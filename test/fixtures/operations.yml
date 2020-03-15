@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estado: one
+  thanks: one
+  comentario: MyText
+  correo: MyString
+
+two:
+  estado: two
+  thanks: two
+  comentario: MyText
+  correo: MyString

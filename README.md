@@ -1,3 +1,12 @@
+rails g model Perfil name:string last_name:string coffee:integer hugs:integer money:integer user:references
+//////////
+ rails g model Estado description:string date:date perfil:references
+//////////
+
+
+
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
