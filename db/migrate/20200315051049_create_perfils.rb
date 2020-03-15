@@ -6,7 +6,7 @@ class CreatePerfils < ActiveRecord::Migration[6.0]
       t.integer :coffee
       t.integer :hugs
       t.integer :money
-      t.references :user, null: false, foreign_key: true
+ #     t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

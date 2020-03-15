@@ -38,10 +38,8 @@ ActiveRecord::Schema.define(version: 2020_03_15_051642) do
     t.integer "coffee"
     t.integer "hugs"
     t.integer "money"
-    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_perfils_on_user_id"
   end
 
   create_table "thanks", force: :cascade do |t|
@@ -54,5 +52,4 @@ ActiveRecord::Schema.define(version: 2020_03_15_051642) do
   add_foreign_key "estados", "perfils"
   add_foreign_key "operations", "estados"
   add_foreign_key "operations", "thanks", column: "thanks_id"
-  add_foreign_key "perfils", "users"
 end
