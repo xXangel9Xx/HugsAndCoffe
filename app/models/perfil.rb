@@ -1,9 +1,10 @@
 class Perfil < ApplicationRecord
-  has_one :user, dependent: :destroy
+ # has_one :user, dependent: :destroy
+  has_many :estados
   validates :name, :last_name, format: {with: /\A[a-zA-Z]+\z/ ,message:"only allows letters"}
   validates :hugs, :coffee, format: {with: /\A[+-]?\d+\z/, message:"only allows number"}
   
-  validate :name, :last_name, length: { in: 3..20 }
+  validates :name, :last_name, length: { in: 3..20 }
   before_save :name_capitalize, :last_name_capitalize
   
   private 
@@ -13,7 +14,7 @@ class Perfil < ApplicationRecord
   end
 
   def last_name_capitalize
-    last_name = self.name.capitalize!
+    last_name = self.last_name.capitalize!
   end
   
 end

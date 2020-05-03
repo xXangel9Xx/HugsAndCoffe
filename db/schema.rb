@@ -13,8 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_03_15_051642) do
 
   create_table "estados", force: :cascade do |t|
-    t.string "description"
-    t.date "date"
+    t.text "description"
     t.integer "perfil_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -22,34 +21,34 @@ ActiveRecord::Schema.define(version: 2020_03_15_051642) do
   end
 
   create_table "operations", force: :cascade do |t|
-    t.integer "estado_id", null: false
-    t.integer "thanks_id", null: false
+    t.integer "estado_id"
+    t.integer "thank_id"
     t.text "comentario"
     t.string "correo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["estado_id"], name: "index_operations_on_estado_id"
-    t.index ["thanks_id"], name: "index_operations_on_thanks_id"
+    t.index ["thank_id"], name: "index_operations_on_thank_id"
   end
 
   create_table "perfils", force: :cascade do |t|
     t.string "name"
     t.string "last_name"
-    t.integer "coffee"
-    t.integer "hugs"
-    t.integer "money"
+    t.integer "coffee", default: 0
+    t.integer "hugs", default: 0
+    t.integer "money", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "thanks", force: :cascade do |t|
     t.integer "coffee"
-    t.integer "hug"
+    t.integer "hug", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "estados", "perfils"
   add_foreign_key "operations", "estados"
-  add_foreign_key "operations", "thanks", column: "thanks_id"
+  add_foreign_key "operations", "thanks"
 end

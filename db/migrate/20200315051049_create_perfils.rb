@@ -3,9 +3,9 @@ class CreatePerfils < ActiveRecord::Migration[6.0]
     create_table :perfils do |t|
       t.string :name
       t.string :last_name
-      t.integer :coffee
-      t.integer :hugs
-      t.integer :money
+      t.integer :coffee, default:0
+      t.integer :hugs, default:0
+      t.integer :money, default:0
  #     t.references :user, null: false, foreign_key: true
 
       t.timestamps
