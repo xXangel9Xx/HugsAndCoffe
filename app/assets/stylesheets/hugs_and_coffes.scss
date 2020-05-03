@@ -1,0 +1,145 @@
+// Place all the styles related to the hugsAndCoffes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@media screen and (min-width:300px){
+.nav-HugsAndCoffe{
+    display: inline-flex;
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+}
+.logoAB{
+    background-color: #EE4380;
+    color: white;
+    margin-left: 5%;
+    position: absolute;
+    border-radius: 5px;
+    width: 5%;
+    height: 30px;
+    left: 20px;
+    top: 17px;
+
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 3px;
+}
+.login{
+    position: absolute;
+    margin-left: 90%;
+    width: 41px;
+    height: 11px;
+    top: 26px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #434242;
+}
+.p-logoAb{
+    margin: 0%;
+}
+.image{
+    margin-top: 6%;
+    margin-left: 38%;
+}
+.lema{
+    width: auto;
+    height: 43px;
+    font-family: Happy Monkey;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #434242;
+}
+.lema2{
+    height: 53px;
+    left: 424px;
+    top: 628px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #434242;
+}
+.div-CrearMiPerfil{ 
+    margin-top: 6%;
+    width: 18%;
+    height: 57px;
+    top: 729px;
+    background: #EE4380;
+    border-radius: 5px;
+    margin-left: 40%;
+    text-align: center;
+    color: white;
+    padding-top: 3%;
+}
+.create-perfil-home{
+    text-decoration: none;
+    color: white;
+    font-size: 26px
+}
+.center-home{
+    background: #F8F8F8;
+    padding-bottom: 29%;
+}
+
+
+.footer-home-hugsAndCoffe{
+    position: absolute;
+    height: -webkit-fill-available;
+    background-color: #EE4380;
+}
+.footer-lema{
+    margin-top: 7%;
+    font-family: Happy Monkey;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    color: #FFFFFF; 
+}
+
+.text-footer-home-information{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 130%;
+    color: #FFFFFF; 
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+.container-images{
+    margin-left: 38%;
+}
+.image-footer-show-image1{
+position: absolute;
+}
+.image-footer-show-image2{
+    margin-left: 9%;
+    margin-top: 3%;
+    position: absolute;
+}
+.image-footer-show-image3{
+    margin-left: 19%;
+    margin-top: 7%;
+    position: absolute;
+}
+
+}
