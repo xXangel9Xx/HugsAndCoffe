@@ -30,7 +30,7 @@ class PerfilsController < ApplicationController
     #render json: (@perfil.update(params_update))? @perfil : @perfil.errors.full_messages, status:400#creo que esto funciona sino se tiene que hacer con el if
     private 
     def params_create
-        params.require(:perfils).permit(:user_id,:name,:last_name,:coffee, :hugs, :money)
+        params.require(:perfils).permit(:user_id,:name,:last_name,:coffee, :hugs, :money, :image)
     end 
 
     def params_update

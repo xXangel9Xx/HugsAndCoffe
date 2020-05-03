@@ -1,6 +1,7 @@
 class Perfil < ApplicationRecord
  # has_one :user, dependent: :destroy
-  has_many :estados
+  has_one_attached :image
+  has_many :estados, dependent: :destroy
   validates :name, :last_name, format: {with: /\A[a-zA-Z]+\z/ ,message:"only allows letters"}
   validates :hugs, :coffee, format: {with: /\A[+-]?\d+\z/, message:"only allows number"}
   
