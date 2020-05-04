@@ -53,11 +53,9 @@ ActiveRecord::Schema.define(version: 2020_05_03_104254) do
   end
 
   create_table "perfils", force: :cascade do |t|
-    t.string "name"
-    t.string "last_name"
-    t.integer "coffee", default: 0
-    t.integer "hugs", default: 0
-    t.integer "money", default: 0
+    t.string "full_name"
+    t.string "ocupacion"
+    t.text "biografia"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

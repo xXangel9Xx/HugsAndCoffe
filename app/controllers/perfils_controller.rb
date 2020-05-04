@@ -1,4 +1,7 @@
 class PerfilsController < ApplicationController
+    #before_action :authenticate_user!
+
+
     before_action :params_create, only: [:create]
     before_action :search, only: [:update,:destroy,:show]
     before_action :params_update, only:[:update]
@@ -30,11 +33,11 @@ class PerfilsController < ApplicationController
     #render json: (@perfil.update(params_update))? @perfil : @perfil.errors.full_messages, status:400#creo que esto funciona sino se tiene que hacer con el if
     private 
     def params_create
-        params.require(:perfils).permit(:user_id,:name,:last_name,:coffee, :hugs, :money, :image)
+        params.require(:perfils).permit(:user_id,:full_name, :ocupacion ,:biografia, :image)
     end 
-
+#,:coffee, :hugs esta va en create  , esta va en update coffee,:hugs, :money, estas 2 las quitare por ahora
     def params_update
-        params.require(:perfils).permit(:name,:last_name,:coffee,:hugs, :money)
+        params.require(:perfils).permit(:full_name, :ocupacion,:biografia )
     end
 
     def search 

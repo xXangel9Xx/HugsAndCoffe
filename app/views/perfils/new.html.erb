@@ -1,8 +1,107 @@
 <div>
    <nav class="nav-create-usuario">
-        <div class="logoAB">
+        <div class="logoAB-profile">
             <p class="p-logoAb">A&B</p>
         </div>
+
+        <div class="profile">
+            <div class="image-profile">
+               
+            </div>
+
+            <h1 class="name-user">angel Gonzalez</h1>
+        </div>
     </nav>
+
+    <div class="container-Perfils-new">
+
+     <div class="nav-perfil-imanes-cuentas">
+     
+      <div>
+       <%= image_tag 'icon.svg'%>  <a href="">Perfil</a>
+      </div>
+      <br>
+      <div>
+        <%= image_tag 'icon.png' %> <a href="">Imagenes</a>
+      </div>
+      <br>
+      <div>
+       <%= image_tag 'iconCuentas.svg' %> <a href="">Cuentas</a>
+      </div>
+     <br>
+     </div>
+<div class="container-publicar-perfil">
+    <h1 class="perfil-usuario-text-on-perfil">Perfil Del Usuario</h1>
+    <div>
+    <%= image_tag 'Switch_Off.png' %>
+    <p style="width: 107px;height: 9px;left: 1263px;top: 151px;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 14px;line-height: 16px;display: flex;align-items: center;text-align: right;color: #434242;">
+    Despublicar perfil</p>
+    </div>
+</div>
+
+<div class="dates-usuario">
+<%=form_with model: @perfil, local: true do |f| %>
+  <div class="add_full_name-and-ocupation">
+  <div style="margin-right: 49%;">
+    <br>
+      <%= f.label :full_name%>
+    <br>
+      <%= f.text_field :full_name, placeholder: 'nombre y apellido' %>
+    <br>
+  </div>
+
+
+  <div>
+    <br>
+      <%=f.label :ocupation%>
+    <br>
+      <%=f.text_field :ocupation%>
+    <br>
+  </div>  
+  </div>
+
+
+  <div>
+    <br>
+      <%=f.label :biografia%>
+    <br>
+      <div><%=f.text_field :biografia%></div>
+    <br>
+  </div>
+
+  <div>
+      <br>
+        <%=f.label :image%>
+      <br>
+        <%=f.file_field :image %>
+        <div style="    
+            margin: 4%;
+            padding-left: 22%;
+            height: 135px;
+            padding-top: 14%;
+            padding-bottom: 8%;
+            padding-right: 24%;
+            background: #FFFFFF;
+            box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+            border-radius: 5px;">
+        <%= image_tag 'message.png' %>
+        </div>
+        
+  </div>
+<br>
+<br>
+
+</div>
+<div style="margin-left: 83%;
+    width: 13%;
+    position: absolute;
+    margin-top: 46%;">
+<%=f.submit 'Guardar'%>
+</div>
+
+<% end %>
+
+    </div>
+
 
 </div>
