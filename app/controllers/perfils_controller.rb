@@ -9,25 +9,28 @@ class PerfilsController < ApplicationController
     def create
      @perfil = Perfil.new(params_create)
         if @perfil.save
-            render json: @perfil
+            render @perfil
+            #redirect_to ''
         else
-            render json:@perfil.errors.full_messages
+            render 'new'
+            #render json:@perfil.errors.full_messages
         end
     end
 
     def show
-        render json: @perfil
+        render @perfil
     end
 
     def destroy
-        render json: @perfil.delete
+        render @perfil.delete
     end
 
     def update
      if @perfil.update(params_update)
-        render json: @perfil
+        render @perfil
      else
-        render json: @perfil.errors.full_messages, status:400
+        render 'update'
+        #render json: @perfil.errors.full_messages, status:400
      end
     end
     #render json: (@perfil.update(params_update))? @perfil : @perfil.errors.full_messages, status:400#creo que esto funciona sino se tiene que hacer con el if
