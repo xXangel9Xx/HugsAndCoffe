@@ -10,7 +10,7 @@ class PerfilsController < ApplicationController
      @perfil = Perfil.new(params_create)
         if @perfil.save
             render @perfil
-            #redirect_to ''
+            redirect_to ''
         else
             render 'new'
             #render json:@perfil.errors.full_messages
