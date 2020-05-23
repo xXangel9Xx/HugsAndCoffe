@@ -8,9 +8,9 @@ class OperationsController < ApplicationController
        operations = Operation.new(params_create)
     #   @realizado = Operation.transaction(operations)
        if @realizado == true && operations.save
-        render json: operations
+        render js: "alert('Se realizo su operacion correctamente')"
        else
-        render json: operation_valid.errors.full_messages 
+        render js: "alert('Lamentablemente ocurrio un error')"
        end
     end
 
@@ -29,9 +29,9 @@ class OperationsController < ApplicationController
 
     def update
         if @operation.update(params_update)
-            render json: @operation
+            render js: "alert('Se actualizo correctamente')"
         else
-            srender json: @operation.errors.full_messages, status:400
+            render js: "alert('Lamentamos informar que no se puedo actualizar correctamente')" 
         end
     end
 

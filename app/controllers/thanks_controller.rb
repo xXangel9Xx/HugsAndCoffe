@@ -3,11 +3,12 @@ class ThanksController < ApplicationController
     def create 
        @thak = Thank.new(params_create)
        if @thank.save
-        render json: @thank
+        render js:"alert('Se creo correctamente')"
        else
-        render json: @thank.errors.full_messages, status:400
+        render js: "alert('Lamentamos informar que ocurrio un error')"
        end
     end
+    
     private
 
     def params_create

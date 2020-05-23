@@ -1,0 +1,36 @@
+// Place all the styles related to the bankAccount controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.container-text-create-account-bank{
+    width: 63%;
+    height: 6%;
+    margin-top: 3%;
+    border-bottom: inset;
+    margin-left: 32%;
+    position: absolute;
+}
+
+.create-account-bank{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #434242;
+    position: absolute;
+}
+.container-text-information-accountBank{
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 32%;
+    width: 13%;
+}
+.container-create-new-bankAccount{    
+    padding: 4%;
+    position: absolute;
+    width: 40%;
+    margin-left: 49%;
+    margin-top: 7%;
+    box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+    border-radius: 5px;
+}

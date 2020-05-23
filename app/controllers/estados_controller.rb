@@ -5,9 +5,9 @@ before_action :search, only: [:update,:destroy,:show]
     def create
           @estado = Estado.new(params_create)
           if @estado.save
-            render json:@estado
+            render js: "alert('Se creo correctamente')"
           else
-            render json:@estado.errors.full_messages
+            render js: "alert('Lamentablemente ocurrio un error')"
           end
     end
 
@@ -26,9 +26,9 @@ before_action :search, only: [:update,:destroy,:show]
 
     def update
       if @estado.update(params_update)
-          render json: @estado  
+          render js: "alert('Se actualizo correctamente')"  
       else
-        render json: @estado.errors.full_messages, status:400
+          render js: "alert('Lamentablemente ocurrio un error')"
       end
     end
 

@@ -1,19 +1,18 @@
 class PerfilsController < ApplicationController
     #before_action :authenticate_user!
-
-
     before_action :params_create, only: [:create]
     before_action :search, only: [:update,:destroy,:show]
     before_action :params_update, only:[:update]
+    def new 
+        @perfil = Perfil.new
+    end
 
     def create
      @perfil = Perfil.new(params_create)
         if @perfil.save
-            render @perfil
-            redirect_to ''
+            render js:"alert('Se a creado el perfil correctamente')"
         else
-            render 'new'
-            #render json:@perfil.errors.full_messages
+            render js: "alert('Lamentamos informar que a ocurrido un error')"
         end
     end
 
@@ -27,18 +26,16 @@ class PerfilsController < ApplicationController
 
     def update
      if @perfil.update(params_update)
-        render @perfil
+        render js: "alert('Se actualizo correctamente')"
      else
-        render 'update'
-        #render json: @perfil.errors.full_messages, status:400
+        render js: "alert('Lamentamos informar que a ocurrido un error')"
      end
     end
-    #render json: (@perfil.update(params_update))? @perfil : @perfil.errors.full_messages, status:400#creo que esto funciona sino se tiene que hacer con el if
     private 
     def params_create
-        params.require(:perfils).permit(:user_id,:full_name, :ocupacion ,:biografia, :image)
+        params.require(:perfils).permit(:full_name, :ocupacion ,:biografia, :image)
     end 
-#,:coffee, :hugs esta va en create  , esta va en update coffee,:hugs, :money, estas 2 las quitare por ahora
+#:user_id,
     def params_update
         params.require(:perfils).permit(:full_name, :ocupacion,:biografia )
     end

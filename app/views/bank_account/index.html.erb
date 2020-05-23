@@ -1,0 +1,62 @@
+<div>
+ <nav class="nav-create-usuario">
+        <div class="logoAB-profile">
+            <p class="p-logoAb">A&B</p>
+        </div>
+
+        <div class="profile">
+            <div class="image-profile">
+               
+            </div>
+
+            <h1 class="name-user">angel Gonzalez</h1>
+        </div>
+    </nav>
+    <div class="container-Perfils-new">
+
+     <div class="nav-perfil-imanes-cuentas">
+     
+      <div>
+       <%= image_tag 'icon.svg'%>  <a href="">Perfil</a>
+      </div>
+      <br>
+      <div>
+        <%= image_tag 'icon.png' %> <a href="">Imagenes</a>
+      </div>
+      <br>
+      <div>
+       <%= image_tag 'iconCuentas.svg' %> <a href="/bank_account">Cuentas</a>
+      </div>
+     <br>
+    </div>
+    <div>
+
+    </div>
+
+    <div class="container-list-account">
+     <h1>Listado de Cuentas</h1>
+
+     <div class="addAccount">
+        <a href="tuna" style="    
+        text-decoration: none;
+        color: white;
+        font-size: 26px">Crear</a>
+     </div>
+
+    </div>
+    <div class="index-accounts-banks">
+    <%if @bankAccount%>
+    
+    <%@bankAccount.each do |accounts|%>
+
+
+    
+    <%end%>
+    
+    <%else%>
+       <div class="null-accounts-banks">
+       <h1 style="margin-top: 17px;">No contiene cuentas registradas</h1>
+       </div>
+    <%end%>
+    </div>
+</div>
