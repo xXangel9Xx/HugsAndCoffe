@@ -5,6 +5,7 @@ devise_for :users, path: 'users', path_names: { sign_in: 'sign_in', sign_out: 's
 
 get '/', to: 'hugs_and_coffes#new'
 resources :bank_account
+
 resources :perfils, except: [:index] do
    resources :estado 
 end

@@ -2,6 +2,10 @@ class EstadosController < ApplicationController
 before_action :params_create, only: [:create]
 before_action :params_update, only: [:update]
 before_action :search, only: [:update,:destroy,:show]
+    def new
+      @estado = Estado.new
+    end
+    
     def create
           @estado = Estado.new(params_create)
           if @estado.save

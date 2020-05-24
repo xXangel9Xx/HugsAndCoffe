@@ -40,7 +40,7 @@
 </div>
 <!---->
 <div class="dates-usuario">
-<%=form_with(method: "post", model:@perfil, local: true) do |f| %>
+<%=form_with model:@perfils, local: true do |f| %>
 
   <div class="add_full_name-and-ocupation">
   <div style="margin-right: 49%;">
@@ -95,6 +95,7 @@
 
 
 </div>
+<!-- 
 <div class="monto-coffe-and-symbol">
   <div class="monto-of-an-coffe">
     <div>
@@ -113,10 +114,8 @@
         </div>
     </div>
   </div>
-
- 
 </div>
-
+-->
 <div style="margin-left: 83%;
     width: 13%;
     position: absolute;

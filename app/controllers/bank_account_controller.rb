@@ -3,6 +3,11 @@ class BankAccountController < ApplicationController #ojo con el nombre de la cla
     before_action :params_create, only: [:create]
     before_action :params_update, only: [:update]
     before_action :search, only: [:update,:destroy]
+    
+    def new
+    @bank_Account = Bank_Account.new
+    end
+
     def create
         @bank_Account = BankAccount.new(params_create)
         if @bank_Account.save

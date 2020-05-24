@@ -4,7 +4,7 @@ class PerfilsController < ApplicationController
     before_action :search, only: [:update,:destroy,:show]
     before_action :params_update, only:[:update]
     def new 
-        @perfil = Perfil.new
+     @perfil = Perfil.new
     end
 
     def create

@@ -1,7 +1,11 @@
 class ThanksController < ApplicationController
    before_action :params_create, only:[:create]
+   def new
+      @thank = Thank.new
+   end
+   
     def create 
-       @thak = Thank.new(params_create)
+       @thank = Thank.new(params_create)
        if @thank.save
         render js:"alert('Se creo correctamente')"
        else

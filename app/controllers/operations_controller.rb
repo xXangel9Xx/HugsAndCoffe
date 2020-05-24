@@ -3,11 +3,16 @@ class OperationsController < ApplicationController
     before_action :params_update, only: [:update]
     before_action :search, only: [:update,:destroy,:show]
 
+    def new
+       @operation = Operation.new
+    end
+
+
     def create
        @realizado = false
-       operations = Operation.new(params_create)
+       @operation = Operation.new(params_create)
     #   @realizado = Operation.transaction(operations)
-       if @realizado == true && operations.save
+       if @realizado == true && @operation.save
         render js: "alert('Se realizo su operacion correctamente')"
        else
         render js: "alert('Lamentablemente ocurrio un error')"
