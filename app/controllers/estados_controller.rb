@@ -9,9 +9,11 @@ before_action :search, only: [:update,:destroy,:show]
     def create
           @estado = Estado.new(params_create)
           if @estado.save
-            render js: "alert('Se creo correctamente')"
+            flash[:notice] = "Su estado fue realizado exitosamente"
+            #redirect_to 'path'
           else
-            render js: "alert('Lamentablemente ocurrio un error')"
+            flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+            #redirect_to 'path'
           end
     end
 
@@ -30,20 +32,22 @@ before_action :search, only: [:update,:destroy,:show]
 
     def update
       if @estado.update(params_update)
-          render js: "alert('Se actualizo correctamente')"  
+          flash[:notice] = "su cuenta fue creada exitosamente"
+          #redirect_to 'path'
       else
-          render js: "alert('Lamentablemente ocurrio un error')"
+          flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+          #redirect_to 'path'
       end
     end
 
     private
 
     def params_create
-       params.require(:estados).permit(:description, :perfil_id ,:coffee,:hugs)
+       params.require(:estado).permit(:description, :perfil_id ,:coffee,:hugs)
     end
 
     def params_update
-        params.require(:estados).permit(:description)
+        params.require(:estado).permit(:description)
     end
 
     def search

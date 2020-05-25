@@ -10,9 +10,11 @@ class PerfilsController < ApplicationController
     def create
      @perfil = Perfil.new(params_create)
         if @perfil.save
-            render js:"alert('Se a creado el perfil correctamente')"
+            flash[:notice] = "Su perfil fue creada exitosamente"
+            #redirect_to 'path'
         else
-            render js: "alert('Lamentamos informar que a ocurrido un error')"
+            flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+            #redirect_to 'path'
         end
     end
 
@@ -26,9 +28,11 @@ class PerfilsController < ApplicationController
 
     def update
      if @perfil.update(params_update)
-        render js: "alert('Se actualizo correctamente')"
+        flash[:notice] = "Su perfil fue actualizado exitosamente"
+        #redirect_to 'path'
      else
-        render js: "alert('Lamentamos informar que a ocurrido un error')"
+        flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+        #redirect_to 'path'
      end
     end
     private 

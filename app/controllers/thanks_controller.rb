@@ -7,15 +7,17 @@ class ThanksController < ApplicationController
     def create 
        @thank = Thank.new(params_create)
        if @thank.save
-        render js:"alert('Se creo correctamente')"
+         flash[:notice] = "Su agradecimiento se realizo correctamente"
+         #redirect_to 'path'
        else
-        render js: "alert('Lamentamos informar que ocurrio un error')"
+         flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+         #redirect_to 'path'
        end
     end
     
     private
 
     def params_create
-      params.require(:thanks).permit(:coffee,:hug)
+      params.require(:thank).permit(:coffee,:hug)
     end
 end

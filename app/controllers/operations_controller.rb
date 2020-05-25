@@ -13,9 +13,11 @@ class OperationsController < ApplicationController
        @operation = Operation.new(params_create)
     #   @realizado = Operation.transaction(operations)
        if @realizado == true && @operation.save
-        render js: "alert('Se realizo su operacion correctamente')"
+         flash[:notice] = "Su operacion fue realizada fue creada exitosamente"
+         #redirect_to 'path'
        else
-        render js: "alert('Lamentablemente ocurrio un error')"
+         flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+         #redirect_to 'path'
        end
     end
 
@@ -34,20 +36,22 @@ class OperationsController < ApplicationController
 
     def update
         if @operation.update(params_update)
-            render js: "alert('Se actualizo correctamente')"
+           flash[:notice] = "La acutalizacion de su operacion fue realizada fue creada exitosamente"
+           #redirect_to 'path'
         else
-            render js: "alert('Lamentamos informar que no se puedo actualizar correctamente')" 
+            flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+            #redirect_to 'path'
         end
     end
 
     private
 
      def params_create
-        params.require(:operations).permit(:comentario, :correo, :estado_id, :thank_id)
+        params.require(:operation).permit(:comentario, :correo, :estado_id, :thank_id)
      end
  
      def params_update
-         params.require(:operations).permit(:comentario, :correo)
+         params.require(:operation).permit(:comentario, :correo)
      end
  
      def search

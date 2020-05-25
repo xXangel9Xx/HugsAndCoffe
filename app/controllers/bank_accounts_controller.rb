@@ -9,25 +9,28 @@ class BankAccountsController < ApplicationController
     end
     
     def index
-    @bankAccounts = BankAccount.all
+     @bankAccounts = BankAccount.all
     end
 
     def create
         @bankAccount = BankAccount.new(params_create)
         if @bankAccount.save
-            render js: "alert('Se guardo correctamente')"
+            flash[:notice] = "Su cuenta fue creada exitosamente"
+            #redirect_to 'path'
         else
-            render js: "alert('Lamentamos informar que ocurrio un error')"
+            flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+             #redirect_to 'path'
         end
     end
 
-    def update
+    def edit
         if @bankAccount.update(params_update)
-            render js: "alert('Se logro actualizar correctamente')"
+            flash[:notice] = "Fue editado exitosamente"
+             #redirect_to 'path'
         else
-            render js: "alert('Lamentamos informar que ocurrio un eror')"
+            flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+             #redirect_to 'path'
         end
-
     end
 
     def destroy
@@ -41,10 +44,10 @@ class BankAccountsController < ApplicationController
     end
 
     def params_create
-          params.require(:bankAccounts).permit(:entidad,:email,:account,:identification,:typeAccount)
+          params.require(:bankAccount).permit(:entidad,:email,:account,:identification,:typeAccount)
     end
 
     def params_update
-        params.require(:bankAccounts).permit(:entidad,:email,:account,:identification,:typeAccount)
+        params.require(:bankAccount).permit(:entidad,:email,:account,:identification,:typeAccount)
     end
 end

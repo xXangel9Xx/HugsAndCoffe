@@ -48,9 +48,15 @@
     <%if @bankAccount%>
     
     <%@bankAccount.each do |accounts|%>
-
-
-    
+    <table class="all-accounts">
+        <tr class="container-show-account">
+            <td><%= accounts.entidad%></td>
+            <td><%= accounts.typeAccount%></td>
+            <td><%= accounts.identification%></td>
+            <td><%= accounts.typeAccount%></td>
+            <!--<td><%=%>imagensita</td>-->
+        </tr>
+    </table>
     <%end%>
     
     <%else%>
