@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GaleryControllerTest < ActionDispatch::IntegrationTest
+class GalleriesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

@@ -7,9 +7,9 @@ get '/', to: 'hugs_and_coffes#new'
 resources :bank_accounts
 
 resources :perfils, except: [:index] do
-   resources :estado 
+   resources :estados 
 end
-
+resources :galeries
 
 end
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
