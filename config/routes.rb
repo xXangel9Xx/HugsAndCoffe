@@ -4,7 +4,7 @@ devise_for :users, skip: :all
 devise_for :users, path: 'users', path_names: { sign_in: 'sign_in', sign_out: 'sign_out', password: 'password', confirmation: 'confirmation', unlock: 'unblock', sign_up: 'sign_up'  }
 
 get '/', to: 'hugs_and_coffes#new'
-resources :bank_account
+resources :bank_accounts
 
 resources :perfils, except: [:index] do
    resources :estado 

@@ -4,7 +4,7 @@ class PerfilsController < ApplicationController
     before_action :search, only: [:update,:destroy,:show]
     before_action :params_update, only:[:update]
     def new 
-     @perfil = Perfil.new
+     @perfils = Perfil.new
     end
 
     def create
@@ -33,11 +33,11 @@ class PerfilsController < ApplicationController
     end
     private 
     def params_create
-        params.require(:perfils).permit(:full_name, :ocupacion ,:biografia, :image)
+        params.require(:perfil).permit(:full_name, :ocupacion ,:biografia, :image)
     end 
 #:user_id,
     def params_update
-        params.require(:perfils).permit(:full_name, :ocupacion,:biografia )
+        params.require(:perfil).permit(:full_name, :ocupacion,:biografia )
     end
 
     def search 

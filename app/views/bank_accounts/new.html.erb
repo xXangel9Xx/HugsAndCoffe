@@ -17,7 +17,7 @@
      <div class="nav-perfil-imanes-cuentas">
      
       <div>
-       <%= image_tag 'icon.svg'%>  <a href="">Perfil</a>
+       <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
       </div>
       <br>
       <div>
@@ -25,7 +25,7 @@
       </div>
       <br>
       <div>
-       <%= image_tag 'iconCuentas.svg' %> <a href="/bank_account">Cuentas</a>
+       <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
       </div>
      <br>
  </div>
@@ -40,7 +40,7 @@
   </div>
 <div class="container-create-new-bankAccount">
   <div class="container-form-bankAccount">
-  <%=form_with model:@bank_Account, local:true do |f| %>
+  <%=form_with model:@bankAccount, local:true do |f| %>
   <div>
   <br>
   <%=f.label :entidad%>
