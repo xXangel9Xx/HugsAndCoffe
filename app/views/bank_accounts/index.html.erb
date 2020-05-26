@@ -45,24 +45,26 @@
 
     </div>
     <div class="index-accounts-banks">
-    <%if @bankAccount%>
-    
-    <%@bankAccount.each do |accounts|%>
+    <%if @bank_accounts%>
+    <%@bank_accounts.each do |accounts|%>
     <table class="all-accounts">
         <tr class="container-show-account">
-            <td><%= accounts.entidad%></td>
-            <td><%= accounts.typeAccount%></td>
-            <td><%= accounts.identification%></td>
-            <td><%= accounts.typeAccount%></td>
+            <td> <p class="td-accounts-index">Entidad: <%=accounts.entidad%></p></td>
+            <td> <p class="td-accounts-index">Numero de cuenta: <%=accounts.account%></p></td>
+            <td> <p class="td-accounts-index"> Identificacion: <%=accounts.identification%></p></td>
+            <td> <p class="td-accounts-index">Tipo de cuenta: <%=accounts.typeAccount%></p></td>
             <!--<td><%=%>imagensita</td>-->
         </tr>
     </table>
+    <br>
+    <br>
     <%end%>
-    
     <%else%>
+
+ 
        <div class="null-accounts-banks">
        <h1 style="margin-top: 17px;">No contiene cuentas registradas</h1>
        </div>
-    <%end%>
+   <%end%>
     </div>
 </div>

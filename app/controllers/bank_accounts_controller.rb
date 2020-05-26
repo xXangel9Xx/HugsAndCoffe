@@ -5,16 +5,16 @@ class BankAccountsController < ApplicationController
     before_action :search, only: [:update,:destroy]
     
     def new
-     @bankAccount = BankAccount.new
+     @bank_account = BankAccount.new
     end
     
     def index
-     @bankAccounts = BankAccount.all
+     @bank_accounts = BankAccount.all
     end
 
     def create
-        @bankAccount = BankAccount.new(params_create)
-        if @bankAccount.save
+        @bank_account = BankAccount.new(params_create)
+        if @bank_account.save
             flash[:notice] = "Su cuenta fue creada exitosamente"
             #redirect_to 'path'
         else
@@ -24,7 +24,7 @@ class BankAccountsController < ApplicationController
     end
 
     def edit
-        if @bankAccount.update(params_update)
+        if @bank_account.update(params_update)
             flash[:notice] = "Fue editado exitosamente"
              #redirect_to 'path'
         else
@@ -34,20 +34,20 @@ class BankAccountsController < ApplicationController
     end
 
     def destroy
-       render @bankAccount.delete
+       render @bank_account.delete
     end
 
  
     private
     def search
-        @bankAccount = BankAccounts.find_by( id: params[:id] )
+        @bank_account = BankAccount.find_by( id: params[:id] )
     end
 
     def params_create
-          params.require(:bankAccount).permit(:entidad,:email,:account,:identification,:typeAccount)
+          params.require(:bank_account).permit(:entidad,:email,:account,:identification,:typeAccount)
     end
 
     def params_update
-        params.require(:bankAccount).permit(:entidad,:email,:account,:identification,:typeAccount)
+        params.require(:bank_account).permit(:entidad,:email,:account,:identification,:typeAccount)
     end
 end

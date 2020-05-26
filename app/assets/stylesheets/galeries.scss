@@ -1,6 +1,27 @@
 // Place all the styles related to the galeries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container-galery-image-new{
+    padding: 11px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+    border-radius: 5px;
+}
+.container-subtitle-image{
+    margin-bottom: 19px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+    border-radius: 5px;
+    height: 79px;
+    padding: 11px;
+}
+.new-photo-galeries{
+    position: absolute;
+    margin-left: 62%;
+    margin-top: 5%;
+    width: 35%;
+}
 .container-images-galeries{
     padding: 2%;
     display: flex;

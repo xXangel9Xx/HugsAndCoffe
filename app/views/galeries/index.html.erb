@@ -41,9 +41,12 @@
      </div>
 
     </div>
-
-    <div class="container-images-galeries">
-       <div class="image-galeries"> p </div>
-    </div>
-    
+   <%@galery.each do |photos|%>
+   
+        <div class="container-images-galeries">
+            <div class="image-galeries">
+             <%= image_tag "#{photos}" %>
+            </div>
+        </div>
+    <%end%>  
 </div>

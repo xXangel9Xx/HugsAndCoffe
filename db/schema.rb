@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2020_05_20_184947) do
   end
 
   create_table "bank_accounts", force: :cascade do |t|
-    t.integer "user_id", null: false
     t.string "entidad"
     t.string "email"
     t.integer "account"
@@ -42,7 +41,6 @@ ActiveRecord::Schema.define(version: 2020_05_20_184947) do
     t.string "typeAccount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_bank_accounts_on_user_id"
   end
 
   create_table "estados", force: :cascade do |t|
@@ -100,7 +98,6 @@ ActiveRecord::Schema.define(version: 2020_05_20_184947) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "bank_accounts", "users"
   add_foreign_key "estados", "perfils"
   add_foreign_key "galeries", "perfils"
   add_foreign_key "operations", "estados"

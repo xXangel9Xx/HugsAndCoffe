@@ -40,7 +40,7 @@
   </div>
 <div class="container-create-new-bankAccount">
   <div class="container-form-bankAccount">
-  <%=form_with model:@bankAccount, local:true do |f| %>
+  <%=form_with model:@bank_account, local:true do |f| %>
   <div>
   <br>
   <%=f.label :entidad%>
@@ -77,7 +77,7 @@
     width: 13%;
     position: absolute;
     margin-top: 17%;">
-    <%=f.submit 'Guardar'%>
+    <%=f.submit 'Guardar', :class =>'save'%>
   </div>
 <% end %>
   </div>

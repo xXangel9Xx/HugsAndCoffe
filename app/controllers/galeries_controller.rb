@@ -2,7 +2,7 @@ class GaleriesController < ApplicationController
         #before_action :authenticate_user!
         before_action :params_create, only:[:create]
         before_action :params_update, only:[:update]
-        before_action :search, only:[:destroy,:update]
+        before_action :search, only:[:destroy,:update,:show]
         def new
             @galery = Galery.new
         end
@@ -10,8 +10,6 @@ class GaleriesController < ApplicationController
         def create
            @galery = Galery.new(params_create)
            if @galery.save
-            @galery.images.attach(params[:images])
-            #Llame @messages.images.attach para agregar nuevas imágenes a un mensaje existente:
             flash[:notice] = "Su perfil fue creada exitosamente"
             #redirect_to 'path'
            else
@@ -45,11 +43,11 @@ class GaleriesController < ApplicationController
         private
         
         def params_create
-         params.require(:galery).permit(:subtitulo,images:[])
+         params.require(:galery).permit(:subtitulo, :image)
         end
   
         def params_update
-         params.require(:galery).permit(:subtitulo,images:[])
+         params.require(:galery).permit(:subtitulo, :image)
         end
   
         def search
