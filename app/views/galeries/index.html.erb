@@ -41,11 +41,12 @@
      </div>
 
     </div>
-   <%@galery.each do |photos|%>
-   
+   <%@galery.each do |photo|%>
         <div class="container-images-galeries">
             <div class="image-galeries">
-             <%= image_tag "#{photos}" %>
+            <%= link_to edit_galery_path(photo) do%>
+                    <%=photo.image %>
+            <%end%>
             </div>
         </div>
     <%end%>  

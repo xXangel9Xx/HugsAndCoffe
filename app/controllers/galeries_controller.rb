@@ -2,7 +2,7 @@ class GaleriesController < ApplicationController
         #before_action :authenticate_user!
         before_action :params_create, only:[:create]
         before_action :params_update, only:[:update]
-        before_action :search, only:[:destroy,:update,:show]
+        before_action :search, only:[:destroy,:update,:edit,:show]
         def new
             @galery = Galery.new
         end
@@ -11,24 +11,27 @@ class GaleriesController < ApplicationController
            @galery = Galery.new(params_create)
            if @galery.save
             flash[:notice] = "Su perfil fue creada exitosamente"
-            #redirect_to 'path'
+               redirect_to '/galeries'
            else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
-            #redirect_to 'path'
+               redirect_to '/galeries'
            end
         end
         
         def show
            @galery
         end
-  
+
+        def edit
+        end
+
         def update
             if @galery.update(params_update)
                flash[:notice] = "Su perfil fue creada exitosamente"
-               #redirect_to 'path'
+               redirect_to '/galeries'
             else
                flash[:notice] = "Lamentamos informar que ha ocurrido un error"
-               #redirect_to 'path'
+               redirect_to '/galeries'
             end
         end
         

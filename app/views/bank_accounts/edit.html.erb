@@ -40,36 +40,36 @@
   </div>
 <div class="container-create-new-bankAccount">
   <div class="container-form-bankAccount">
-  <%=form_with model:@bankAccount, local:true do |f| %>
+  <%=form_with model:@bank_account, local:true do |f| %>
   <div>
   <br>
   <%=f.label :entidad%>
-  <%=f.text_field :entidad, placeholder: @bankAccount.entidad%>
+  <%=f.text_field :entidad%>
   <br>
   </div>
 
   <div>
   <br>
   <%=f.label :email%>
-  <%=f.text_field :email, placeholder: @bankAccount.email%>
+  <%=f.text_field :email%>
   <br>
   </div>
   <div>
   <br>
   <%=f.label :cuenta%>
-  <%=f.number_field :account, placeholder: @bankAccount.account%>
+  <%=f.number_field :account%>
   <br>
   </div>
   <div>
   <br>
   <%=f.label :identificacion%>
-  <%=f.number_field :identification, placeholder: @bankAccount.identification%>
+  <%=f.number_field :identification%>
   <br>
   </div>
   <div>
   <br>
   <%=f.label :tipo_de_cuenta%>
-  <%=f.text_field :typeAccount, placeholder: @bankAccount.typeAccount%>
+  <%=f.text_field :typeAccount%>
   <br>
   <div>
 

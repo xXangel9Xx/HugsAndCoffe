@@ -1,4 +1,4 @@
-<div>
+<!--<div>
     <nav class="nav-create-usuario">
         <div class="logoAB-profile">
             <p class="p-logoAb">A&B</p>
@@ -32,36 +32,42 @@
     </div>
 
 
+  <div class="container-show-bank-account">
+      <div>
+        <br>
+          <%="Entidad bancaria: #{@bank_account.entidad}"%>
+          <hr>
+      </div>
 
-  <div>
-    <br>
-        <%="Entidad bancaria: #{@bankAccount.entidad}"%>
-    <br>
+    <div>
+        <br>
+          <%="Email: #{@bank_account.email}"%>
+          <hr>
+    </div>
+
+    <div>
+        <br>
+          <%="Numero de cuenta: #{@bank_account.account}"%>
+          <hr>
+    </div>
+
+    <div>
+        <br>
+          <%="Cedula de identidad: #{@bank_account.identification}"%>
+          <hr>
+    </div>
+
+    <div>
+        <br>
+          <%="Tipo de cuenta :#{@bank_account.typeAccount}"%>
+          <hr>
+    <div>
   </div>
 
   <div>
-    <br>
-        <%="Email: #{@bankAccount.email}"%>
-    <br>
+  <%@bank_account.each do |bank_account|%>
+    <%= link_to 'editar', edit_bank_account_path(bank_account) %>
+  <%end%>
   </div>
 
-  <div>
-    <br>
-        <%="Numero de cuenta: #{@bankAccount.account}"%>
-    <br>
-  </div>
-
-  <div>
-    <br>
-        <%="Cedula de identidad: #{@bankAccount.identification}"%>
-    <br>
-  </div>
-
-  <div>
-    <br>
-        <%="Tipo de cuenta :#{@bankAccount.typeAccount}"%>
-    <br>
-  <div>
-
-
-</div>
+</div>-->
