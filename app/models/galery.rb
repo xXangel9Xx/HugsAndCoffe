@@ -1,4 +1,4 @@
 class Galery < ApplicationRecord
   has_one :perfil
-  has_many_attached :images
+  has_one_attached :image
 end

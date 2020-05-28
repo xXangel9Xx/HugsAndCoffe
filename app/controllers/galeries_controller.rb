@@ -10,7 +10,7 @@ class GaleriesController < ApplicationController
         def create
            @galery = Galery.new(params_create)
            if @galery.save
-            flash[:notice] = "Su perfil fue creada exitosamente"
+               flash[:notice] = "Su perfil fue creada exitosamente"
                redirect_to '/galeries'
            else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
@@ -40,7 +40,7 @@ class GaleriesController < ApplicationController
         end
      
         def index
-           @galery = Galery.all
+           @galeries = Galery.all
         end
      
         private
@@ -54,7 +54,7 @@ class GaleriesController < ApplicationController
         end
   
         def search
-           @galery = Galery.findy_by( id: params[:id] )
+           @galery = Galery.find_by( id: params[:id] )
         end
      
 end

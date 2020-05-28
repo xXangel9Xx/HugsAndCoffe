@@ -41,13 +41,21 @@
      </div>
 
     </div>
-   <%@galery.each do |photo|%>
-        <div class="container-images-galeries">
+
+    
+     <div class="container-images-galeries">
+   <%@galeries.each_with_index do |photo,index|%>
+        <!--<%if logeado%>-->
             <div class="image-galeries">
             <%= link_to edit_galery_path(photo) do%>
-                    <%=photo.image %>
+                <%=image_tag(photo.image, :class =>'image-galeries') %>
             <%end%>
             </div>
-        </div>
+        <!--else
+        <%= link_to galery_path(photo) do%>
+            <%=image_tag(photo.image, :class =>'image-galeries') %>
+        <%end%>
+        <%end%>-->
     <%end%>  
+    </div>
 </div>

@@ -52,11 +52,9 @@ ActiveRecord::Schema.define(version: 2020_05_20_184947) do
   end
 
   create_table "galeries", force: :cascade do |t|
-    t.integer "perfil_id", null: false
     t.string "subtitulo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["perfil_id"], name: "index_galeries_on_perfil_id"
   end
 
   create_table "operations", force: :cascade do |t|
@@ -99,7 +97,6 @@ ActiveRecord::Schema.define(version: 2020_05_20_184947) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "estados", "perfils"
-  add_foreign_key "galeries", "perfils"
   add_foreign_key "operations", "estados"
   add_foreign_key "operations", "thanks"
 end
