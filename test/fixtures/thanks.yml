@@ -1,9 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  coffee: 1
-  hug: 1
+  coffe: false
+  hug: 1.5
+  name: MyString
+  ocupacion: MyString
+  message: MyText
+  estado: one
 
 two:
-  coffee: 1
-  hug: 1
+  coffe: false
+  hug: 1.5
+  name: MyString
+  ocupacion: MyString
+  message: MyText
+  estado: two
