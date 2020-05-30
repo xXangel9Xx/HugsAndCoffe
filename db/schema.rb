@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_184947) do
+ActiveRecord::Schema.define(version: 2020_05_29_181750) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -57,17 +57,6 @@ ActiveRecord::Schema.define(version: 2020_05_20_184947) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "operations", force: :cascade do |t|
-    t.integer "estado_id"
-    t.integer "thank_id"
-    t.text "comentario"
-    t.string "correo"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["estado_id"], name: "index_operations_on_estado_id"
-    t.index ["thank_id"], name: "index_operations_on_thank_id"
-  end
-
   create_table "perfils", force: :cascade do |t|
     t.string "full_name"
     t.string "ocupacion"
@@ -77,8 +66,11 @@ ActiveRecord::Schema.define(version: 2020_05_20_184947) do
   end
 
   create_table "thanks", force: :cascade do |t|
-    t.integer "coffee"
-    t.integer "hug", default: 0
+    t.boolean "coffe", default: false
+    t.float "hug", default: 0.0
+    t.string "name"
+    t.string "ocupacion"
+    t.text "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -97,6 +89,4 @@ ActiveRecord::Schema.define(version: 2020_05_20_184947) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "estados", "perfils"
-  add_foreign_key "operations", "estados"
-  add_foreign_key "operations", "thanks"
 end

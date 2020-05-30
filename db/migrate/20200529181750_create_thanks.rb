@@ -6,7 +6,7 @@ class CreateThanks < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :ocupacion
       t.text :message
-      t.references :estado, null: false, foreign_key: true
+    #  t.references :estado, null: false, foreign_key: true
 
       t.timestamps
     end
