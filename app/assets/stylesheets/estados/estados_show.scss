@@ -1,0 +1,83 @@
+.delete-estado{
+    position: absolute;
+    background: #EE4380;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 7px;
+    width: 8%;
+    height: 19px;
+    margin-top: 37%;
+    margin-left: 40%;
+}
+.text-edit-estate{
+    color: white;
+    text-decoration: none;
+}
+.edit-estado{
+    position: absolute;
+    margin-top: 37%;
+    margin-left: 78%;
+    background: #EE4380;
+    border-radius: 5px;
+    width: 8%;
+    height: 19px;
+    text-align: center;
+    padding-top: 7px;
+}
+.images-estados{
+    width: 200px;
+    height: 160px;
+    box-sizing: border-box;
+}
+.container-all-images-estado{
+    margin-left: 50%;
+    margin-top: 10%;
+    position: absolute;
+    perspective: 1000px;
+}
+.content-carrousel{
+    width: 90%;
+    position: absolute;
+    animation: imagenes 10s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+ animation-play-state: paused;
+}
+.figure{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.content-carrousel .figure:nth-child(1){/*deg es grados*/
+    transform: rotateY(0deg)
+    translateZ(300px);
+}
+.content-carrousel .figure:nth-child(2){
+    transform: rotateY(72deg)
+    translateZ(300px);
+}
+.content-carrousel .figure:nth-child(3){
+    transform: rotateY(144deg)
+    translateZ(300px);
+}
+.content-carrousel .figure:nth-child(4){
+    transform: rotateY(216deg)
+    translateZ(300px);
+}
+.content-carrousel .figure:nth-child(5){
+    transform: rotateY(288deg)
+    translateZ(300px);
+}
+.content-carrousel .figure:nth-child(6){
+    transform: rotateY(360deg)
+    translateZ(300px);
+}
+@keyframes imagenes{
+      form{
+       transform:rotateY(0deg)
+      }to{
+        transform:rotateY(360deg)
+      }
+}

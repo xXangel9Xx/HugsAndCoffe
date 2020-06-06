@@ -1,0 +1,57 @@
+<div>
+    <nav class="nav-create-usuario">
+        <div class="logoAB-profile">
+            <p class="p-logoAb">A&B</p>
+        </div>
+
+        <div class="profile">
+            <div class="image-profile">
+               
+            </div>
+
+            <h1 class="name-user">angel Gonzalez</h1>
+        </div>
+    </nav>
+    <div class="container-Perfils-new">
+
+     <div class="nav-perfil-imanes-cuentas">
+     
+      <div>
+       <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
+      </div>
+      <br>
+      <div>
+        <%= image_tag 'icon.png' %> <a href="/galeries">Imagenes</a>
+      </div>
+      <br>
+      <div>
+       <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
+      </div>
+     <br>
+    </div>
+    <div class="edit-estado">
+            <%= link_to 'Editar', edit_estado_path(@estado), :class=>"text-edit-estate" %>
+    </div>
+    <div class="delete-estado">
+            <%= link_to 'eliminar', estados_path(@estado), :class=>"text-edit-estate", method: :delte %>
+    </div>
+
+    <div style="
+    text-align: center;
+    position: absolute;
+    margin-left: 26%;
+    width: 74%;
+    margin-top: 1%;">
+       <p style="margin-bottom: 1%;"><%=@estado.description%></p> <!--ponte que 180 caracteres cuanto maximo-->
+        <div class="container-all-images-estado">
+            <div class="content-carrousel">
+                    <div class="figure"><%=image_tag(@estado.images[0], :class=>'images-estados')%></div>
+                    <div class="figure"><%=image_tag(@estado.images[1], :class=>'images-estados')%></div>
+                    <div class="figure"><%=image_tag(@estado.images[2], :class=>'images-estados')%></div>
+                    <div class="figure"><%=image_tag(@estado.images[3], :class=>'images-estados')%></div>
+                    <div class="figure"><%=image_tag(@estado.images[4], :class=>'images-estados')%></div>
+                    <div class="figure"><%=image_tag(@estado.images[5], :class=>'images-estados')%></div>     
+            </div>
+        </div>
+    </div>   
+</div>

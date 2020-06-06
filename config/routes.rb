@@ -5,10 +5,8 @@ devise_for :users, path: 'users', path_names: { sign_in: 'sign_in', sign_out: 's
 
 get '/', to: 'hugs_and_coffes#new'
 resources :bank_accounts
-
-resources :perfils, except: [:index] do
-   resources :estados 
-end
+resources :estados 
+resources :perfils
 resources :galeries
 
 
@@ -23,4 +21,7 @@ end
 #get '/perfils', to: 'perfils#new'
 #namespace :users do
 #  root :to => 'perfils#new'
+#end,
+# except: [:index] do
+   
 #end

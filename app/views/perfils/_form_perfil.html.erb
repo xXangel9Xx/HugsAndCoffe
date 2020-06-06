@@ -1,0 +1,82 @@
+<div class="dates-usuario">
+<%=form_with model:@perfil, local: true do |f| %>
+
+  <div class="add_full_name-and-ocupation">
+  <div style="margin-right: 49%;">
+    <br>
+      <%= f.label :full_name%>
+    <br>
+      <%= f.text_field( :full_name)%>
+    <br>
+  </div>
+
+
+  <div>
+    <br>
+      <%=f.label :ocupation%>
+    <br>
+      <%=f.text_field(:ocupacion)%>
+    <br>
+  </div>  
+  </div>
+
+
+  <div>
+    <br>
+      <%=f.label :biografia%>
+    <br>
+      <div><%=f.text_field(:biografia)%></div>
+    <br>
+  </div>
+
+  <div>
+      <br>
+        <%=f.label :image%>
+      <br>
+        <%=f.file_field(:image) %>
+        <div style="    
+            margin: 4%;
+            padding-left: 22%;
+            height: 135px;
+            padding-top: 14%;
+            padding-bottom: 8%;
+            padding-right: 24%;
+            background: #FFFFFF;
+            box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+            border-radius: 5px;">
+        <%= image_tag 'message.png' %>
+        </div>
+        
+  </div>
+<br>
+<br>
+</div>
+
+<div class="monto-coffe-and-symbol">
+  <div class="monto-of-an-coffe">
+    <div>
+          <p class="text-monto-coffe">Monto de un cafe</p>
+        <br>
+      <div class="input-monto-coffe"><%=f.number_field :amountCoffe%></div>
+        <br>
+          <p class="text-monto-coffe">Simbolo de la moneda</p>
+        <br>
+      <div class="input-monto-coffe"><%=f.text_field  :currencySymbol%></div>
+        <br>
+         <p class="text-monto-coffe">Multiplicadores</p>
+         <br>
+        <div class="multiplicadores">
+         <p>hola mundo</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <div style="margin-left: 83%;
+    width: 13%;
+    position: absolute;
+    margin-top: 46%;">
+    <%=f.submit 'Guardar', :class =>'save' %>
+  </div>
+<% end %>
+</div>

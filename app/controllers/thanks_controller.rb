@@ -1,5 +1,9 @@
 class ThanksController < ApplicationController
    before_action :params_create, only:[:create]
+   def index
+      @thanks = Thank.all
+   end 
+
    def new
       @thank = Thank.new
    end

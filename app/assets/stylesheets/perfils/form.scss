@@ -1,0 +1,43 @@
+.dates-usuario{
+    position: absolute;
+    margin-top: 16%;
+    margin-left: 34%;
+    width: 42%;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+    border-radius: 5px;
+}
+.add_full_name-and-ocupation{
+    display: inline-flex;
+}
+.monto-coffe-and-symbol{
+    margin-top: 16%;
+    width: 18%;
+    position: absolute;
+    margin-left: 78%;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+    border-radius: 5px;
+}
+.input-monto-coffe{    
+    width: 80%;
+    margin-left: 10%;
+    background: #FFFFFF;
+    border: 1px solid #C4CDD5;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.text-monto-coffe{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #434242;
+    margin-left: 10%
+}
+.multiplicadores{
+    padding-bottom: 49%;
+    margin-left: 10%;
+}

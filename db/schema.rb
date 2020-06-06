@@ -45,10 +45,8 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
 
   create_table "estados", force: :cascade do |t|
     t.text "description"
-    t.integer "perfil_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["perfil_id"], name: "index_estados_on_perfil_id"
   end
 
   create_table "galeries", force: :cascade do |t|
@@ -58,6 +56,8 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
   end
 
   create_table "perfils", force: :cascade do |t|
+    t.integer "amountCoffe"
+    t.text "currencySymbol"
     t.string "full_name"
     t.string "ocupacion"
     t.text "biografia"
@@ -88,5 +88,4 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "estados", "perfils"
 end

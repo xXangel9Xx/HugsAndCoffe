@@ -4,7 +4,7 @@ class PerfilsController < ApplicationController
     before_action :search, only: [:update,:destroy,:show]
     before_action :params_update, only:[:update]
     def new 
-     @perfils = Perfil.new
+     @perfil = Perfil.new
     end
 
     def create
@@ -25,7 +25,8 @@ class PerfilsController < ApplicationController
     def destroy
         render @perfil.delete
     end
-
+    def edit
+    end
     def update
      if @perfil.update(params_update)
         flash[:notice] = "Su perfil fue actualizado exitosamente"
@@ -37,11 +38,11 @@ class PerfilsController < ApplicationController
     end
     private 
     def params_create
-        params.require(:perfil).permit(:full_name, :ocupacion ,:biografia, :image)
+        params.require(:perfil).permit(:full_name, :ocupacion ,:biografia, :amountCoffe,:currencySymbol,:image)
     end 
 #:user_id,
     def params_update
-        params.require(:perfil).permit(:full_name, :ocupacion,:biografia )
+        params.require(:perfil).permit(:full_name, :ocupacion,:biografia,:amountCoffe,:currencySymbol,:image)
     end
 
     def search 
