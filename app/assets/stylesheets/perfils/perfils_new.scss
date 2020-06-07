@@ -1,60 +1,74 @@
-.logoAB-profile{
-    background-color: #EE4380;
-    width: 26%;
-    color: white;
-    text-align: center;
-    padding-top: 2%;
-}
-.profile{
-    display: inline-flex;
-    width: 28%;
-    margin-left: 46%;
-    border: 1px solid #C4CDD5;
-}
-.image-profile{
-    position: absolute;
-    margin-top: 1%;
-    width: 9%;
-    height: 70%;
-    border-radius: 48%;
-    background-color: black;
-}
-.name-user{
-    margin-left: 11%;
-    margin-top: 2%;
-    position: absolute;
-}
-.container-Perfils-new{
-    position: absolute;
-    width: 100%;
-    height: -webkit-fill-available;
-    margin-top: 61px;
-    display: inline-flex;
-}
-.nav-perfil-imanes-cuentas{
-    width: 26%;
-    border-right: 0.5px solid #C4CDD5;
-    text-align: center;
-    padding-top: 4%;
-}
+@media screen and(min-width: 700px){
+    .publicar-perfil{
+        width: 107px;
+        height: 9px;
+        left: 1263px;
+        top: 151px;
+        font-family: Roboto;font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: right;color: #434242;
+    }
+    .logoAB-profile{
+        background-color: #EE4380;
+        width: 26%;
+        color: white;
+        text-align: center;
+        padding-top: 2%;
+    }
+    .profile{
+        display: inline-flex;
+        width: 28%;
+        margin-left: 46%;
+        border: 1px solid #C4CDD5;
+    }
+    .image-profile{
+        position: absolute;
+        margin-top: 1%;
+        width: 9%;
+        height: 70%;
+        border-radius: 48%;
+        background-color: black;
+    }
+    .name-user{
+        margin-left: 11%;
+        margin-top: 2%;
+        position: absolute;
+    }
+    .container-Perfils-new{
+        position: absolute;
+        width: 100%;
+        height: -webkit-fill-available;
+        margin-top: 61px;
+        display: inline-flex;
+    }
+    .nav-perfil-imanes-cuentas{
+        width: 26%;
+        border-right: 0.5px solid #C4CDD5;
+        text-align: center;
+        padding-top: 4%;
+    }
 
-.container-publicar-perfil{
-    padding-bottom: 2%;
-    border-bottom: 0.5px solid #C4CDD5;
-    width: 62%;
-    display: flex;
-    height: fit-content;
-    margin-top: 4%;
-    margin-left: 8%;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: -0.02em;
-    color: #212B36;
-
-}
+    .container-publicar-perfil{
+        padding-bottom: 2%;
+        border-bottom: 0.5px solid #C4CDD5;
+        width: 62%;
+        display: flex;
+        height: fit-content;
+        margin-top: 4%;
+        margin-left: 8%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        color: #212B36;
+    }
     .perfil-usuario-text-on-perfil{
         margin-right: 65%;
     }
+}

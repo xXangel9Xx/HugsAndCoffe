@@ -1,3 +1,4 @@
+@media screen and(min-width:700px){
 .container-create-new-bankAccount{    
     padding: 4%;
     position: absolute;
@@ -6,4 +7,11 @@
     margin-top: 7%;
     box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
     border-radius: 5px;
+}
+.container-save-form-bank{
+    margin-left: 70%;
+    width: 13%;
+    position: absolute;
+    margin-top: 17%;
+}
 }

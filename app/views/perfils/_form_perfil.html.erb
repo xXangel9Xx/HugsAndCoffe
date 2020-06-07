@@ -2,7 +2,7 @@
 <%=form_with model:@perfil, local: true do |f| %>
 
   <div class="add_full_name-and-ocupation">
-  <div style="margin-right: 49%;">
+  <div  class="container-input-full-name-perfil-form">
     <br>
       <%= f.label :full_name%>
     <br>
@@ -34,16 +34,7 @@
         <%=f.label :image%>
       <br>
         <%=f.file_field(:image) %>
-        <div style="    
-            margin: 4%;
-            padding-left: 22%;
-            height: 135px;
-            padding-top: 14%;
-            padding-bottom: 8%;
-            padding-right: 24%;
-            background: #FFFFFF;
-            box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
-            border-radius: 5px;">
+        <div class="container-div-image-tag-perfils-form">
         <%= image_tag 'message.png' %>
         </div>
         
@@ -72,10 +63,7 @@
   </div>
 </div>
 
-  <div style="margin-left: 83%;
-    width: 13%;
-    position: absolute;
-    margin-top: 46%;">
+  <div class="container-save-perfil-new">
     <%=f.submit 'Guardar', :class =>'save' %>
   </div>
 <% end %>

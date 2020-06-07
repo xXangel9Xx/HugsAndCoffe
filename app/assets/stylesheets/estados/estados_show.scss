@@ -1,3 +1,4 @@
+@media screen and(min-width:700px){
 .delete-estado{
     position: absolute;
     background: #EE4380;
@@ -80,4 +81,5 @@
       }to{
         transform:rotateY(360deg)
       }
+}
 }
