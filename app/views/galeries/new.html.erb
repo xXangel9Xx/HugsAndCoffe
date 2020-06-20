@@ -1,4 +1,8 @@
-<div>
+<div style="    
+    background: #F8F8F8;
+    position: absolute;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;">
 <nav class="nav-create-usuario">
         <div class="logoAB-profile">
             <p class="p-logoAb">A&B</p>
@@ -13,8 +17,7 @@
         </div>
     </nav>
  <div class="container-Perfils-new">
-
-     <div class="nav-perfil-imanes-cuentas">
+     <div class="nav-perfil-images-cuentas">
      
       <div>
        <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
@@ -28,20 +31,24 @@
        <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
       </div>
      <br>
- </div>
-  <div  class="text-crearImage">
-    <p>Crear Imagen</p>
   </div>
+  </div>
+
+ <div  class="text-crearImage">
+    <p class="lema-subtitle">Crear Imagen</p>
+  </div> 
+
 
   <div class="sutitle-galeries-text">
    <h1>Subtitulo</h1>
-   <p>Agrega un subtitulo que otorgue vida a tu imagen.</p>
+   <p class="lema-subtitle">Agrega un subtitulo que otorgue vida a tu imagen.</p>
   </div>
-  
+
   <div class="text-h1-p">
       <h1>Imagen</h1>
       <p>Comparte imagenes que conecten con las personas y muestren a que te dedicas.</p>
   
   </div>
+
   <%= render partial: 'form_galeries', layout:'form_galeries' %>
 </div>

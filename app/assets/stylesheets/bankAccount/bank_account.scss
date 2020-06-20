@@ -1,16 +1,15 @@
 // Place all the styles related to the bankAccount controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-@media screen and(min-width:700px){
-.container-text-create-account-bank{
-    width: 63%;
-    height: 6%;
-    margin-top: 3%;
-    border-bottom: inset;
-    margin-left: 32%;
-    position: absolute;
-}
-
+@media screen and(min-width:300px){
+    .container-text-create-account-bank{
+        width: 79%;
+        height: 6%;
+        margin-top: 25%;
+        border-bottom: inset;
+        margin-left: 12%;
+        position: absolute;    
+    }
 .create-account-bank{
     font-family: Roboto;
     font-style: normal;
@@ -22,7 +21,25 @@
 }
 .container-text-information-accountBank{
     position: absolute;
-    margin-top: 13%;
+    margin-top: 38%;
+    margin-left: 9%;
+    width: 95%;
+}
+}
+
+@media screen and(min-width:700px){
+.container-text-create-account-bank{
+    width: 63%;
+    height: 6%;
+    margin-top: 7%;
+    border-bottom: inset;
+    margin-left: 32%;
+    position: absolute;
+}
+
+.container-text-information-accountBank{
+    position: absolute;
+    margin-top: 23%;
     margin-left: 32%;
     width: 13%;
 }

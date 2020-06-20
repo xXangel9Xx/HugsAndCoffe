@@ -1,4 +1,7 @@
-<div>
+<div style="    
+        position: absolute;
+        width: -webkit-fill-available;
+">
 <nav class="nav-create-usuario">
         <div class="logoAB-profile">
             <p class="p-logoAb">A&B</p>
@@ -12,32 +15,28 @@
             <h1 class="name-user">angel Gonzalez</h1>
         </div>
     </nav>
- <div class="container-Perfils-new">
+    <div class="container-Perfils-new">
+     <div class="nav-perfil-images-cuentas">
+        <div>
+            <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
+        </div>
+        <br>
+        <div>
+            <%= image_tag 'icon.png' %> <a href="/galeries">Imagenes</a>
+        </div>
+        <br>
+        <div>
+            <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
+        </div>
+        <br>
+     </div>
+    </div>
 
-     <div class="nav-perfil-imanes-cuentas">
-     
-      <div>
-       <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
-      </div>
-      <br>
-      <div>
-        <%= image_tag 'icon.png' %> <a href="/galeries">Imagenes</a>
-      </div>
-      <br>
-      <div>
-       <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
-      </div>
-     <br>
- </div>
+    <div class="container-list-account-index">
+     <h1  class="h1-list-image-text">Listado de Imagenes</h1>
 
-    <div class="container-list-account">
-     <h1>Listado de Imagenes</h1>
-
-     <div class="addAccount">
-        <a href="/galeries/new" style="    
-        text-decoration: none;
-        color: white;
-        font-size: 26px">Crear</a>
+     <div class="addAccount-index">
+        <a href="/galeries/new" class="crear-text-a">Crear</a>
      </div>
 
     </div>
@@ -45,7 +44,6 @@
     
      <div class="container-images-galeries">
    <%@galeries.each_with_index do |photo,index|%>
-       
             <div class="image-galeries">
             <%= link_to edit_galery_path(photo) do%>
                 <%=image_tag(photo.image, :class =>'image-galeries') %>

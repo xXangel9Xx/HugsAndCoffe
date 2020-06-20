@@ -1,8 +1,43 @@
-
-@media screen and (min-width: 600px) {
-
+@media screen and (min-width: 340px){
+    .dates-usuario{
+        padding: 8%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+        margin: 5%;
+    }
+    .monto-coffe-and-symbol{
+        padding: 8%;
+        margin: 5%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+    }
     .container-save-perfil-new{
-        margin-left: 83%;
+        width: 40%;
+        margin-left: 29%;
+    }
+    .container-div-image-tag-perfils-form{
+        padding: 3%;
+        padding-left: 11%;
+        padding-top: 9%;
+    }
+
+}
+
+@media screen and (min-width: 1000px) { 
+       .dates-usuario{
+        padding: 0%;
+        position: absolute;
+        margin-top: 16%;
+        margin-left: 34%;
+        width: 38%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+    }
+    .container-save-perfil-new{
+        margin-left: 80%;
         width: 13%;
         position: absolute;
         margin-top: 46%;
@@ -22,24 +57,18 @@
     .container-input-full-name-perfil-form{
         margin-right: 12%;
     }
-    .dates-usuario{
-        position: absolute;
-        margin-top: 16%;
-        margin-left: 34%;
-        width: 42%;
-        background: #FFFFFF;
-        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
-        border-radius: 5px;
-    }
+
     .add_full_name-and-ocupation{
+        justify-content: space-between;
         display: inline-flex;
         width: -webkit-fill-available;
     }
     .monto-coffe-and-symbol{
+        padding: 4%;
         margin-top: 16%;
         width: 18%;
         position: absolute;
-        margin-left: 78%;
+        margin-left: 73%;
         background: #FFFFFF;
         box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
         border-radius: 5px;

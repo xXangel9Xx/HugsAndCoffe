@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
   create_table "bank_accounts", force: :cascade do |t|
     t.string "entidad"
     t.string "email"
-    t.integer "account"
-    t.integer "identification"
+    t.string "account"
+    t.string "identification"
     t.string "typeAccount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

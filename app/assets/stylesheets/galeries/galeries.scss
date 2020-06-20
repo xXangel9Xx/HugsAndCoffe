@@ -1,3 +1,56 @@
-// Place all the styles related to the galeries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@media screen and (min-width: 400px){
+    .text-h1-p{
+        position: absolute;
+        margin-top: 71%;
+        margin-left: 8%;
+    }
+
+    .sutitle-galeries-text{
+        margin-top: 40%;
+        margin-left: 8%;
+        position: absolute;
+    }
+    .lema-subtitle{
+        position: absolute;
+        width: 364px;
+        height: 15px;       
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 134.77%;
+        color: #434242;
+    }
+    .text-crearImage{    
+        position: absolute;
+        margin-top: 25%;
+        width: 85%;
+        margin-left: 9%;
+        padding-bottom: 8%;
+        border-bottom: inset;
+    }
+
+
+}
+@media screen and (min-width:1000px){
+    .text-crearImage{
+        position: absolute;
+        margin-top: 9%;
+        width: 64%;
+        margin-left: 32%;
+        padding-bottom: 4%;
+        border-bottom: inset;
+    }
+    .sutitle-galeries-text{
+        margin-top: 17%;
+        margin-left: 32%;
+        position: absolute;
+    }
+    .text-h1-p{
+        position: absolute;
+        margin-top: 32%;
+        margin-left: 32%;
+        width: 332px;
+    }
+}

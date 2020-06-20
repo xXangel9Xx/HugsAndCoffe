@@ -1,10 +1,9 @@
 <div class="new-photo-galeries">
      <%=form_with model:@galery, local:true do |f|%>
        <div class="container-subtitle-image">
-       <br>
         <%=f.label :subtitulo%>
         <br>
-        <%=f.text_field(:subtitulo) %>
+        <%=f.text_field(:subtitulo, :class=>"input-subtitle") %>
         <br>
        </div>
        <br>
