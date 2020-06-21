@@ -38,18 +38,18 @@
         color: white;
         font-size: 26px">Crear</a>
      </div>
-
     </div>
+   
     <div class="index-accounts-banks">
     <%if @bank_accounts%>
     <%@bank_accounts.each do |bank_account|%>
     <table class="all-accounts">
         <tr class="container-show-account">
-            <td> <p class="td-accounts-index">Entidad: <%for i in 0..bank_account.entidad.length/2%><%=bank_account.entidad[i]%><%end%>..</p></td>
-            <td> <p class="td-accounts-index">Numero de cuenta: <%for i in 0..bank_account.account.length/2%><%=bank_account.account[i]%><%end%>..</p></td>  
-            <td> <p class="td-accounts-index"> Identificacion: <%for i in 0..bank_account.identification.length/2%><%=bank_account.identification[i]%><%end%>..</p></td>
-            <td> <p class="td-accounts-index">Tipo de cuenta: <%for i in 0..bank_account.typeAccount.length/2%><%=bank_account.typeAccount[i]%><%end%>..</p></td>
-            <td><%=link_to  edit_bank_account_path(bank_account) do %>
+            <td style="width: 10%;"> <p class="td-accounts-index"><%for i in 0..bank_account.entidad.length/2%><%=bank_account.entidad[i]%><%end%>..</p></td>
+            <td style="width: 10%;"> <p class="td-accounts-index"><%for i in 0..bank_account.account.length/2%><%=bank_account.account[i]%><%end%>..</p></td>  
+            <td style="width: 10%;"> <p class="td-accounts-index"><%for i in 0..bank_account.identification.length/2%><%=bank_account.identification[i]%><%end%>..</p></td>
+            <td style="width: 10%;"> <p class="td-accounts-index"><%for i in 0..bank_account.typeAccount.length/2%><%=bank_account.typeAccount[i]%><%end%>..</p></td>
+            <td style="width: 10%;"><%=link_to  edit_bank_account_path(bank_account) do %>
                 <%=image_tag 'menu_accounts.png'%>
                <%end%></td>
             
@@ -59,11 +59,10 @@
     <br>
     <%end%>
     <%else%>
-
- 
        <div class="null-accounts-banks">
        <h1 style="margin-top: 17px;">No contiene cuentas registradas</h1>
        </div>
    <%end%>
     </div>
+   
 </div>
