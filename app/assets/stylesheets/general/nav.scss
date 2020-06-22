@@ -1,6 +1,3 @@
-// Place all the styles related to the perfils controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 @media screen and(min-width: 300px){
     .nav-create-usuario{
         display: inline-flex;
@@ -47,8 +44,8 @@
         color: white;
         text-align: center;
         padding-top: 2%;
-    }
-
+    } 
+    
     .profile{
         display: inline-flex;
         width: 28%;
@@ -56,17 +53,20 @@
         border: 1px solid #C4CDD5;
     }
 
-    .image-profile{
+  .image-profile{
         position: absolute;
         margin-top: 1%;
         width: 9%;
         height: 70%;
         border-radius: 48%;
         background-color: black;
-    }
+    }  
     .name-user{
         margin-left: 11%;
         margin-top: 2%;
         position: absolute;
     }
+  
+  
+  
 }
