@@ -1,0 +1,10 @@
+<div>
+<%=form_with model:@thank, local:true do |f|%>
+ <%=f.label :name%>
+ <%=f.text_field(:name)%>
+ <%=f.label :ocupacion%>
+ <%=f.text_field(:ocupacion)%>
+ <%=f.label :message%>
+ <%=f.text_field(:message)%>
+<%end%>
+</div>

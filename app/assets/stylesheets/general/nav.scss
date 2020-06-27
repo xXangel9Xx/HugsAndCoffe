@@ -1,5 +1,10 @@
 @media screen and(min-width: 300px){
-    .nav-create-usuario{
+    .burguer{
+        position: absolute;
+        display: flex;
+        margin: 4%;
+    }
+    .navCreateUsuario{
         display: inline-flex;
         position: absolute;
         width: 100%;
@@ -28,7 +33,10 @@
 }
 
 @media screen and(min-width: 1000px){
-    .nav-create-usuario{
+    .burguer{
+        display: none;
+    }
+    .navCreateUsuario{
         display: inline-flex;
         position: absolute;
         width: 100%;

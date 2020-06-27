@@ -1,12 +1,16 @@
 @media screen and (min-width: 340px){
     .dates-usuario{
-        padding: 8%;
+        padding-top: 20%;
+        padding-left: 8%;
+        padding-right: 8%;
         background: #FFFFFF;
         box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
         border-radius: 5px;
-        margin: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .monto-coffe-and-symbol{
+        width: 75%;
         padding: 8%;
         margin: 5%;
         background: #FFFFFF;
@@ -16,11 +20,25 @@
     .container-save-perfil-new{
         width: 40%;
         margin-left: 29%;
+        /*margin-top: 89%;*/
     }
     .container-div-image-tag-perfils-form{
         padding: 3%;
         padding-left: 11%;
         padding-top: 9%;
+    }
+
+    .multiplicadores{
+        display: inline-flex;
+        padding-bottom: 49%;
+    }
+    .valueMultipl{
+        margin-right: 20%;
+        border: 1px solid #EE4380;
+        box-sizing: border-box;
+        border-radius: 44%;
+        padding-right: 5px;
+        padding-left: 5px;
     }
 
 }
@@ -63,7 +81,8 @@
         display: inline-flex;
         width: -webkit-fill-available;
     }
-    .monto-coffe-and-symbol{
+    .monto-coffe-and-symbol{ 
+        position: absolute;
         padding: 4%;
         margin-top: 16%;
         width: 18%;
@@ -91,8 +110,8 @@
         color: #434242;
         margin-left: 10%
     }
-    .multiplicadores{
-        padding-bottom: 49%;
-        margin-left: 10%;
+    .multiplicadores{    
+        margin-left: 8%;
     }
+
 }

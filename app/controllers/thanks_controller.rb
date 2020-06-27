@@ -22,6 +22,6 @@ class ThanksController < ApplicationController
     private
 
     def params_create
-      params.require(:thank).permit(:coffee,:hug,:name,:message,:ocupacion )
+      params.require(:thank).permit(:coffee,:hug,:value_coffes,:name,:message,:ocupacion )
     end
 end

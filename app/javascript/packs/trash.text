@@ -1,0 +1,3 @@
+del nav 
+nav_create_usuario.innerHTML += Nav_movile
+burger.setAttribute()

@@ -1,6 +1,6 @@
 @media screen and(min-width:300px){
     .container-list-account{ 
-        position: absolute;
+        /*position: absolute;*/
         margin-left: 5%;
         display: inline-flex;
         margin-top: 26%;
@@ -9,7 +9,7 @@
         padding-bottom: 1%;
     }
     .addAccount{    
-        margin-left: 25%;
+        margin-left: 53%;
         height: 42px;
         background: #EE4380;
         border: 1px solid #EE4380;
@@ -19,13 +19,12 @@
         color: white;
         font-size: 26px;
         padding-top: 8px;
-        padding-top: 8px;
         padding-left: 2px;
-        width: 24%;
+        width: 70px;
     }
     .index-accounts-banks{
-        position: absolute;
-        margin-top: 53%;
+        /*position: absolute;*/
+        margin-top: 7%;
         padding-left: 4%;
     }
     .all-accounts{    
@@ -37,7 +36,7 @@
 }
 @media screen and(min-width:700px){
     .container-list-account{    
-        position: absolute;
+        /*position: absolute;*/
         margin-left: 21%;
         display: inline-flex;
         margin-top: 11%;
@@ -62,8 +61,9 @@
     }
     
     .index-accounts-banks{
+       /* position: absolute;*/
         width: 56%;
-        margin-top: 23%;
+        margin-top: 5%;
         margin-left: 29%;
         padding-left: 0%;
     }
@@ -71,6 +71,7 @@
 @media screen and(min-width:1000px){
 
 .index-accounts-banks{
+    position: absolute;
     width: 56%;
     margin-top: 12%;
     margin-left: 39%;
