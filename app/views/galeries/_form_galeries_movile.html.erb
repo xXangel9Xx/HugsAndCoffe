@@ -1,0 +1,35 @@
+<div class="new-photo-galeries-movile">
+ <div  class="text-crearImage-movile">
+    <p class="lema-subtitle-movile">Crear Imagen</p>
+  </div> 
+     <%=form_with model:@galery, local:true do |f|%>
+       <div class="sutitle-galeries-text-movile">
+          <p class="lema-subtitle-movile">Agrega un subtitulo que otorgue vida a tu imagen.</p>
+       </div>
+       <div class="container-subtitle-image-movile">
+        <%=f.label :subtitulo%>
+        <br>
+        <%=f.text_field(:subtitulo, :class=>"input-subtitle") %>
+        <br>
+       </div>
+       <br>
+
+       <div class="container-galery-image-new-movile">
+          <div class="text-h1-p-movile">
+               <h1>Imagen</h1>
+               <p>Comparte imagenes que conecten con las personas y muestren a que te dedicas.</p>
+          </div>
+
+            <%=f.file_field(:image)%>
+            <div class="form-image-container-galeries">
+            <%= image_tag 'message.png' %>
+            </div>
+        </div>
+
+         <hr>
+
+        <div class="container-save-form-galeries">
+        <%=f.submit 'Guardar', :class =>'save' %>
+        </div>
+     <%end%>
+</div>

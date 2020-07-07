@@ -1,20 +1,8 @@
-<div>
-  <%= render partial: './general/nav', layout: './general/nav' %>
-  <div class="container-Perfils-new">
-    <div class="nav-perfil-imanes-cuentas">
-      <div>
-       <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
-      </div>
-      <br>
-      <div>
-        <%= image_tag 'icon.png' %> <a href="/galeries">Imagenes</a>
-      </div>
-      <br>
-      <div>
-       <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
-      </div>
-     <br>
-    </div>
-  </div>
-<%= render partial: 'form_thanks', layout: 'form_thanks'%>
+
+<div data-context="thanks--new">
+  <%=render partial: 'selection', layout: 'selection'%>
+  <%=render partial: 'form_coffe', layout: 'form_coffe'%>
+  <%=render partial: 'hug', layout:'hug'%>
+  <%=render partial: 'form_thanks', layout: 'form_thanks'%>
+  <%=render partial: 'thank', layout: 'thank'%>
 </div>

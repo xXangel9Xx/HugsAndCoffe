@@ -1,0 +1,56 @@
+<div class="container_thanks_form_coffe">
+   <div class="container_exit_coffe">
+      <%= image_tag 'Vector.png',:class=>"exit" %>
+   </div>
+   
+   <%=form_with model: @thank do |f|%>
+   <div class="container-how-many-coffe">
+      <div class="how_many_coffe">
+       <p class="text-how-many-coffe">¿Cuantos café?</p>
+        <div class="multiplicadores_coffe">
+            <%= image_tag 'coffe.png', :class=>"coffe-image-multiplicadores" %>
+            <p class="simbol-X">X</p>
+          <div class="valueMultipl_coffe_thanks" value="1">1</div>
+          <div class="valueMultipl_coffe_thanks" value="2">2</div>
+          <div class="valueMultipl_coffe_thanks" value="3">3</div>
+          <div class="valueMultipl_coffe_thanks" value="4">4</div>
+          <div class="valueMultipl_coffe_thanks" value="5">5</div>
+         </div>
+         <p class="type-date">560</p>
+         <p class="type-date">total:1200</p>
+      </div>
+    </div>
+      <div class="container-dates-user-bank">
+      <h1>Datos de Salvador</h1>
+      <br>
+      <p class="type-date">Entidad: <span class="dates">Banco Banana Republic</span> </p>
+      <p class="type-date">Email: <span class="dates">xyz@xyz.xyz</span></p>
+      <p class="type-date">Nro de cuenta:<span class="dates"> 12345678912345678912</span> </p>
+      <p class="type-date">identificacion:<span class="dates">27623280</span></p>
+      <hr>
+      <p class="type-date">Entidad: <span class="dates">Paypal</span></p>
+      <p class="type-date">Email:<span class="dates">xyz@</span></p>
+      <p>..</p>
+      </div>
+      <div class="container_date_person">      
+       <p class="type-date">Nombre</p>
+       <br>
+       <%=f.text_field(:name, :class=>"input-thank" )%>
+       <br>
+       <br>
+       <p class="type-date">Ocupación</p>
+       <br>
+       <%=f.text_field(:ocupacion, :class=>"input-thank")%>
+       <br>
+       <br>
+       <p class="type-date">Mensaje de agradecimiento</p>
+       <br>
+       <%=f.text_field(:message, :class=>"input-thank-message") %>
+      </div>
+      <br>
+       <div class="width_save">
+        <%=f.submit 'Guardar', :class =>'save' %>
+       </div>
+      <%end%>
+
+   </div>

@@ -1,0 +1,98 @@
+@media screen and (min-width:300px){
+    .container-new-thanks{
+        padding-top: 30%;
+        display: block;
+    }
+    .container_exit_selection{
+        width: 24px;
+        margin-left: 15%;
+    }
+    .exit{
+        height: 19px;
+    }
+    .thanks-selection{    
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container-image-selection{
+        background: #FFFFFF;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        text-align: center;
+        padding: 5%;
+        justify-content: center;
+    }
+    .image_coffe_thanks{
+        height: 65px;
+    }
+    .image-empty{    
+        margin-left: 28%;
+    }
+    .text-cafe-heard{
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .container-recognize{
+        margin-bottom: 8%;
+        text-align: center;
+    }
+    .text-aside{
+    text-align: center;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    }
+}
+@media screen and (min-width:470px){
+    .image-empty{    
+        margin-left: 32%;
+    }
+}
+@media screen and (min-width:500px){
+    .image-empty{    
+        margin-left: 35%;
+    }
+    .container-new-thanks{
+        padding-top: 20%;
+    }
+}
+@media screen and(min-width:600px){
+    .container-new-thanks{
+        padding-top: 15%;
+    }
+    .image-empty{    
+        margin-left: 40%;
+    }
+}
+@media screen and(min-width:1000px){
+    .container-new-thanks{
+        padding-top: 8%;
+    }
+    .container-recognize{
+        width: 100%;
+        position: absolute;
+    }
+    .thanks-selection{
+        width: 100%;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+
+    .image-empty{
+        margin-left: 44%;
+        position: absolute;
+        margin-top: 20%;
+    }
+    .container-text-aside{
+        position: absolute;
+        margin-top: 40%;
+        margin-left: 40%;
+    }
+}

@@ -13,6 +13,7 @@ require("channels")
 
 import LoadContent from "../utils"
 import Nav from "./general/nav"
+import HugsOrCoffe from "./thanks/thanks_new"
 const load = new LoadContent()
 
 document.addEventListener('turbolinks:load', function (){console.log('nose')})
@@ -22,7 +23,17 @@ const nav = new Nav()
  if (nav.context() == 'general--nav'){
      nav.burger()
      nav.exitMenuMovile()
- }
+ };
+ 
+const hugsOrCoffe = new HugsOrCoffe()
+ if (hugsOrCoffe.context() == 'thanks--new'){
+    hugsOrCoffe.selectionFormCoffe()
+    hugsOrCoffe.selectionFormHug()
+    hugsOrCoffe.containerFollowing()
+    hugsOrCoffe.exitThankCoffe()
+    hugsOrCoffe.exitHug()
+    hugsOrCoffe.exitFormHug()
+ };
 
 });
 

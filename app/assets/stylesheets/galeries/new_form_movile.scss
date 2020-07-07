@@ -1,0 +1,108 @@
+@media screen and (min-width: 300px){
+    .text-crearImage-movile{
+        margin-bottom: 5%;
+        padding-bottom: 5%;
+        border-bottom: inset;
+    }
+    .container-galery-image-new-movile{
+        padding-bottom: 15%;
+    }
+    .sutitle-galeries-text-movile{
+        width: 100%;
+    }
+    .lema-subtitle-movile{
+        width: 308px;
+        height: 15px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 132.77%;
+        color: #434242;
+    }
+    .new-photo-galeries-movile{
+        margin-top: 20%;
+        width: 80%;
+        margin-left: 3%;
+    }
+    .lema-subtitle-movile{
+        width: 364px;
+        height: 15px;       
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 134.77%;
+        color: #434242;
+    }
+    .container-subtitle-image-movile{
+        margin-top: 5%;
+        padding: 2%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+    }
+    .text-h1-p-movile{
+        margin-bottom: 9%;
+    }
+}
+@media screen and (min-width:700px){
+    .container-subtitle-image-movile{
+        margin-top: 4%;
+    }
+    .new-photo-galeries-movile{
+        margin-top: 13%;
+    }
+}
+@media screen and (min-width: 1000px){
+    .container-galery-image-new-movile{
+        display: none;
+    }
+    .sutitle-galeries-text-movile{
+        display: none;
+    }
+    .lema-subtitle-movile{
+        display: none;
+    }
+    .new-photo-galeries-movile{
+        display: none;
+    }
+    .lema-subtitle-movile{
+        display: none;
+    }
+    .container-subtitle-image-movile{
+        display: none;
+    }
+    .new-photo-galeries-movile{
+        display: none;
+    }
+    .text-h1-p-movile{
+        display: none;
+    }
+}
+@media screen and (min-width: 1000px){
+    .container-galery-image-new-movile{
+        display: none;
+    }
+    .sutitle-galeries-text-movile{
+        display: none;
+    }
+    .lema-subtitle-movile{
+        display: none;
+    }
+    .new-photo-galeries-movile{
+        display: none;
+    }
+    .lema-subtitle-movile{
+        display: none;
+    }
+    .container-subtitle-image-movile{
+        display: none;
+    }
+    .new-photo-galeries-movile{
+        display: none;
+    }
+    .text-h1-p-movile{
+        display: none;
+    }
+}
