@@ -13,6 +13,7 @@ require("channels")
 
 import LoadContent from "../utils"
 import Nav from "./general/nav"
+import Multiplicador from './general/new_multiplicador'
 import HugsOrCoffe from "./thanks/thanks_new"
 const load = new LoadContent()
 
@@ -20,11 +21,17 @@ document.addEventListener('turbolinks:load', function (){console.log('nose')})
 load.ready(function(){
 
 const nav = new Nav()
+
  if (nav.context() == 'general--nav'){
      nav.burger()
      nav.exitMenuMovile()
  };
  
+ const multiplicadorPerfil = new Multiplicador()
+ if (multiplicadorPerfil.context() == 'general--nav'){
+     multiplicadorPerfil.multiplicador()
+ };
+
 const hugsOrCoffe = new HugsOrCoffe()
  if (hugsOrCoffe.context() == 'thanks--new'){
     hugsOrCoffe.selectionFormCoffe()
