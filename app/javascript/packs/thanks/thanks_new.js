@@ -46,7 +46,6 @@ export default function HugsOrCoffe(){
           exit_thank_coffe[i].addEventListener('click',(e)=>{
             container_thanks_form_coffe.style.display = "none";
             container_new_thanks.style.display = "block"; 
-            
           },true);
        };
     };

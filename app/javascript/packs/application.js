@@ -15,10 +15,12 @@ import LoadContent from "../utils"
 import Nav from "./general/nav"
 import Multiplicador from './general/new_multiplicador'
 import HugsOrCoffe from "./thanks/thanks_new"
+import Hug from "./thanks/hug_new"
 const load = new LoadContent()
 
 document.addEventListener('turbolinks:load', function (){console.log('nose')})
 load.ready(function(){
+
 
 const nav = new Nav()
 
@@ -41,7 +43,11 @@ const hugsOrCoffe = new HugsOrCoffe()
     hugsOrCoffe.exitHug()
     hugsOrCoffe.exitFormHug()
  };
-
+let seconds = 0
+ const hug = new Hug
+ if (hug.context() == 'thanks--new'){
+     hug.hugSeconds(seconds)
+ };
 });
 
 /*
