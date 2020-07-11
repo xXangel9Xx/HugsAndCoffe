@@ -43,21 +43,14 @@ const hugsOrCoffe = new HugsOrCoffe()
     hugsOrCoffe.exitHug()
     hugsOrCoffe.exitFormHug()
  };
-let seconds = 0
- const hug = new Hug
+const hug = new Hug 
+let second = 0
+
  if (hug.context() == 'thanks--new'){
-     hug.hugSeconds(seconds)
+   hug.hugSeconds()
  };
 });
 
-/*
-const perfil = Perfil()
-if (perfil.context()==''){
-    
-}*/
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+
+
+

@@ -2,6 +2,9 @@ export default function HugsOrCoffe(){
     this.context = function(){
         return document.querySelector("[data-context]").dataset['context'];
     };
+
+
+
     this.containerFollowing = function(){
         let container_following = document.getElementsByClassName('container-following');
         let container_hug = document.getElementsByClassName('container_hug')[0];
