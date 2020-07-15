@@ -4,19 +4,19 @@ export default function Hug(){
   };
 
   this.animationHug = function(){
-    
+    let circleHug = document.getElementsByClassName("circle-hug")[0];
   }
 
 
 
-let contador = 0
+let contador = 0 
   this.hugSeconds = function(){
     let circleHug = document.getElementsByClassName("circle-hug")[0];
     let seconds = document.getElementsByClassName("seconds")[0];
+    let hug = document.getElementById("abrazo");
     (function(){
       let interval
       circleHug.addEventListener('mouseup',(e)=>{
-          console.log(`${contador}`)
           clearInterval(interval)
       })
 
@@ -24,9 +24,11 @@ let contador = 0
       let contar = function(){
         contador++
         if (contador<60){
-        seconds.innerHTML = contador+'S'
+          hug.value = contador
+          seconds.innerHTML = contador+'S'
          }
       }
+       
      interval =  setInterval(contar,1000)
     },true)
     }())

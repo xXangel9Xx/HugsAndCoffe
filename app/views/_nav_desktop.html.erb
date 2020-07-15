@@ -1,0 +1,20 @@
+<div class="container-Perfils-new">
+  <div class="nav-perfil-images-cuentas">
+    <div>
+         <%= image_tag 'icon.svg'%><%= link_to 'Perfil', perfil_path(current_user.id,@perfil) %>
+    </div>
+      <br>
+    <div>
+      <%= image_tag 'icon.png' %> <%= link_to 'Imagenes', perfil_galeries_path(current_user.id,@perfil)	 %>
+    </div>
+      <br>
+    <div>
+       <%= image_tag 'iconCuentas.svg' %> <%= link_to 'Cuentas', perfil_bank_accounts_path(current_user.id,@perfil) %>
+    </div>
+    <br>
+    <div>
+       <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete%>
+    </div>
+     <br>
+  </div>
+</div>

@@ -1,4 +1,46 @@
 @media screen and (min-width:300px){
+    .navthank{
+        display: inline-flex;
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    .logoAB-profile-thank{
+        background-color: #EE4380;
+        width: 26%;
+        color: white;
+        text-align: center;
+        padding-top: 2%;
+    }
+    .p-logoAb-thank{
+        margin: 0%;
+    }
+    .profile-thank{
+        display: inline-flex;
+        width: 28%;
+        margin-left: 46%;
+        border: 1px solid #C4CDD5;
+    }
+    .image-profile-thank{
+        position: absolute;
+        margin-top: 1%;
+        width: 9%;
+        height: 70%;
+        border-radius: 48%;
+        background-color: black;
+    }
+    .name-user-thank{
+        margin-left: 11%;
+        margin-top: 2%;
+        position: absolute;
+        font-size: 90%;
+    }
+
+    
     .container-new-thanks{
         padding-top: 30%;
         display: block;

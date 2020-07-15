@@ -1,23 +1,41 @@
- <%= render partial: './general/nav', layout: './general/nav' %>
+
+<div data-context="general--nav">
+        <nav class="class_movile">
+           <%= image_tag 'exit_image.png', :id => "exit-menu-movile" %>
+            <div class="ABC_movile"><p>A&B</p></div>
+             <div class="container_link_movile_nav"><a href="" class="link_movile_nav">Perfil</a></div>
+            <div class="container_link_movile_nav"><a href="" class="link_movile_nav">Imagenes</a></div>
+            <div class="container_link_movile_nav"><a href="" class="link_movile_nav">Cuentas</a></div>
+            <div class="container_link_movile_nav"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class=>"link_movile_nav"%></div>
+        </nav>
+
+  
+   <nav  class="navCreateUsuario">
+        <%= image_tag 'Header.png', :class => "burguer", :id=>'menu-burger'%>
+        <div class="logoAB-profile">
+            <p class="p-logoAb">A&B</p>
+        </div>
+        <div class="profile">
+            <div class="image-profile">  
+            </div>
+            <h1 class="name-user"><%=%></h1>
+        </div>
+    </nav>
+</div><!--angel Gonzalez-->
 <div>
-    <div class="container-Perfils-new">
-     <div class="nav-perfil-images-cuentas">
-      <div>
-         <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
-      </div>
-      <br>
-      <div>
-        <%= image_tag 'icon.png' %> <a href="/galeries">Imagenes</a>
-      </div>
-      <br>
-      <div>
-        <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
-      </div>
-     <br>
-     </div>
+
+<div class="container-Perfils-new">
+  <div class="nav-perfil-images-cuentas">
+    <div>
+   <%= image_tag 'icon.svg'%> <a href="/perfils/new">Perfil</a>
     </div>
-
-
+      <br>  
+    <div>
+       <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete%>
+    </div>
+    <br>
+  </div>
+</div>
 <div class="container-publicar-perfil">
     <h1 class="perfil-usuario-text-on-perfil">Perfil Del Usuario</h1>
     <div>

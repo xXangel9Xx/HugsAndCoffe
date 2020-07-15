@@ -1,6 +1,7 @@
 <div>
  <%= render partial: './general/nav', layout: './general/nav' %>
-
+ <%= render partial: './general/nav_desktop', layout: './general/nav_desktop'%>
+<!--
     <div class="container-Perfils-new">
 
      <div class="nav-perfil-imanes-cuentas">
@@ -18,7 +19,7 @@
       </div>
      <br>
     </div>
-
+-->
 
   <div class="container-show-bank-account">
       <div>
@@ -54,7 +55,7 @@
 
   <div>
   <%@bank_account.each do |bank_account|%>
-    <%= link_to 'editar', edit_bank_account_path(bank_account) %>
+    <%= link_to 'editar', edit_perfil_bank_account_path(bank_account) %>
   <%end%>
   </div>
 

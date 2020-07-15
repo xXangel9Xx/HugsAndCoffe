@@ -1,5 +1,5 @@
 <div class="new-photo-galeries">
-     <%=form_with model:@galery, local:true do |f|%>
+     <%=form_with(url:new_perfil_galery_path, model:@galery) do |f|%>
        <div class="container-subtitle-image">
         <%=f.label :subtitulo%>
         <br>
@@ -20,4 +20,4 @@
         <%=f.submit 'Guardar', :class =>'save' %>
         </div>
      <%end%>
-</div>
+</div><!--, local:true-->

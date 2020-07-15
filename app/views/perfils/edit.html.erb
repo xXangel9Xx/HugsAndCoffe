@@ -1,26 +1,7 @@
  <%= render partial: './general/nav', layout: './general/nav' %>
 <div>
-    <div class="container-Perfils-new">
+<%=render partial: './general/nav_desktop', layout: './general/nav_desktop'%>
 
-     <div class="nav-perfil-imanes-cuentas">
-     
-      <div>
-      <%if !@perfils  %>
-         <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
-      <%else%>
-          <%= image_tag 'icon.svg'%>  <a href="/perfils/edit">Perfil</a>
-      <% end %>
-      </div>
-      <br>
-      <div>
-        <%= image_tag 'icon.png' %> <a href="/galeries">Imagenes</a>
-      </div>
-      <br>
-      <div>
-       <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
-      </div>
-     <br>
-     </div>
 <div class="container-publicar-perfil">
     <h1 class="perfil-usuario-text-on-perfil">Perfil Del Usuario</h1>
     <div>

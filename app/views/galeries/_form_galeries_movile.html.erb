@@ -2,7 +2,7 @@
  <div  class="text-crearImage-movile">
     <p class="lema-subtitle-movile">Crear Imagen</p>
   </div> 
-     <%=form_with model:@galery, local:true do |f|%>
+     <%=form_with(url:new_perfil_galery_path, model:@galery, local:true )do |f|%>
        <div class="sutitle-galeries-text-movile">
           <p class="lema-subtitle-movile">Agrega un subtitulo que otorgue vida a tu imagen.</p>
        </div>

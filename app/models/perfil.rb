@@ -1,9 +1,11 @@
 class Perfil < ApplicationRecord
   has_one :user, dependent: :destroy
-  has_one_attached :image
   has_one :galery, dependent: :destroy
+  has_many :bank_account, dependent: :destroy
   
-  has_many :estados, dependent: :destroy
+  has_one_attached :image
+
+
   validates :full_name, :ocupacion, format: {with: /\A[a-zA-Z]+\z/ ,message:"only allows letters"}
 
   

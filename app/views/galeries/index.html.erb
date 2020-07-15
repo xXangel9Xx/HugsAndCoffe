@@ -1,27 +1,11 @@
- <%= render partial: './general/nav', layout: './general/nav' %>
+ <%= render partial: './nav', layout: './nav' %>
+ <%= render partial: './nav_desktop', layout: './nav_desktop'%>
 <div>
-    <div class="container-Perfils-new">
-     <div class="nav-perfil-images-cuentas">
-        <div>
-            <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
-        </div>
-        <br>
-        <div>
-            <%= image_tag 'icon.png' %> <a href="/galeries">Imagenes</a>
-        </div>
-        <br>
-        <div>
-            <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
-        </div>
-        <br>
-     </div>
-    </div>
-
     <div class="container-list-account-index">
      <h1  class="h1-list-image-text">Listado de Imagenes</h1>
 
      <div class="addAccount-index">
-        <a href="/galeries/new" class="crear-text-a">Crear</a>
+     <%= link_to 'Crear', new_perfil_galery_path, :class=>"crear-text-a" ,method: :get %>
      </div>
     </div>
 
@@ -29,11 +13,10 @@
      <div class="container-images-galeries">
    <%@galeries.each_with_index do |photo,index|%>
             <div class="image-galeries">
-            <%= link_to edit_galery_path(photo) do%>
+            <%= link_to galery_path(photo) do%>
                 <%=image_tag(photo.image, :class =>'image-galeries') %>
             <%end%>
             </div>
-       
     <%end%>  
     </div>
 </div>

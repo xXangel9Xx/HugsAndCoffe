@@ -1,5 +1,5 @@
 class GaleriesController < ApplicationController
-        #before_action :authenticate_user!
+        before_action :authenticate_user!, only:[:create,:update,:destroy]
         before_action :params_create, only:[:create]
         before_action :params_update, only:[:update]
         before_action :search, only:[:destroy,:update,:edit,:show]
@@ -46,11 +46,12 @@ class GaleriesController < ApplicationController
         private
         
         def params_create
-         params.require(:galery).permit(:subtitulo, :image)
+         #perfil_id
+         params.require(:galery).permit(:perfil_id,:subtitulo, :image)
         end
   
         def params_update
-         params.require(:galery).permit(:subtitulo, :image)
+         params.require(:galery).permit(:perfil_id,:subtitulo, :image)
         end
   
         def search

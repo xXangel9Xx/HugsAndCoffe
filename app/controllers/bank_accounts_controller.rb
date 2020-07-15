@@ -1,5 +1,5 @@
 class BankAccountsController < ApplicationController
-    #before_action :authenticate_user!
+    before_action :authenticate_user!, only: [:create,:update,:destroy]
     before_action :params_create, only: [:create]
     #before_action :params_update, only: [:update]
     before_action :search, only: [:show,:update,:edit,:destroy]
@@ -12,12 +12,13 @@ class BankAccountsController < ApplicationController
      @bank_accounts = BankAccount.all
     end
 
-   def show
+    def show
       render @bank_account
-   end
+    end
 
     def create
         @bank_account = BankAccount.new(params_create)
+        @bank_account.user_id = current_user.id
         if @bank_account.save
             flash[:notice] = "Su cuenta fue creada exitosamente"
             redirect_to '/bank_accounts'
@@ -27,7 +28,7 @@ class BankAccountsController < ApplicationController
         end
     end
    def update
-        if @bank_account.update(params_update)
+        if @bank_account.update(params_create)
             flash[:notice] = "Fue editado exitosamente"
              #redirect_to 'path'
         else
@@ -50,10 +51,11 @@ class BankAccountsController < ApplicationController
     end
 
     def params_create
-          params.require(:bank_account).permit(:entidad,:email,:account,:identification,:typeAccount)
+        #perfil_id
+        params.require(:bank_account).permit(:entidad,:email,:account,:identification,:typeAccount)
     end
 
-    def params_update
-       params.require(:bank_account).permit(:entidad,:email,:account,:identification,:typeAccount)
-    end
+  #  def params_update
+  #     params.require(:bank_account).permit(:entidad,:email,:account,:identification,:typeAccount)
+  #  end
 end

@@ -1,3 +1,3 @@
 class Thank < ApplicationRecord
-  has_one :estado
+  has_one :galery, dependent: :destroy
 end

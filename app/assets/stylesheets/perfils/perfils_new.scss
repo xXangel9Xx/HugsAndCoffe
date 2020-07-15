@@ -1,14 +1,5 @@
 @media screen and (min-width: 300px){
   
-
-  .container-publicar-perfil{
-    display: none;
-    /*
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-bottom: 3%;
-    border-bottom: inset;*/
-  }
   .perfil-usuario-text-on-perfil{
     margin-right: 34%;
   }
@@ -33,19 +24,6 @@
 }
 
 @media screen and (min-width: 1000px){
-  .container-Perfils-new{
-    position: absolute;
-    width: 100%;
-    height: -webkit-fill-available;
-    margin-top: 61px;
-    display: inline-flex;
-}
-    .nav-perfil-images-cuentas{
-        width: 26%;
-        border-right: 0.5px solid #C4CDD5;
-        text-align: center;
-        padding-top: 4%;
-    }
 
     .publicar-perfil{
         width: 107px;

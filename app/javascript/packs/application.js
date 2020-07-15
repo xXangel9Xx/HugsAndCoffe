@@ -48,6 +48,7 @@ let second = 0
 
  if (hug.context() == 'thanks--new'){
    hug.hugSeconds()
+   hug.animationHug()
  };
 });
 

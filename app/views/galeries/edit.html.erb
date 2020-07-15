@@ -1,4 +1,4 @@
- <%= render partial: './general/nav', layout: './general/nav' %>
+ <%= render partial: './nav', layout: './nav' %>
 <div>
   <div class="subtitulo-text-edit">
    <h1>Subtitulo</h1>
@@ -10,23 +10,8 @@
       <p>Comparte imagenes que conecten con las personas y muestren a que te dedicas.</p>
   
   </div>
- <div class="container-Perfils-new">
+ <%= render partial: './nav_desktop', layout: './nav_desktop'%>
 
-     <div class="nav-perfil-images-cuentas">
-      <div>
-       <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
-      </div>
-      <br>
-      <div>
-        <%= image_tag 'icon.png' %> <a href="/galeries">Imagenes</a>
-      </div>
-      <br>
-      <div>
-       <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
-      </div>
-     <br>
-     </div>
-    </div>
   <%= render partial: 'form_galeries', layout:'form_galeries' %>
   <%=  render partial: 'form_galeries_movile', layout:'form_galeries_movile'%>
 </div>

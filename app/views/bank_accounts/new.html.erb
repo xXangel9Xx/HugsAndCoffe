@@ -1,22 +1,6 @@
 <div>
- <%= render partial: './general/nav', layout: './general/nav' %>
- <div class="container-Perfils-new">
-     <div class="nav-perfil-images-cuentas">
-      <div>
-       <%= image_tag 'icon.svg'%>  <a href="/perfils/new">Perfil</a>
-      </div>
-      <br>
-      <div>
-        <%= image_tag 'icon.png' %> <a href="/galeries">Imagenes</a>
-      </div>
-      <br>
-      <div>
-       <%= image_tag 'iconCuentas.svg' %> <a href="/bank_accounts">Cuentas</a>
-      </div>
-     <br>
-    </div>
-  </div>
-  
+ <%= render partial: './nav', layout: './nav' %>
+ <%= render partial: './nav_desktop', layout: './nav_desktop'%>
 
  <div class="container-text-create-account-bank">
   <h1 class="create-account-bank">Crear cuenta</h1>

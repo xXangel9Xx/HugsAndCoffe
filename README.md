@@ -1,8 +1,8 @@
-rails g model Perfil name:string last_name:string coffee:integer hugs:integer money:integer user:references
-//////////
- rails g model Estado description:string date:date perfil:references
-//////////
+Se parece al error que Builderse refiere al ActiveRecord::Associations::Buildermódulo que se define en el alcance de ActiveRecord.
 
+Intenta acceder a tu modelo con ::Builder:
+
+  if ::Builder.exists?(email: email)
 
 
 

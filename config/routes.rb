@@ -1,16 +1,21 @@
 Rails.application.routes.draw do
+ root to: 'hugs_and_coffes#new'
+devise_for :users
+#devise_for :users, path: 'users', path_names: { sign_in: 'sign_in', sign_out: 'sign_out', password: 'password', confirmation: 'confirmation', unlock: 'unblock', sign_up: 'sign_up'  }
+
+
+#get '/', to: 
+
+   resources :perfils do 
+      resources :galeries
+         resources :bank_accounts
+            resources :thanks
+   end
  
-devise_for :users, skip: :all
-devise_for :users, path: 'users', path_names: { sign_in: 'sign_in', sign_out: 'sign_out', password: 'password', confirmation: 'confirmation', unlock: 'unblock', sign_up: 'sign_up'  }
-
-get '/', to: 'hugs_and_coffes#new'
-resources :bank_accounts
-resources :estados 
-resources :perfils
-resources :galeries
-resources :thanks
-
 end
+#devise_for :users do
+ #  get '/users/sign_out' => 'devise/sessions#destroy'
+# end
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 #  resources :hugs_and_coffes, only: [:new],  as: :hugsAndCoffes
 # get ':users_id/perfils', to: 'perfils#show'
@@ -23,5 +28,5 @@ end
 #  root :to => 'perfils#new'
 #end,
 # except: [:index] do
-   
+#resources :estados 
 #end

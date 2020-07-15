@@ -39,20 +39,18 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
     t.string "account"
     t.string "identification"
     t.string "typeAccount"
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "estados", force: :cascade do |t|
-    t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_bank_accounts_on_user_id"
   end
 
   create_table "galeries", force: :cascade do |t|
+    t.integer "perfil_id", null: false
     t.string "subtitulo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["perfil_id"], name: "index_galeries_on_perfil_id"
   end
 
   create_table "perfils", force: :cascade do |t|
@@ -61,18 +59,23 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
     t.string "full_name"
     t.string "ocupacion"
     t.text "biografia"
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_perfils_on_user_id"
   end
 
   create_table "thanks", force: :cascade do |t|
     t.boolean "coffe", default: false
-    t.float "hug", default: 0.0
+    t.integer "value_coffes", default: 0
+    t.integer "hug", default: 0
     t.string "name"
     t.string "ocupacion"
     t.text "message"
+    t.integer "perfil_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["perfil_id"], name: "index_thanks_on_perfil_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -88,4 +91,8 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bank_accounts", "users"
+  add_foreign_key "galeries", "perfils"
+  add_foreign_key "perfils", "users"
+  add_foreign_key "thanks", "perfils"
 end
