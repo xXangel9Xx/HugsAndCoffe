@@ -1,6 +1,6 @@
 class Perfil < ApplicationRecord
   has_one :user, dependent: :destroy
-  has_one :galery, dependent: :destroy
+  has_many :galery, dependent: :destroy
   has_many :bank_account, dependent: :destroy
   
   has_one_attached :image

@@ -1,7 +1,22 @@
-<%= render partial: './nav_desktop', layout: './nav_desktop'%>
+
+<%if user_signed_in?%>
+    <%= render partial: 'nav_login', layout: 'nav_login'%>
+    <%= render partial: './nav_desktop', layout: './nav_desktop'%>
 <div>
- <%=@perfil.full_name%>
- <!--<% if @galeries%>
+
+</div>
+
+
+    
+
+<%else%>
+<%=render partial: 'nav_logout', layout: 'nav_logout'%>
+<% end %>
+
+
+<div>
+  <!--<%=@perfil.full_name%>
+<% if @galeries%>
   <%= @galeries.subtitulo%>
  <%end%>*-->
 </div>

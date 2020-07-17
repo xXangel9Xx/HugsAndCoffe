@@ -1,6 +1,6 @@
 <div class="container-create-new-bankAccount">
   <div class="container-form-bankAccount">
-  <%=form_with model:@bank_account, local:true do |f| %>
+  <%=form_with(url:new_perfil_bank_account_path, model:@bank_account, local:true) do |f| %>
   <div>
   <br>
   <%=f.label :entidad%>

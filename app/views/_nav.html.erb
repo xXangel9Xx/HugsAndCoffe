@@ -3,14 +3,14 @@
            <%= image_tag 'exit_image.png', :id => "exit-menu-movile" %>
             <div class="ABC_movile"><p>A&B</p></div>
              <div class="container_link_movile_nav">
-                <%= link_to 'Perfil', perfil_path(current_user.id,@perfil),:class=>"link_movile_nav" %>
+                <%= link_to 'Perfil', perfil_path(current_user.id),:class=>"link_movile_nav" %>
              </div>
 
             <div class="container_link_movile_nav">
-             <%= link_to 'Imagenes', perfil_galeries_path(current_user.id,@perfil), :class=>"link_movile_nav"%> 
+             <%= link_to 'Imagenes', perfil_galeries_path(current_user.id), :class=>"link_movile_nav"%> 
             </div>
             <div class="container_link_movile_nav">
-          <%= link_to 'Cuentas', perfil_bank_accounts_path(current_user.id,@perfil), :class=>"link_movile_nav" %>
+          <%= link_to 'Cuentas', perfil_bank_accounts_path(current_user.id), :class=>"link_movile_nav" %>
             </div>
             <div class="container_link_movile_nav"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class=>"link_movile_nav"%></div>
         </nav>

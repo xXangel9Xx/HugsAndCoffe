@@ -1,3 +1,4 @@
+  <%if user_signed_in?%> 
  <%= render partial: './nav', layout: './nav' %>
 <div>
   <div class="subtitulo-text-edit">
@@ -11,7 +12,7 @@
   
   </div>
  <%= render partial: './nav_desktop', layout: './nav_desktop'%>
-
   <%= render partial: 'form_galeries', layout:'form_galeries' %>
   <%=  render partial: 'form_galeries_movile', layout:'form_galeries_movile'%>
 </div>
+<% end %>

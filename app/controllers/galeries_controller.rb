@@ -9,12 +9,13 @@ class GaleriesController < ApplicationController
   
         def create
            @galery = Galery.new(params_create)
+           @galery.perfil_id = current_user.id
            if @galery.save
                flash[:notice] = "Su perfil fue creada exitosamente"
-               redirect_to '/galeries'
+               redirect_to perfil_galeries_path(current_user.id,@galery.perfil_id)
            else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
-               redirect_to '/galeries'
+               redirect_to new_perfil_galery_path
            end
         end
         
@@ -40,18 +41,19 @@ class GaleriesController < ApplicationController
         end
      
         def index
+          perfil = Perfil.find_by(id:current_user.id)
+          
            @galeries = Galery.all
         end
      
         private
         
         def params_create
-         #perfil_id
-         params.require(:galery).permit(:perfil_id,:subtitulo, :image)
+         params.require(:galery).permit(:subtitulo, :image)
         end
   
         def params_update
-         params.require(:galery).permit(:perfil_id,:subtitulo, :image)
+         params.require(:galery).permit(:subtitulo, :image)
         end
   
         def search

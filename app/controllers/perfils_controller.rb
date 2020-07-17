@@ -14,6 +14,7 @@ class PerfilsController < ApplicationController
     def create
      @perfil = Perfil.new(params_create)
      @perfil.user_id = current_user.id
+     @perfil.id = current_user.id
         if @perfil.save
             flash[:notice] = "Su perfil fue creada exitosamente"
             redirect_to @perfil

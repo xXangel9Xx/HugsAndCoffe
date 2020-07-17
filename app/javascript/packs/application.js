@@ -16,6 +16,7 @@ import Nav from "./general/nav"
 import Multiplicador from './general/new_multiplicador'
 import HugsOrCoffe from "./thanks/thanks_new"
 import Hug from "./thanks/hug_new"
+import PerfilNav from "./perfil/nav_login"
 const load = new LoadContent()
 
 document.addEventListener('turbolinks:load', function (){console.log('nose')})
@@ -28,7 +29,11 @@ const nav = new Nav()
      nav.burger()
      nav.exitMenuMovile()
  };
- 
+const perfilNav = new PerfilNav()
+if (perfilNav.context()=='perfil--nav'){
+  nav.burger()
+  nav.exitMenuMovile()
+};
  const multiplicadorPerfil = new Multiplicador()
  if (multiplicadorPerfil.context() == 'general--nav'){
      multiplicadorPerfil.multiplicador()
@@ -44,7 +49,7 @@ const hugsOrCoffe = new HugsOrCoffe()
     hugsOrCoffe.exitFormHug()
  };
 const hug = new Hug 
-let second = 0
+/*let second = 0*/
 
  if (hug.context() == 'thanks--new'){
    hug.hugSeconds()

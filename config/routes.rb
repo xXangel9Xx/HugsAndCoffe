@@ -7,11 +7,11 @@ devise_for :users
 #get '/', to: 
 
    resources :perfils do 
-      resources :galeries
+      resources :galeries, except: [:create]
          resources :bank_accounts
             resources :thanks
    end
- 
+ resources :galeries, only: [:create]
 end
 #devise_for :users do
  #  get '/users/sign_out' => 'devise/sessions#destroy'

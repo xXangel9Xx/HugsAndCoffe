@@ -1,10 +1,17 @@
-<div data-context="general--nav">
+<div data-context="perfil--nav">
         <nav class="class_movile">
            <%= image_tag 'exit_image.png', :id => "exit-menu-movile" %>
             <div class="ABC_movile"><p>A&B</p></div>
-             <div class="container_link_movile_nav"><a href="/perfils/new" class="link_movile_nav">Perfil</a></div>
-            <div class="container_link_movile_nav"><a href="/perfils/:perfil_id/galeries" class="link_movile_nav">Imagenes</a></div>
-            <div class="container_link_movile_nav"><a href="/perfils/:perfil_id/bank_accounts" class="link_movile_nav">Cuentas</a></div>
+             <div class="container_link_movile_nav">
+                <%= link_to 'Perfil', perfil_path(current_user.id,@perfil),:class=>"link_movile_nav" %>
+             </div>
+
+            <div class="container_link_movile_nav">
+             <%= link_to 'Imagenes', perfil_galeries_path(current_user.id,@perfil), :class=>"link_movile_nav"%> 
+            </div>
+            <div class="container_link_movile_nav">
+          <%= link_to 'Cuentas', perfil_bank_accounts_path(current_user.id,@perfil), :class=>"link_movile_nav" %>
+            </div>
             <div class="container_link_movile_nav"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class=>"link_movile_nav"%></div>
         </nav>
 
