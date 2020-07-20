@@ -12,7 +12,7 @@ class GaleriesController < ApplicationController
            @galery.perfil_id = current_user.id
            if @galery.save
                flash[:notice] = "Su perfil fue creada exitosamente"
-               redirect_to perfil_galeries_path(current_user.id,@galery.perfil_id)
+               redirect_to perfil_galeries_path(current_user.id)
            else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
                redirect_to new_perfil_galery_path
@@ -29,7 +29,7 @@ class GaleriesController < ApplicationController
         def update
             if @galery.update(params_update)
                flash[:notice] = "Su perfil fue creada exitosamente"
-               redirect_to '/galeries'
+               redirect_to perfil_galeries_path(current_user.id)
             else
                flash[:notice] = "Lamentamos informar que ha ocurrido un error"
                redirect_to '/galeries'
@@ -41,9 +41,8 @@ class GaleriesController < ApplicationController
         end
      
         def index
-          perfil = Perfil.find_by(id:current_user.id)
-          
-           @galeries = Galery.all
+          perfil = Perfil.find_by(id: current_user.id)    
+          @galeries = perfil.galery.all
         end
      
         private

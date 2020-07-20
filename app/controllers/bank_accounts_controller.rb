@@ -21,7 +21,7 @@ class BankAccountsController < ApplicationController
         @bank_account.user_id = current_user.id
         if @bank_account.save
             flash[:notice] = "Su cuenta fue creada exitosamente"
-            redirect_to '/bank_accounts'
+            redirect_to perfil_bank_accounts_path(current_user.id)
         else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
              #redirect_to 'path'
@@ -30,7 +30,7 @@ class BankAccountsController < ApplicationController
    def update
         if @bank_account.update(params_create)
             flash[:notice] = "Fue editado exitosamente"
-             #redirect_to 'path'
+            redirect_to perfil_bank_accounts_path(current_user.id)
         else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
              #redirect_to 'path'

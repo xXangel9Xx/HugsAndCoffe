@@ -3,9 +3,9 @@ export default function Hug(){
       return document.querySelector("[data-context]").dataset['context'];
   };
 
-  this.animationHug = function(){
+ /* this.animationHug = function(){
     let circleHug = document.getElementsByClassName("circle-hug")[0];
-  }
+  }*/
 
 
 
@@ -13,6 +13,7 @@ let contador = 0
   this.hugSeconds = function(){
     let circleHug = document.getElementsByClassName("circle-hug")[0];
     let seconds = document.getElementsByClassName("seconds")[0];
+    let sendHugOf = document.getElementsByClassName("send-hug-of")[0];
     let hug = document.getElementById("abrazo");
     (function(){
       let interval
@@ -24,7 +25,8 @@ let contador = 0
       let contar = function(){
         contador++
         if (contador<60){
-          hug.value = contador
+         hug.value = contador
+          sendHugOf.innerHTML = contador+'S'
           seconds.innerHTML = contador+'S'
          }
       }

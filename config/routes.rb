@@ -8,10 +8,12 @@ devise_for :users
 
    resources :perfils do 
       resources :galeries, except: [:create]
-         resources :bank_accounts
-            resources :thanks
+         resources :bank_accounts, except: [:create]
+            
    end
+   resources :thanks
  resources :galeries, only: [:create]
+ resources :bank_accounts, only: [:create]
 end
 #devise_for :users do
  #  get '/users/sign_out' => 'devise/sessions#destroy'

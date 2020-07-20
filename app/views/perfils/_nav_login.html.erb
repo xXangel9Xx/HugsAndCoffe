@@ -22,9 +22,8 @@
             <p class="p-logoAb">A&B</p>
         </div>
         <div class="profile">
-            <div class="image-profile">  
-            </div>
-            <h1 class="name-user"><%=%></h1>
+            <%=image_tag(User.find_by(id: params[:id]).perfil.image, :class=>"image-profile")%>
+            <h1 class="name-user"><%=User.find_by(id: params[:id]).perfil.full_name%></h1>
         </div>
     </nav>
-</div><!--angel Gonzalez-->
+</div><!--<div class="image-profile"></div> angel Gonzalez-->

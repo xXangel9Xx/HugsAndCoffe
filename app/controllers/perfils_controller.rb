@@ -28,10 +28,6 @@ class PerfilsController < ApplicationController
         @perfil
     end
 
-   # def destroy
-   #     render @perfil.delete
-   # end
-
     def edit
     end
 

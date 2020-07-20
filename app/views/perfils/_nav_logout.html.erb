@@ -1,21 +1,15 @@
 
 <div class="nav_show_perfil_logout">
       <div class="container-dates-user-logout-nav">
-            <div class="image-profile-logout">  
-              s
-            </div>
-
+              <%=image_tag(User.find_by(id: params[:id]).perfil.image, :class=>"image-profile-logout")  %>
             <div class="name-and-ocupation">
-             <h1 class="date-user-logout"><p class="full-name-date">NOSE DIME TU</p></h1>
-             <h2 class="ocupation"> ocupacion</h2>
-
-          
+             <h1 class="date-user-logout">
+             <%=User.find_by(id: params[:id]).perfil.full_name%>
+             </h1>
+             <h2 class="ocupation">Ocupacion: <%=User.find_by(id: params[:id]).perfil.ocupacion%></h2>
             </div>
-            
               <div class="logoAB-logout">
                 <p class="p-logoAb">A&B</p>
               </div>
-  
-
       </div>
 </div>
