@@ -18,11 +18,34 @@
 
 
                <div class="container-image-show">
-   
+              
                 </div>
              
 
+              
+
+
+           
+            <!--
             
+<%= hidden_field_tag "galeries", Perfil.find_by(id: params[:id]).galery,{ "data-galeriesAll" => Perfil.find_by(id: params[:id]).galery} %>
+ <%Perfil.find_by(id: params[:id]).galery.each_with_index do |states,i|%>
+
+  <%= image_tag(states.image, :class=>"photos-state") %>
+                    <p><%= states.subtitulo%></p>
+
+  <%end%>
+            <%= image_tag(Perfil.find_by(id: params[:id]).galery[0].image, :class=>"photos-state") %>
+              <p><%=Perfil.find_by(id: params[:id]).galery[0].subtitulo%></p>
+            <%Perfil.find_by(id: params[:id]).galery.each_with_index do |photo,i|%>
+            <div>
+                <%= image_tag(photo.image) %>
+                
+                <p><%="#{i}"%></p>
+            </div>
+            <% end %>
+  -->
+          
      </div> 
 </div>
 

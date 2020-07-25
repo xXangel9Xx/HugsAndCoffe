@@ -1,8 +1,10 @@
 class PerfilsController < ApplicationController
     before_action :authenticate_user!, only: [:create,:uptade]
     before_action :params_create, only: [:create]
-    before_action :search, only: [:update,:destroy,:show]
     before_action :params_update, only:[:update]
+    before_action :search, only: [:update,:destroy,:show]
+
+
     def index
       @perfils = Perfil.all
     end
@@ -25,6 +27,7 @@ class PerfilsController < ApplicationController
     end
 
     def show
+        gon.states = Perfil.find_by(id: params[:id]).galery
         @perfil
     end
 

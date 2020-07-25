@@ -3,7 +3,7 @@ export default function Show(){
        return document.querySelector("[data-context]").dataset['context'];
     };
     this.carrucelGalery = function(){
-
+       console.log(gon.states)
    /* let galeriesAll = document.getElementById('galeries')
   
     console.log(`${galeriesAll.data("galeriesAll")}`)*/
