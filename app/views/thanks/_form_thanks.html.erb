@@ -8,8 +8,8 @@
  <p class="text-send-hug">Enviando un abrazo de: <span class="send-hug-of"></span> </p>
 </div>
 <div class="container-form-thanks-hug"> 
-<%=form_with(model:@thank, local:true)  do |f|%>
- <!--url:new_perfil_thank_path,-->
+<%=form_with(url:thanks_path, model:@thank, local:true)  do |f|%>
+
  <p class="your-dates-text">Tus datos</p>
  <br>
  <br>

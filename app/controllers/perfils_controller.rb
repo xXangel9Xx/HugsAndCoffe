@@ -52,4 +52,5 @@ class PerfilsController < ApplicationController
     def search 
         @perfil = Perfil.find_by( id: params[:id])
     end
+    
 end

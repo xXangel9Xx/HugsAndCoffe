@@ -3,8 +3,7 @@
       <%= image_tag 'Vector.png',:class=>"exit" %>
    </div>
    
-   <%=form_with(model: @thank, local:true) do |f|%>
-  <!--url:new_perfil_thank_path,--> 
+   <%=form_with(url:thanks_path, model: @thank, local:true) do |f|%>
    <div class="container-how-many-coffe">
       <div class="how_many_coffe">
        <p class="text-how-many-coffe">¿Cuantos café?</p>

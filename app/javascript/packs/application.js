@@ -16,7 +16,7 @@ import Nav from "./general/nav"
 import Multiplicador from './general/new_multiplicador'
 import HugsOrCoffe from "./thanks/thanks_new"
 import Hug from "./thanks/hug_new"
-import PerfilNav from "./perfil/nav_login"
+import Show from "./perfil/show"
 
 const load = new LoadContent()
 
@@ -30,11 +30,16 @@ const nav = new Nav()
      nav.burger()
      nav.exitMenuMovile()
  };
-const perfilNav = new PerfilNav()
-if (perfilNav.context()=='perfil--nav'){
+
+const show = new Show()
+if (show.context()=='perfil--nav'){
+  show.carrucelGalery()
   nav.burger()
   nav.exitMenuMovile()
+
 };
+
+
  const multiplicadorPerfil = new Multiplicador()
  if (multiplicadorPerfil.context() == 'general--nav'){
      multiplicadorPerfil.multiplicador()

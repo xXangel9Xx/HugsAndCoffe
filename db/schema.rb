@@ -72,10 +72,10 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
     t.string "name"
     t.string "ocupacion"
     t.text "message"
-    t.integer "perfil_id", null: false
+    t.integer "galery_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["perfil_id"], name: "index_thanks_on_perfil_id"
+    t.index ["galery_id"], name: "index_thanks_on_galery_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -94,5 +94,5 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
   add_foreign_key "bank_accounts", "users"
   add_foreign_key "galeries", "perfils"
   add_foreign_key "perfils", "users"
-  add_foreign_key "thanks", "perfils"
+  add_foreign_key "thanks", "galeries"
 end

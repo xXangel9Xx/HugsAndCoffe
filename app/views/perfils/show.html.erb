@@ -1,22 +1,44 @@
-
-<%if user_signed_in?%>
+<div>
+ <%if user_signed_in?%>
     <%= render partial: 'nav_login', layout: 'nav_login'%>
     <%= render partial: './nav_desktop', layout: './nav_desktop'%>
-<div>
+    <div class="container-biografia-perfil">
+     <p><%=Perfil.find_by(id: params[:id]).biografia%></p>
 
+   <!--<p>Lorem ipsum dolor sit amet, consectetur 
+        adipisicing elit. Cum totam adipisci cupiditate deserunt eius 
+        id voluptates sint voluptatum accusantium cumque? Pariatur
+        commodi esse accusantium laudantium delectus tempore ea aliquid assumenda.</p>
+-->  
+
+    </div>
+           <div class="index-galery">
+            <div class="container-photos-states">   
+
+
+
+               <div class="container-image-show">
+   
+                </div>
+             
+
+            
+     </div> 
 </div>
+
+  
+
+    
+
+
 
 
     
 
-<%else%>
-<%=render partial: 'nav_logout', layout: 'nav_logout'%>
-<% end %>
+    <%else%>
+        <%=render partial: 'nav_logout', layout: 'nav_logout'%>
+    <% end %>
 
 
-<div>
-  <!--<%=@perfil.full_name%>
-<% if @galeries%>
-  <%= @galeries.subtitulo%>
- <%end%>*-->
+
 </div>

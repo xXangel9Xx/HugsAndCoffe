@@ -1,0 +1,37 @@
+@media screen and(min-width:300px){
+    .index-galery{
+        position: fixed;
+        margin-top: 15%;
+        margin-left: 50%;
+    }
+    .photos-state{
+        height: 100px;
+        width: 100px;
+    }
+}
+@media screen and(min-width: 1000px){
+    .container-biografia-perfil{
+        text-align: center;
+        margin-top: 7%;
+        position: fixed;
+        margin-left: 42%;
+        width: 39%;
+    }
+    .index-galery{
+        position: fixed;
+        margin-top: 15%;
+        margin-left: 40%;
+        width: 41%;
+    }
+    .photos-state{
+        height: 200px;
+        width: 127px;
+    }
+    .container-index-states-photos{
+        margin-top: 14%;
+    }
+    .container-photos-states{
+        display: flex;
+        justify-content: space-between;
+    }
+}
