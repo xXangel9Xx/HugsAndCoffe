@@ -5,8 +5,10 @@ export default function Show(){
     this.carrucelGalery = function(){
         let imageShow = document.getElementsByClassName('container-image-show')[0];
         let states = gon.states
-        console.log(states[0])
-
+       /* let images = gon.galeries
+        console.log(images)*/
+        console.log(states)
+           imageShow.innerHTML = `${states[0].record.subtitulo}`
        
        
        
