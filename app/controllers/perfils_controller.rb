@@ -27,7 +27,9 @@ class PerfilsController < ApplicationController
     end
 
     def show
-        gon.states = Perfil.find_by(id: params[:id]).galery
+        variable = []
+        variable << Perfil.find_by(id: params[:id]).galery.all
+        gon.watch.states = variable
         @perfil
     end
 
