@@ -34,6 +34,7 @@ const nav = new Nav()
 const show = new Show()
 if (show.context()=='perfil--nav'){
   show.carrucelGalery()
+  show.carrucelIndexGalery()
   nav.burger()
   nav.exitMenuMovile()
 

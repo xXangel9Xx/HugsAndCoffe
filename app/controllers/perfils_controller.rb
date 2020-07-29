@@ -57,14 +57,19 @@ class PerfilsController < ApplicationController
 
     def images 
         array = []
-        images = []
+        subtitle = []
+        signed_id = []
+        filename = []
         array << Perfil.find_by(id: params[:id]).galery.all
         large = array[0].length
         for i in 0...large
-           images << Perfil.find_by(id: params[:id]).galery[i].image
-   
+           subtitle << Perfil.find_by(id: params[:id]).galery[i].subtitulo
+           signed_id << Perfil.find_by(id: params[:id]).galery[i].image.signed_id
+           filename << Perfil.find_by(id: params[:id]).galery[i].image.filename
         end
-        gon.watch.states = images
-
+        gon.watch.subtitle = subtitle
+        gon.watch.signedId = signed_id 
+        gon.watch.filename = filename
+        gon.watch.large = large
      end
 end
