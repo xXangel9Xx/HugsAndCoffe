@@ -33,8 +33,11 @@ const nav = new Nav()
 
 const show = new Show()
 if (show.context()=='perfil--nav'){
-  show.carrucelGalery()
+  //show.followerPosition()
   show.carrucelIndexGalery()
+  show.carrucelGalery()
+ //Nav
+ 
   nav.burger()
   nav.exitMenuMovile()
 
