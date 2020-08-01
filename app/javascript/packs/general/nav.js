@@ -1,22 +1,7 @@
 export default function Nav(){
+   
     this.context = function(){
        return document.querySelector("[data-context]").dataset['context'];
-    };
-
-    this.exitMenuMovile = function(){
-          let exit_menu_movile = document.getElementById('exit-menu-movile');
-          let navCreateUsuario = document.getElementsByClassName('navCreateUsuario');
-          let menu_movile = document.getElementsByClassName('class_movile');
-          
-          exit_menu_movile.addEventListener('click', (e) => {
-              for (let i = 0; i < menu_movile.length; i+=1){
-                  menu_movile[i].style.display = "none";
-              };
-              for (let i = 0; i < navCreateUsuario.length; i+=1){
-                  navCreateUsuario[i].style.display = "flex";
-              };
-    
-          },true);
     };
 
    this.burger = function(){
@@ -33,4 +18,21 @@ export default function Nav(){
           };
       }, true);
     };
+  
+    this.exitMenuMovile = function(){
+          let exit_menu_movile = document.getElementById('exit-menu-movile');
+          let navCreateUsuario = document.getElementsByClassName('navCreateUsuario');
+          let menu_movile = document.getElementsByClassName('class_movile');
+          
+          exit_menu_movile.addEventListener('click', (e) => {
+              for (let i = 0; i < menu_movile.length; i+=1){
+                  menu_movile[i].style.display = "none";
+              };
+              for (let i = 0; i < navCreateUsuario.length; i+=1){
+                  navCreateUsuario[i].style.display = "flex";
+              };
+    
+          },true);
+    };
+
 }

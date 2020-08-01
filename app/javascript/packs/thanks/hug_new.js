@@ -24,7 +24,7 @@ let contador = 0
     circleHug.addEventListener('mousedown', (e)=>{
       let contar = function(){
         contador++
-        if (contador<60){
+        if (contador<=60){
          hug.value = contador
           sendHugOf.innerHTML = contador+'S'
           seconds.innerHTML = contador+'S'

@@ -20,7 +20,8 @@ import Show from "./perfil/show"
 
 const load = new LoadContent()
 
-document.addEventListener('turbolinks:load', function (){console.log('nose')})
+//document.addEventListener('turbolinks:load', function (){console.log('nose')})
+
 load.ready(function(){
 
 
@@ -29,19 +30,9 @@ const nav = new Nav()
  if (nav.context() == 'general--nav'){
      nav.burger()
      nav.exitMenuMovile()
+     
  };
 
-const show = new Show()
-if (show.context()=='perfil--nav'){
-  //show.followerPosition()
-  show.carrucelIndexGalery()
-  show.carrucelGalery()
- //Nav
- 
-  nav.burger()
-  nav.exitMenuMovile()
-
-};
 
 
  const multiplicadorPerfil = new Multiplicador()
@@ -59,12 +50,25 @@ const hugsOrCoffe = new HugsOrCoffe()
     hugsOrCoffe.exitFormHug()
  };
 const hug = new Hug 
-let second = 0
 
  if (hug.context() == 'thanks--new'){
    hug.hugSeconds()
   /*hug.animationHug()*/
  };
+ 
+ const show = new Show()
+if (show.context()=='perfil--nav'){
+    /*
+  //show.followerPosition()
+  show.carrucelIndexGalery()
+  show.carrucelGalery()*/
+//let position = show.incrementar()
+ //Nav
+  nav.burger()
+  nav.exitMenuMovile()
+
+};
+
 });
 
 
