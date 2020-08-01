@@ -111,7 +111,7 @@ export default function Show(){
       startsAtCero = large
       startsAtOne = large 
       startsAtTwo = large
-    }else if (position < 0 && signedId[startsAtOne] == null && signedId[startsAtOne] == undefined && signedId[startsAtTwo] == null && signedId[startsAtTwo] == undefined){
+    }else if (position < 0){
         position = 0
         startsAtCero = 0
         startsAtOne = 1 
