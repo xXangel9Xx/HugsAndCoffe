@@ -39,7 +39,7 @@ export default function Show(){
         `
     } 
       //ONE
-    if (signedId[startsAtOne] != null && signedId[startsAtCero] != undefined ){
+    if (signedId[startsAtOne] != null && signedId[startsAtOne] != undefined ){
       containerPhotosStates.innerHTML+=`
         <div class="container-image-show">
         <img src="${baseUrl}rails/active_storage/blobs/${signedId[startsAtOne]}/${filename[startsAtOne]}" alt="image" class="photos-state">
@@ -48,7 +48,7 @@ export default function Show(){
         `
     }     
       //Two
-    if (signedId[startsAtTwo] != null && signedId[startsAtCero] != undefined ){
+    if (signedId[startsAtTwo] != null && signedId[startsAtTwo] != undefined ){
       containerPhotosStates.innerHTML+=`
         <div class="container-image-show">
         <img src="${baseUrl}rails/active_storage/blobs/${signedId[startsAtTwo]}/${filename[startsAtTwo]}" alt="image" class="photos-state">
@@ -106,11 +106,16 @@ export default function Show(){
       startsAtOne -- 
       startsAtTwo --
 
-    }else if (position < 0){
+    }else if (position < 0 && signedId[startsAtCero] != null && signedId[startsAtCero] != undefined && signedId[startsAtOne] != null && signedId[startsAtOne] != undefined && signedId[startsAtTwo] != null && signedId[startsAtTwo] != undefined){
       position = large
       startsAtCero = large
       startsAtOne = large 
       startsAtTwo = large
+    }else if (position < 0 && signedId[startsAtOne] == null && signedId[startsAtOne] == undefined && signedId[startsAtTwo] == null && signedId[startsAtTwo] == undefined){
+        position = 0
+        startsAtCero = 0
+        startsAtOne = 1 
+        startsAtTwo = 2
     }
     renderCarrucelGalery()
     carrucelIndexGalery()
