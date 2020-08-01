@@ -84,36 +84,44 @@ export default function Show(){
   }
 
   function increase(){
-    if (position<large){
+    if (position<=large){
       position++
       startsAtCero++
       startsAtOne++ 
       startsAtTwo++
-    }else{
-      position
+    }else if (position>large){
+      position = 0
+      startsAtCero = 0
+      startsAtOne = 1
+      startsAtTwo = 2
     }
     renderCarrucelGalery()
     carrucelIndexGalery()
   }
 
   function decrease(){
-    if (position<=0){
-      position = large
-      startsAtCero = large
-      startsAtOne = large 
-      startsAtTwo = large
-    }else{
+    if (position>=0){
       position --
       startsAtCero --
       startsAtOne -- 
       startsAtTwo --
+
+    }else if (position < 0){
+      position = large
+      startsAtCero = large
+      startsAtOne = large 
+      startsAtTwo = large
     }
     renderCarrucelGalery()
     carrucelIndexGalery()
   }
+  this.carrucel = function (){
+    nextCarrucel.addEventListener('click',increase,true)
+    backCarrucel.addEventListener('click',decrease,true)
+    renderCarrucelGalery()
+    carrucelIndexGalery()
+  }
 
-  nextCarrucel.addEventListener('click',increase,true)
-  backCarrucel.addEventListener('click',decrease,true)
 
 
   /////////////////////////

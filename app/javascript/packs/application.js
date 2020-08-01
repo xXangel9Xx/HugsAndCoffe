@@ -64,6 +64,7 @@ if (show.context()=='perfil--nav'){
   show.carrucelGalery()*/
 //let position = show.incrementar()
  //Nav
+  show.carrucel()
   nav.burger()
   nav.exitMenuMovile()
 
