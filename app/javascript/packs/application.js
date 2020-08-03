@@ -16,7 +16,7 @@ import Nav from "./general/nav"
 import Multiplicador from './general/new_multiplicador'
 import HugsOrCoffe from "./thanks/thanks_new"
 import Hug from "./thanks/hug_new"
-import Show from "./perfil/show"
+import Show from "./perfils/show"
 
 const load = new LoadContent()
 
@@ -64,7 +64,9 @@ if (show.context()=='perfil--nav'){
   show.carrucelGalery()*/
 //let position = show.incrementar()
  //Nav
-  show.carrucel()
+
+show.carrucel()
+
   nav.burger()
   nav.exitMenuMovile()
 

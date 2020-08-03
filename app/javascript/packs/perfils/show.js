@@ -135,9 +135,12 @@ export default function Show(){
       startsAtOne = 1
       startsAtTwo = 2
     }
-    renderCarrucelGalery()
-    carrucelIndexGalery()
-    markPosition()
+    
+    document.addEventListener('turbolinks:load',
+     renderCarrucelGalery(),
+     carrucelIndexGalery(),
+     markPosition()
+     )
   }
 
   function decrease(){
@@ -158,17 +161,30 @@ export default function Show(){
         startsAtOne = 1 
         startsAtTwo = 2
     }
-    renderCarrucelGalery()
-    carrucelIndexGalery()
-    markPosition()
+
+    //renderCarrucelGalery()
+    //carrucelIndexGalery()
+   
+    document.addEventListener('turbolinks:load',
+     renderCarrucelGalery(),
+     carrucelIndexGalery(),
+     markPosition()
+     )
   }
   this.carrucel = function (){
-    nextCarrucel.addEventListener('click',increase,true)
-    backCarrucel.addEventListener('click',decrease,true)
-    renderCarrucelGalery()
-    carrucelIndexGalery()
-  }
 
+     document.addEventListener('turbolinks:load',
+     renderCarrucelGalery(),
+     carrucelIndexGalery())
+     
+
+
+     
+ 
+      
+      nextCarrucel.addEventListener('click',increase,true)
+      backCarrucel.addEventListener('click',decrease,true)
+  }
 
 
   /////////////////////////
