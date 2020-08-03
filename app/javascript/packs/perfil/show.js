@@ -58,8 +58,47 @@ export default function Show(){
     }    
   }
 
+  function markPosition(){
+    let indexStates = document.getElementsByClassName('index-states');
+    let large = gon.large// esta variable contiene un numero integer que es el largo de todas las imagenes guardadas
+            //CERO
+        if (position == startsAtCero){
+          indexStates[startsAtCero].style.backgroundColor = '#EE4380';
+          indexStates[startsAtCero].style.color = 'white';
 
-  function valores(next6){
+              if (position > 0 && indexStates[startsAtCero-=1].style.backgroundColor != 'white'){
+                indexStates[startsAtCero-=1].style.backgroundColor = 'white';
+                indexStates[startsAtCero-=1].style.color = 'black';
+              }
+      
+            //ONE
+        } else if(position == startsAtOne ){
+            indexStates[startsAtOne].style.backgroundColor = '#EE4380';
+            indexStates[startsAtOne].style.color = 'white';
+
+            if (indexStates[startsAtOne-=1].style.backgroundColor != 'white'){
+              indexStates[startsAtCero-=1].style.backgroundColor = 'white';
+              indexStates[startsAtCero-=1].style.color = 'black';
+            }else if (indexStates[startsAtOne+1].style.backgroundColor != 'white'){
+              indexStates[startsAtCero+=1].style.backgroundColor = 'white';
+              indexStates[startsAtCero+=1].style.color = 'black';
+            }
+            
+             //TWO
+ 
+        } else if (position == startsAtTwo){
+          indexStates[startsAtTwo].style.backgroundColor = '#EE4380';
+          indexStates[startsAtTwo].style.color = 'white';
+        
+          if (position < large && indexStates[startsAtTwo+1].style.backgroundColor != 'white'){
+            indexStates[startsAtTwo+=1].style.backgroundColor = 'white';
+            indexStates[startsAtTwo+=1].style.color = 'black';
+          }
+        }
+  }
+
+
+  function valoresIndex(next6){
       // si (next6 = 13) esto deberia arrojar este pedaso de codigo
       // no necesito hacer un parseInt ya que en si nunca estoy jugando con los valores el html ni restandole a los valores de html
     valores[0].innerHTML != next6 - 6?  valores[0].innerHTML =  next6 - 6 : valores[0].innerHTML//7
@@ -69,7 +108,7 @@ export default function Show(){
     valores[4].innerHTML != next6 - 2?  valores[4].innerHTML =  next6 - 2 : valores[4].innerHTML//11
     valores[5].innerHTML != next6 - 1?  valores[5].innerHTML =  next6 - 1 : valores[5].innerHTML//12
     valores[6].innerHTML =  next6  //13
-    }
+  }
 
   function carrucelIndexGalery(){
     for ( let i=0; i <= large; i += 1 ){ 
@@ -78,7 +117,7 @@ export default function Show(){
         `
       }else if (i>=6 && signedId[i] != null && signedId[i] != undefined){
           next6 +=1
-          valores(next6)//esto lo que hace es hacer que cambie los numeros y se mantengan 7 posiciones
+          valoresIndex(next6)//esto lo que hace es hacer que cambie los numeros y se mantengan 7 posiciones
       }
     }
   }
@@ -89,6 +128,7 @@ export default function Show(){
       startsAtCero++
       startsAtOne++ 
       startsAtTwo++
+      console.log("hola mundo")
     }else if (position>large){
       position = 0
       startsAtCero = 0
@@ -97,6 +137,7 @@ export default function Show(){
     }
     renderCarrucelGalery()
     carrucelIndexGalery()
+    markPosition()
   }
 
   function decrease(){
@@ -105,12 +146,12 @@ export default function Show(){
       startsAtCero --
       startsAtOne -- 
       startsAtTwo --
-
+      console.log("adios mundo")
     }else if (position < 0 && signedId[startsAtCero] != null && signedId[startsAtCero] != undefined && signedId[startsAtOne] != null && signedId[startsAtOne] != undefined && signedId[startsAtTwo] != null && signedId[startsAtTwo] != undefined){
       position = large
-      startsAtCero = large
-      startsAtOne = large 
-      startsAtTwo = large
+      startsAtCero = large -= 2 //12
+      startsAtOne = large -= 1//13
+      startsAtTwo = large //14 
     }else if (position < 0){
         position = 0
         startsAtCero = 0
@@ -119,6 +160,7 @@ export default function Show(){
     }
     renderCarrucelGalery()
     carrucelIndexGalery()
+    markPosition()
   }
   this.carrucel = function (){
     nextCarrucel.addEventListener('click',increase,true)

@@ -1,4 +1,4 @@
-<div data-context="perfil--nav">
+<div data-context="perfil--nav" data-turbolinks="false">
  <%if user_signed_in?%>
     <%= render partial: 'nav_login', layout: 'nav_login'%>
     <%= render partial: './nav_desktop', layout: './nav_desktop'%>
@@ -24,6 +24,7 @@
               </div>-->     
             </div> 
            </div>
+      <%if Perfil.find_by(id:1).galery.exists?%>
         <div class="container-carrucel">
                <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
             <div class="index-image-carrucel-container">
@@ -32,7 +33,7 @@
              </div>
            <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
         </div>
-          
+      <%end%>
 
     
 
