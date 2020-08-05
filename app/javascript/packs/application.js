@@ -58,14 +58,8 @@ const hug = new Hug
  
  const show = new Show()
 if (show.context()=='perfil--nav'){
-    /*
-  //show.followerPosition()
-  show.carrucelIndexGalery()
-  show.carrucelGalery()*/
-//let position = show.incrementar()
- //Nav
 
-show.carrucel()
+  show.carrucel()
 
   nav.burger()
   nav.exitMenuMovile()

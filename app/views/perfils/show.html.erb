@@ -1,4 +1,4 @@
-<div data-context="perfil--nav" data-turbolinks="false">
+<div data-context="perfil--nav">
 
  <%if user_signed_in?%>
     <%= render partial: 'nav_login', layout: 'nav_login'%>
@@ -23,14 +23,30 @@
                 alt="image" class="photos-state">
 
               </div>-->     
+              <div id="container-photos-states-0">
+              </div>
+              
+              <div id="container-photos-states-1">
+              </div>
+              
+              <div id="container-photos-states-2">
+              </div>
+              
+
+            
             </div> 
            </div>
       <%if Perfil.find_by(id:1).galery.exists?%>
         <div class="container-carrucel">
                <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
             <div class="index-image-carrucel-container">
-           
-           
+              <p class="index-states">0</p>
+              <p class="index-states">1</p>
+              <p class="index-states">2</p>
+              <p class="index-states">3</p>
+              <p class="index-states">4</p>
+              <p class="index-states">5</p>
+              <p class="index-states">6</p>
              </div>
            <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
         </div>

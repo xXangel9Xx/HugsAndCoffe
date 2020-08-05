@@ -4,13 +4,13 @@ export default function Show(){
     };
 //VARIABLES
 
-  let containerPhotosStates = document.getElementsByClassName('container-photos-states')[0];
-  
+ let containerPhotosStates0 = document.getElementById('container-photos-states-0')
+ let containerPhotosStates1 = document.getElementById('container-photos-states-1')
+ let containerPhotosStates2 = document.getElementById('container-photos-states-2')
 //estas variables son para añadirle los eventos
   let nextCarrucel = document.getElementById("next-carrucel");
   let backCarrucel = document.getElementById("back-carrucel");
 //estas variables son usadas para unicamente añadir un innerHTML
-  let containerIndex = document.getElementsByClassName('index-image-carrucel-container')[0];
 
 //estas variables la utilizan las funcionescarrucelIndexGalery
   let large = gon.large;// esta variable contiene un numero integer que es el largo de todas las imagenes guardadas
@@ -31,7 +31,7 @@ export default function Show(){
     let filename = gon.filename
     if (signedId[startsAtCero] != null && signedId[startsAtCero] != undefined ){
       //CERO
-      containerPhotosStates.innerHTML+=`
+      containerPhotosStates0.innerHTML=`
         <div class="container-image-show">
         <img src="${baseUrl}rails/active_storage/blobs/${signedId[startsAtCero]}/${filename[startsAtCero]}" alt="image" class="photos-state">
         <p class="subtitle-state">${subtitle[startsAtCero]}</p>
@@ -40,7 +40,7 @@ export default function Show(){
     } 
       //ONE
     if (signedId[startsAtOne] != null && signedId[startsAtOne] != undefined ){
-      containerPhotosStates.innerHTML+=`
+      containerPhotosStates1.innerHTML=`
         <div class="container-image-show">
         <img src="${baseUrl}rails/active_storage/blobs/${signedId[startsAtOne]}/${filename[startsAtOne]}" alt="image" class="photos-state">
         <p class="subtitle-state">${subtitle[startsAtOne]}</p>
@@ -49,7 +49,7 @@ export default function Show(){
     }     
       //Two
     if (signedId[startsAtTwo] != null && signedId[startsAtTwo] != undefined ){
-      containerPhotosStates.innerHTML+=`
+      containerPhotosStates2.innerHTML=`
         <div class="container-image-show">
         <img src="${baseUrl}rails/active_storage/blobs/${signedId[startsAtTwo]}/${filename[startsAtTwo]}" alt="image" class="photos-state">
         <p class="subtitle-state">${subtitle[startsAtTwo]}</p>
@@ -112,10 +112,7 @@ export default function Show(){
 
   function carrucelIndexGalery(){
     for ( let i=0; i <= large; i += 1 ){ 
-      if (i<=6 && signedId[i] != null && signedId[i] != undefined){//esto verifica que la posicion no este vacia y si exista
-        containerIndex.innerHTML+=`<p class="index-states" data-value=${i}>${i}</p>
-        `
-      }else if (i>=6 && signedId[i] != null && signedId[i] != undefined){
+      if (i>=6 && signedId[i] != null && signedId[i] != undefined){
           next6 +=1
           valoresIndex(next6)//esto lo que hace es hacer que cambie los numeros y se mantengan 7 posiciones
       }
@@ -128,7 +125,7 @@ export default function Show(){
       startsAtCero++
       startsAtOne++ 
       startsAtTwo++
-      console.log("hola mundo")
+      console.log()
     }else if (position>large){
       position = 0
       startsAtCero = 0
@@ -136,11 +133,11 @@ export default function Show(){
       startsAtTwo = 2
     }
     
-    document.addEventListener('turbolinks:load',
+   // document.addEventListener('turbolinks:load',
      renderCarrucelGalery(),
      carrucelIndexGalery(),
      markPosition()
-     )
+   //  )
   }
 
   function decrease(){
@@ -165,17 +162,17 @@ export default function Show(){
     //renderCarrucelGalery()
     //carrucelIndexGalery()
    
-    document.addEventListener('turbolinks:load',
+  //  document.addEventListener('turbolinks:load',
      renderCarrucelGalery(),
      carrucelIndexGalery(),
      markPosition()
-     )
+  //   )
   }
   this.carrucel = function (){
 
-     document.addEventListener('turbolinks:load',
+    // document.addEventListener('turbolinks:load',
      renderCarrucelGalery(),
-     carrucelIndexGalery())
+     carrucelIndexGalery()//)
      
 
 
