@@ -3,7 +3,6 @@ export default function Show(){
        return document.querySelector("[data-context]").dataset['context'];
     };
 //VARIABLES
-
  let containerPhotosStates0 = document.getElementById('container-photos-states-0')
  let containerPhotosStates1 = document.getElementById('container-photos-states-1')
  let containerPhotosStates2 = document.getElementById('container-photos-states-2')
@@ -23,7 +22,6 @@ export default function Show(){
   let position = 0;
   let startsAtOne = 1;
   let startsAtTwo = 2;
-
 //Renderiza Las Imagenes De Galery
   function renderCarrucelGalery(){
     let subtitle = gon.subtitle
@@ -97,7 +95,6 @@ export default function Show(){
         }
   }
 
-
   function valoresIndex(next6){
       // si (next6 = 13) esto deberia arrojar este pedaso de codigo
       // no necesito hacer un parseInt ya que en si nunca estoy jugando con los valores el html ni restandole a los valores de html
@@ -109,7 +106,6 @@ export default function Show(){
     valores[5].innerHTML != next6 - 1?  valores[5].innerHTML =  next6 - 1 : valores[5].innerHTML//12
     valores[6].innerHTML =  next6  //13
   }
-
   function carrucelIndexGalery(){
     for ( let i=0; i <= large; i += 1 ){ 
       if (i>=6 && signedId[i] != null && signedId[i] != undefined){
@@ -133,11 +129,15 @@ export default function Show(){
       startsAtTwo = 2
     }
     
-   // document.addEventListener('turbolinks:load',
-     renderCarrucelGalery(),
-     carrucelIndexGalery(),
-     markPosition()
-   //  )
+    renderCarrucelGalery();
+    document.addEventListener('turbolinks:load',renderCarrucelGalery);
+    carrucelIndexGalery();
+    document.addEventListener('turbolinks:load',carrucelIndexGalery);
+    markPosition();
+    document.addEventListener('turbolinks:load',markPosition);
+   //  ,
+   //  ,
+   //   
   }
 
   function decrease(){
@@ -158,32 +158,26 @@ export default function Show(){
         startsAtOne = 1 
         startsAtTwo = 2
     }
-
-    //renderCarrucelGalery()
-    //carrucelIndexGalery()
-   
-  //  document.addEventListener('turbolinks:load',
-     renderCarrucelGalery(),
-     carrucelIndexGalery(),
-     markPosition()
-  //   )
+    renderCarrucelGalery();
+    document.addEventListener('turbolinks:load',renderCarrucelGalery);
+    carrucelIndexGalery();
+    document.addEventListener('turbolinks:load',carrucelIndexGalery);
+    markPosition();
+    document.addEventListener('turbolinks:load',markPosition);
+     //,
+     //,
+     //
   }
   this.carrucel = function (){
-
-    // document.addEventListener('turbolinks:load',
-     renderCarrucelGalery(),
-     carrucelIndexGalery()//)
-     
-
-
-     
- 
-      
+   //  ,
+   //  
+      renderCarrucelGalery();
+      document.addEventListener('turbolinks:load',renderCarrucelGalery);
+      carrucelIndexGalery();
+      document.addEventListener('turbolinks:load',carrucelIndexGalery);
       nextCarrucel.addEventListener('click',increase,true)
       backCarrucel.addEventListener('click',decrease,true)
   }
-
-
   /////////////////////////
 }
 
