@@ -23,7 +23,8 @@ export default function Show(){
   let startsAtOne = 1;
   let startsAtTwo = 2;
 //Renderiza Las Imagenes De Galery
-  function renderCarrucelGalery(){
+
+  this.renderCarrucelGalery = function(){
     let subtitle = gon.subtitle
     let signedId = gon.signedId
     let filename = gon.filename
@@ -106,7 +107,7 @@ export default function Show(){
     valores[5].innerHTML != next6 - 1?  valores[5].innerHTML =  next6 - 1 : valores[5].innerHTML//12
     valores[6].innerHTML =  next6  //13
   }
-  function carrucelIndexGalery(){
+ this.carrucelIndexGalery = function(){
     for ( let i=0; i <= large; i += 1 ){ 
       if (i>=6 && signedId[i] != null && signedId[i] != undefined){
           next6 +=1
@@ -116,37 +117,28 @@ export default function Show(){
   }
 
   function increase(){
-    if (position<=large){
+    console.log(position)
+    if (position<large){
       position++
       startsAtCero++
-      startsAtOne++ 
+      startsAtOne++
       startsAtTwo++
-      console.log()
-    }else if (position>large){
+    }else if (position == large){
       position = 0
       startsAtCero = 0
       startsAtOne = 1
       startsAtTwo = 2
     }
     
-    renderCarrucelGalery();
-    document.addEventListener('turbolinks:load',renderCarrucelGalery);
-    carrucelIndexGalery();
-    document.addEventListener('turbolinks:load',carrucelIndexGalery);
-    markPosition();
-    document.addEventListener('turbolinks:load',markPosition);
-   //  ,
-   //  ,
-   //   
+
   }
 
   function decrease(){
     if (position>=0){
-      position --
-      startsAtCero --
-      startsAtOne -- 
-      startsAtTwo --
-      console.log("adios mundo")
+      --position 
+      --startsAtCero 
+      --startsAtOne 
+      --startsAtTwo 
     }else if (position < 0 && signedId[startsAtCero] != null && signedId[startsAtCero] != undefined && signedId[startsAtOne] != null && signedId[startsAtOne] != undefined && signedId[startsAtTwo] != null && signedId[startsAtTwo] != undefined){
       position = large
       startsAtCero = large -= 2 //12
@@ -158,25 +150,11 @@ export default function Show(){
         startsAtOne = 1 
         startsAtTwo = 2
     }
-    renderCarrucelGalery();
-    document.addEventListener('turbolinks:load',renderCarrucelGalery);
-    carrucelIndexGalery();
-    document.addEventListener('turbolinks:load',carrucelIndexGalery);
-    markPosition();
-    document.addEventListener('turbolinks:load',markPosition);
-     //,
-     //,
-     //
+    
   }
   this.carrucel = function (){
-   //  ,
-   //  
-      renderCarrucelGalery();
-      document.addEventListener('turbolinks:load',renderCarrucelGalery);
-      carrucelIndexGalery();
-      document.addEventListener('turbolinks:load',carrucelIndexGalery);
-      nextCarrucel.addEventListener('click',increase,true)
-      backCarrucel.addEventListener('click',decrease,true)
+      nextCarrucel.addEventListener('click',increase,true);
+      backCarrucel.addEventListener('click',decrease,true);
   }
   /////////////////////////
 }
