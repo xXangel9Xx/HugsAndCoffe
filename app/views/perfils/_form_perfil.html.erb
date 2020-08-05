@@ -1,0 +1,72 @@
+<div class="dates-usuario">
+<%=form_with model:@perfil, local: true do |f| %>
+  <div class="add_full_name-and-ocupation">
+  <div  class="container-input-full-name-perfil-form">
+    <br>
+     <p>Primer Nombre y Primer apellido</p>
+    <!-- <%= f.label :full_name%>--> 
+    <br>
+      <%= f.text_field( :full_name)%>
+    <br>
+  </div>
+  <div>
+    <br>
+      <%=f.label :ocupation%>
+    <br>
+      <%=f.text_field(:ocupacion)%>
+    <br>
+  </div>  
+  </div>
+
+
+  <div>
+    <br>
+      <%=f.label :biografia%>
+    <br>
+      <div><%=f.text_field(:biografia)%></div>
+    <br>
+  </div>
+
+  <div>
+      <br>
+        <%=f.label :image%>
+      <br>
+        <%=f.file_field(:image) %>
+        <div class="container-div-image-tag-perfils-form">
+        <%= image_tag 'message.png' %>
+        </div>
+        
+  </div>
+<br>
+<br>
+</div>
+
+<div class="monto-coffe-and-symbol">
+  <div class="monto-of-an-coffe">
+    <div>
+          <p class="text-monto-coffe">Monto de un cafe</p>
+        <br>
+      <div class="input-monto-coffe"><%=f.number_field(:amountCoffe,:id=>"monto-coffe-value")%></div>
+        <br>
+          <p class="text-monto-coffe">Simbolo de la moneda</p>
+        <br>
+      <div class="input-monto-coffe"><%=f.text_field  :currencySymbol%></div>
+        <br>
+         <p class="text-monto-coffe">Multiplicadores</p>
+         <br>
+        <div class="multiplicadores">
+          <div class="valueMultipl" data-value=1>1</div>
+          <div class="valueMultipl" data-value=2>2</div>
+          <div class="valueMultipl" data-value=3>3</div>
+          <div class="valueMultipl" data-value=4>4</div>
+          <div class="valueMultipl" data-value=5>5</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container-save-perfil-new">
+    <%=f.submit 'Guardar', :class =>'save' %>
+  </div>
+<% end %>
+</div>

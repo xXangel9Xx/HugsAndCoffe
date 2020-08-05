@@ -1,0 +1,23 @@
+<div class="new-photo-galeries">
+     <%=form_with(url:galeries_path, model:@galery) do |f|%>
+       <div class="container-subtitle-image">
+        <%=f.label :subtitulo%>
+        <br>
+        <%=f.text_field(:subtitulo, :class=>"input-subtitle") %>
+        <br>
+       </div>
+       <br>
+       <div class="container-galery-image-new">
+            <%=f.file_field(:image)%>
+            <div class="form-image-container-galeries">
+            <%= image_tag 'message.png' %>
+            </div>
+        </div>
+
+         <hr>
+
+        <div class="container-save-form-galeries">
+        <%=f.submit 'Guardar', :class =>'save' %>
+        </div>
+     <%end%>
+</div><!--, local:true-->

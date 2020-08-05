@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+ root to: 'hugs_and_coffes#new'
+devise_for :users
+
+
+   resources :perfils do 
+      resources :galeries, except: [:create]
+         resources :bank_accounts, except: [:create]
+            resources :thanks, except: [:create]
+
+   end
+ resources :thanks, only: [:create]
+ resources :galeries, only: [:create]
+ resources :bank_accounts, only: [:create]
 end

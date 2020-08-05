@@ -1,0 +1,18 @@
+  <%if user_signed_in?%> 
+ <%= render partial: './nav', layout: './nav' %>
+<div>
+  <div class="subtitulo-text-edit">
+   <h1>Subtitulo</h1>
+   <p>Agrega un subtitulo que otorgue vida a tu imagen.</p>
+  </div>
+  
+  <div class="text-edit-imagen">
+      <h1>Imagen</h1>
+      <p>Comparte imagenes que conecten con las personas y muestren a que te dedicas.</p>
+  
+  </div>
+ <%= render partial: './nav_desktop', layout: './nav_desktop'%>
+  <%= render partial: 'form_galeries', layout:'form_galeries' %>
+  <%=  render partial: 'form_galeries_movile', layout:'form_galeries_movile'%>
+</div>
+<% end %>

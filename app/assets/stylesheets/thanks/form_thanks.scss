@@ -1,0 +1,68 @@
+@media screen and(min-width:300px){
+    .container-form-hug{
+        display: none;
+        padding-top: 30%;
+    }
+    .container-send-hug{
+        margin-left: 10%;
+    }
+    .text-send-hug{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #434242;
+    }
+    .container_exit_hug_form{
+        width: 30px;
+        margin-left: 5%;
+    }
+    .container-form-thanks-hug{
+        margin: 5%;
+        padding: 5%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;   
+    }
+    .your-dates-text{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #434242;
+    }
+    .input-form-thank{
+        background: #FFFFFF;
+        border: 1px solid #C4CDD5;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+    .container-save-thank{
+        width: 64px;
+        margin-left: 40%;
+    }
+}
+@media screen and(min-width:500px){
+    .container-form-hug{
+        padding-top: 16%;
+    }
+}
+@media screen and(min-width:700px){
+    .text-send-hug{
+        font-size: 22px;
+    }
+    .your-dates-text{
+        font-size: 22px;
+    }
+    .container-save-thank{
+        width: 115px;
+        margin-left: 50%;
+    }
+}
+@media screen and(min-width:1000px){
+    .container-form-hug{
+        padding-top: 10%;
+    }
+}

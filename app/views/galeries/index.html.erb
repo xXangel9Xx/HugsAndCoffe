@@ -1,0 +1,26 @@
+ <%if user_signed_in?%> 
+ <%= render partial: './nav', layout: './nav' %>
+ <%= render partial: './nav_desktop', layout: './nav_desktop'%>
+
+<div>
+    <div class="container-list-account-index">
+     <h1  class="h1-list-image-text">Listado de Imagenes</h1>
+
+     <div class="addAccount-index">
+     <%= link_to 'Crear', new_perfil_galery_path, :class=>"crear-text-a" ,method: :get %>
+     </div>
+    </div>
+
+    
+     <div class="container-images-galeries">
+     
+   <%@galeries.each_with_index do |photo,index|%>
+            <div class="image-galeries">
+            <%= link_to edit_perfil_galery_path(current_user.id,photo) do%>
+                <%=image_tag(photo.image, :class =>'image-galeries') %>
+            <%end%>
+            </div>
+    <%end%>    
+    </div>
+</div>
+<% end %>

@@ -1,0 +1,35 @@
+<div class="container-form-hug">
+
+  <div class="container_exit_hug_form">
+      <%= image_tag 'Vector.png',:class=>"exit" %>
+   </div>
+
+<div class="container-send-hug">
+ <p class="text-send-hug">Enviando un abrazo de: <span class="send-hug-of"></span> </p>
+</div>
+<div class="container-form-thanks-hug"> 
+<%=form_with(url:thanks_path, model:@thank, local:true)  do |f|%>
+
+ <p class="your-dates-text">Tus datos</p>
+ <br>
+ <br>
+ <%=f.number_field :hug, :id=>"abrazo"%>
+
+ <%=f.label :name%>
+ <%=f.text_field(:name, :class=>"input-form-thank")%>
+ <br>
+ <br>
+ <%=f.label :ocupacion%>
+ <%=f.text_field(:ocupacion, :class=>"input-form-thank")%>
+ <br>
+ <br>
+ <%=f.label :message%>
+ <%=f.text_field(:message, :class=>"input-form-thank")%>
+ <br>
+ <br>
+ <div class="container-save-thank">
+ <%=f.submit 'Guardar', :class=>'save'%>
+ </div>
+<%end%>
+</div>
+</div>

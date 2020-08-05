@@ -1,0 +1,2 @@
+class HugsAndCoffesController < ApplicationController
+end

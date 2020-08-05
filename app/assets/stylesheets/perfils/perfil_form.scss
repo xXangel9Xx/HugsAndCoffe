@@ -1,0 +1,117 @@
+@media screen and (min-width: 300px){
+    .dates-usuario{
+        padding-top: 20%;
+        padding-left: 8%;
+        padding-right: 8%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .monto-coffe-and-symbol{
+        width: 75%;
+        padding: 8%;
+        margin: 5%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+    }
+    .container-save-perfil-new{
+        width: 40%;
+        margin-left: 29%;
+        /*margin-top: 89%;*/
+    }
+    .container-div-image-tag-perfils-form{
+        padding: 3%;
+        padding-left: 11%;
+        padding-top: 9%;
+    }
+
+    .multiplicadores{
+        display: inline-flex;
+        padding-bottom: 49%;
+    }
+    .valueMultipl{
+        margin-right: 20%;
+        border: 1px solid #EE4380;
+        box-sizing: border-box;
+        border-radius: 44%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+}
+
+@media screen and (min-width: 1000px) { 
+       .dates-usuario{
+        padding: 0%;
+        position: absolute;
+        margin-top: 16%;
+        margin-left: 34%;
+        width: 38%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+    }
+    .container-save-perfil-new{
+        margin-left: 80%;
+        width: 13%;
+        position: absolute;
+        margin-top: 46%;
+    }
+    .container-div-image-tag-perfils-form{
+        margin: 4%;
+        padding-left: 22%;
+        height: 135px;
+        padding-top: 14%;
+        padding-bottom: 8%;
+        padding-right: 24%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+    }
+
+    .container-input-full-name-perfil-form{
+        margin-right: 12%;
+    }
+
+    .add_full_name-and-ocupation{
+        justify-content: space-between;
+        display: inline-flex;
+        width: -webkit-fill-available;
+    }
+    .monto-coffe-and-symbol{ 
+        position: absolute;
+        padding: 4%;
+        margin-top: 16%;
+        width: 18%;
+        position: absolute;
+        margin-left: 73%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+    }
+    .input-monto-coffe{    
+        width: 80%;
+        margin-left: 10%;
+        background: #FFFFFF;
+        border: 1px solid #C4CDD5;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+    .text-monto-coffe{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: #434242;
+        margin-left: 10%
+    }
+    .multiplicadores{    
+        margin-left: 8%;
+    }
+
+}

@@ -1,0 +1,148 @@
+@media screen and(min-width:300px){
+    .container_thanks_form_coffe{
+        display: none;
+    }
+    .container_exit_coffe{
+        padding-top: 15%;
+        width: 30px;
+        margin-left: 5%;
+    }
+    .container-how-many-coffe{
+        padding-top: 5%;
+    }
+    
+    .how_many_coffe{
+        padding-top: 25%; 
+        padding: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+        padding-bottom: 7%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+    }
+    .multiplicadores_coffe{
+        display: flex;
+    }
+    .coffe-image-multiplicadores{
+        height: 39px;
+        margin-right: 2%;
+    }
+    .simbol-X{
+        font-family: Candy Beans;
+        font-size: 16px;
+        line-height: 21px;
+        color: #434242;
+        margin-right: 2%;
+        padding-top: 3%;
+    }
+    .valueMultipl_coffe_thanks{
+        margin-right: 7%;
+        border: 1px solid #EE4380;
+        box-sizing: border-box;
+        border-radius: 44%;
+        padding-right: 8px;
+        padding-left: 7px;
+        padding-top: 3%;
+        height: 40px;
+    }
+
+    .container-dates-user-bank{
+        margin: 5%;
+        padding: 5%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+    }
+    .dates{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: #434242;
+    }
+    .container_date_person{
+        margin: 5%;
+        padding: 5%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+    }
+    .input-thank{
+        background: #FFFFFF;
+        border: 1px solid #C4CDD5;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+    .input-thank-message{
+        background: #FFFFFF;
+        border: 1px solid #C4CDD5;
+        box-sizing: border-box;
+        border-radius: 4px;
+        height: 80px;
+    }
+    .width_save{    
+        width: 30%;
+        margin-left: 35%;
+        margin-bottom: 8%;
+    }
+        
+}
+@media screen and(min-width:400px){
+    .valueMultipl_coffe_thanks{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+@media screen and(min-width:480px){
+    .valueMultipl_coffe_thanks{
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+    .coffe-image-multiplicadores{
+        height: 50px;
+    }
+}
+@media screen and(min-width:600px){
+    .valueMultipl_coffe_thanks{
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+}
+@media screen and(min-width:700px){
+    .valueMultipl_coffe_thanks{
+    padding-right: 24px;
+    padding-left: 24px;
+    }
+}
+@media screen and(min-width:828px){
+    .coffe-image-multiplicadores{  
+        height: 65px;
+    }
+    .valueMultipl_coffe_thanks{
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-bottom: 28px;
+    }
+}
+@media screen and(min-width:1000px){
+ .container_thanks_form_coffe{
+    position: absolute;
+    margin-left: 6%;
+    width: 90%;
+ }   
+ .container-how-many-coffe{
+    padding-top: 5%;
+ }
+ .type-date{
+    font-size: 25px;
+ }
+ .dates{
+    font-size: 25px;
+ }
+ .text-how-many-coffe{
+    font-size: 25px;
+ }
+}

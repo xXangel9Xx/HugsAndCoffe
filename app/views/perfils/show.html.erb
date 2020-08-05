@@ -1,0 +1,68 @@
+<div data-context="perfil--nav">
+
+ <%if user_signed_in?%>
+    <%= render partial: 'nav_login', layout: 'nav_login'%>
+    <%= render partial: './nav_desktop', layout: './nav_desktop'%>
+    <div class="container-biografia-perfil">
+     <p style="height: 100%;"><%=Perfil.find_by(id: params[:id]).biografia%></p>
+
+   <!--<p>Lorem ipsum dolor sit amet, consectetur 
+        adipisicing elit. Cum totam adipisci cupiditate deserunt eius 
+        id voluptates sint voluptatum accusantium cumque? Pariatur
+        commodi esse accusantium laudantium delectus tempore ea aliquid assumenda.                    <div class="container-image-show">
+                        
+                        
+                    </div></p>
+-->  
+    </div>
+
+           <div class="index-galery">
+            <div class="container-photos-states">  
+           <!-- <div class="container-image-show">
+                <img src="http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--88ea69a9b976b484b8eac3df36420d16acd88095/96774630_2506748759543337_2958228625712742400_n.jpg" 
+                alt="image" class="photos-state">
+
+              </div>-->     
+              <div id="container-photos-states-0">
+              </div>
+              
+              <div id="container-photos-states-1">
+              </div>
+              
+              <div id="container-photos-states-2">
+              </div>
+              
+
+            
+            </div> 
+           </div>
+      <%if Perfil.find_by(id:1).galery.exists?%>
+        <div class="container-carrucel">
+               <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
+            <div class="index-image-carrucel-container">
+              <p class="index-states">0</p>
+              <p class="index-states">1</p>
+              <p class="index-states">2</p>
+              <p class="index-states">3</p>
+              <p class="index-states">4</p>
+              <p class="index-states">5</p>
+              <p class="index-states">6</p>
+             </div>
+           <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
+        </div>
+      <%end%>
+
+    
+
+
+
+
+    
+
+    <%else%>
+        <%=render partial: 'nav_logout', layout: 'nav_logout'%>
+    <% end %>
+
+
+
+</div>

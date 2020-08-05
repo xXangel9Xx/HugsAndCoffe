@@ -1,0 +1,14 @@
+ <%= render partial: './general/nav', layout: './general/nav' %>
+<div>
+<%=render partial: './general/nav_desktop', layout: './general/nav_desktop'%>
+
+<div class="container-publicar-perfil">
+    <h1 class="perfil-usuario-text-on-perfil">Perfil Del Usuario</h1>
+    <div>
+    <%= image_tag 'Switch_Off.png' %>
+    <p style="width: 107px;height: 9px;left: 1263px;top: 151px;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 14px;line-height: 16px;display: flex;align-items: center;text-align: right;color: #434242;">
+    Despublicar perfil</p>
+    </div>
+</div>
+<%= render partial: 'form_perfil', layout:'form_perfil'%>
+</div>

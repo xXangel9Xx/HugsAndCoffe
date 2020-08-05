@@ -1,0 +1,123 @@
+@media screen and(min-width:300px){
+    .container_hug{
+        display: none;
+        padding-top: 30%;
+    }
+    .article{
+        text-align: center;
+        margin-bottom: 19%;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 19px;
+        line-height: 16px;
+    }
+    .container_exit_hug{
+        width: 30px;
+        margin-left: 5%;
+    }
+    .circle-hug{
+        display: flex;
+        justify-content: center;
+        border-radius: 100%;
+        width: 90%;
+        height: 296px;
+        margin-left: 5%;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.15);
+    }
+    .container_count_seconds{
+        margin-top: 10%;
+        text-align: center;
+    }
+    .hug_of{
+        font-size: 30px;
+    }
+    .container-text-while{
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 19px;
+        line-height: 16px;
+    }
+    .container-following{
+        text-align: center;
+        width: 50%;
+        padding-top: 16px;
+        height: 28px;
+        margin-left: 24%;
+        margin-top: 4%;
+        background: #EE4380;
+        border-radius: 5px;
+        color: white;
+    }
+    .ilug-image{
+        padding-top: 10%;
+        height: 228px;
+    }
+    #abrazo{
+        visibility: hidden;
+    }
+}
+@media screen and(min-width:500px){
+    .container_hug{
+        padding-top: 22%;
+    }
+    .article{
+        margin-bottom: 11%;
+    }
+}
+@media screen and(min-width:551px){
+    .circle-hug{
+        width: 71%;
+        margin-left: 16%;
+    }
+}
+@media screen and(min-width:650px){
+    .circle-hug{
+        width: 63%;
+        margin-left: 20%;
+    }
+    .container-following{
+        width: 31%;
+        margin-left: 35%;
+    }
+}
+@media screen and(min-width:750px){
+    .container_hug{
+        padding-top: 14%;
+    }
+    .circle-hug{
+        width: 55%;
+        margin-left: 23%;
+    }
+}
+@media screen and(mint-width:850px){
+    .circle-hug{
+        width: 43%;
+        margin-left: 30%;
+    }
+}
+@media screen and(min-width:1000px){
+    .article{
+        margin-bottom: 4%;
+    }
+    .container_hug{
+        padding-top: 10%;
+    }
+    .circle-hug{
+        margin-left: 36%;
+        width: 30%;
+    }
+
+    .container_count_seconds{
+        margin-top: 3%;
+    }
+    .container-following{
+        width: 19%;
+        margin-left: 41%;
+    }
+
+}

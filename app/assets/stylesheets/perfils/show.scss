@@ -1,0 +1,70 @@
+@media screen and(min-width:300px){
+    .index-galery{
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 50%;
+    }
+    .photos-state{
+        height: 100px;
+        width: 100px;
+    }
+    .container-image-show{
+        display: block;
+        height: 269px;
+        width: 127px;
+    }
+}
+@media screen and(min-width: 1000px){
+    .container-biografia-perfil{
+        height: 14%;
+        text-align: center;
+        margin-top: 7%;
+        position: absolute;
+        margin-left: 42%;
+        width: 39%;
+    }
+    .index-galery{
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 40%;
+        width: 41%;
+    }
+    .photos-state{
+        height: 200px;
+        width: 127px;
+    }
+    .container-index-states-photos{
+        margin-top: 14%;
+    }
+    .container-photos-states{
+        display: flex;
+        justify-content: space-between;
+    }
+    .subtitle-state{
+        height: 60px;
+    }
+
+    .index-image-carrucel-container{
+        display: inline-flex;
+    }
+    .container-carrucel{
+        margin-top: 34%;
+        margin-left: 55%;
+        display: inline-flex;
+    }
+    .back-image-carrucel{
+        margin-right: 5px;
+    }
+
+    .index-states{
+        margin-right: 5px;
+        border-top-style: solid; 
+        border: 1px solid #EE4380;
+        box-sizing: border-box;
+        border-radius: 59%;
+        padding: 2px;
+        padding-left: 3px;
+        background-color: white;
+
+    }
+}

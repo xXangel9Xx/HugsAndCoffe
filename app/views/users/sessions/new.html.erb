@@ -1,0 +1,40 @@
+<div>
+   <nav class="nav-HugsAndCoffe">
+        <div class="logoAB">
+            <p class="p-logoAb">A&B</p>
+        </div>
+    </nav>
+    <div class="atras-login">
+     <a href="/">  atras</a>
+    </div>
+  <div class="container-all-login">
+    <div class="container-login">
+      <div class="container-inputs-login">
+      <h1>Login</h1>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :Correo_electronico %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :Contraseña %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
+        </div>
+          <div class="actions">
+            <%= f.submit "Login" %>
+          </div>
+            <% end %>
+            <%= render "users/shared/links" %>
+    </div>
+        
+  </div>
+    
+</div>
