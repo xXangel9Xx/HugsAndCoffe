@@ -58,10 +58,6 @@ const hug = new Hug
  
  const show = new Show()
 if (show.context()=='perfil--nav'){
-  show.renderCarrucelGalery()
-  show.carrucelIndexGalery()
-  show.carrucel()
-
   nav.burger()
   nav.exitMenuMovile()
 
