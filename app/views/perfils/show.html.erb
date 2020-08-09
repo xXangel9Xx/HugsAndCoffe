@@ -17,40 +17,37 @@
     </div>
 
            <div class="index-galery">
-            <div class="container-photos-states">  
-           <!-- <div class="container-image-show">
-                <img src="http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--88ea69a9b976b484b8eac3df36420d16acd88095/96774630_2506748759543337_2958228625712742400_n.jpg" 
-                alt="image" class="photos-state">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">  
+                <div class="carousel-inner">
+                  <%@states.each_with_index do |states,i|%>
+                    <%if i == 0%>
+                    <div class="item active">
+                       <%= image_tag(states.image, :class=>"photos-state") %>
+                    </div>
+                    <%else%>
+                    <div class="item">
+                       <%= image_tag(states.image, :class=>"photos-state") %>
+                    </div>
+                    <%end%>
 
-              </div>-->     
-              <div id="container-photos-states-0">
-              </div>
-              
-              <div id="container-photos-states-1">
-              </div>
-              
-              <div id="container-photos-states-2">
-              </div>
-              
+                  <%end%>
+                </div>
 
-            
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                 <span class="glyphicon glyphicon-chevron-left"></span>
+                 <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+
             </div> 
            </div>
-      <%if Perfil.find_by(id:1).galery.exists?%>
-        <div class="container-carrucel">
-               <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
-            <div class="index-image-carrucel-container">
-              <p class="index-states">0</p>
-              <p class="index-states">1</p>
-              <p class="index-states">2</p>
-              <p class="index-states">3</p>
-              <p class="index-states">4</p>
-              <p class="index-states">5</p>
-              <p class="index-states">6</p>
-             </div>
-           <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
-        </div>
-      <%end%>
+      
+     
+
 
     
 

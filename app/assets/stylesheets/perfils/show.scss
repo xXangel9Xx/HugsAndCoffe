@@ -1,12 +1,17 @@
+
 @media screen and(min-width:300px){
+    .item{
+      width: 100% !important ;
+      height: 300px !important;
+    }
     .index-galery{
         position: absolute;
         margin-top: 15%;
         margin-left: 50%;
     }
     .photos-state{
-        height: 100px;
-        width: 100px;
+        height: 100% !important;
+        width: 100% !important;
     }
     .container-image-show{
         display: block;
@@ -30,16 +35,16 @@
         width: 41%;
     }
     .photos-state{
-        height: 200px;
-        width: 127px;
+        height: 100% !important;
+        width: 100% !important;
     }
     .container-index-states-photos{
         margin-top: 14%;
     }
-    .container-photos-states{
-        display: flex;
-        justify-content: space-between;
-    }
+   // .container-photos-states{
+   //     display: flex;
+   //     justify-content: space-between;
+   // }
     .subtitle-state{
         height: 60px;
     }

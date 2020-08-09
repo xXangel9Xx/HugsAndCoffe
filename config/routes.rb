@@ -9,6 +9,7 @@ devise_for :users
             resources :thanks, except: [:create]
 
    end
+   
  resources :thanks, only: [:create]
  resources :galeries, only: [:create]
  resources :bank_accounts, only: [:create]
