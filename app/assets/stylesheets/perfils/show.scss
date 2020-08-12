@@ -62,14 +62,16 @@
     }
 
     .index-states{
-        margin-right: 5px;
+        width: auto !important;
+        height: auto !important;
+        margin-right: 5px !important;
         border-top-style: solid; 
         border: 1px solid #EE4380;
         box-sizing: border-box;
         border-radius: 59%;
         padding: 2px;
         padding-left: 3px;
-        background-color: white;
+        background-color: white !important;
 
     }
 }

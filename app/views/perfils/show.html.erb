@@ -17,7 +17,7 @@
     </div>
 
            <div class="index-galery">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">  
+            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">  
                 <div class="carousel-inner">
                   <%@states.each_with_index do |states,i|%>
                     <%if i == 0%>
@@ -44,12 +44,46 @@
                 </a>
 
             </div> 
-           </div>
-      
-     
+          </div>
 
 
-    
+
+        <div class="container-carrucel">
+           <div class="carousel-indicators">
+            <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
+             <div class="index-image-carrucel-container">
+              <%@states.each_with_index do |states,i|%>
+                <%if i == 0%>
+                  <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> class="index-states active"><%="#{i}"%></p>
+                <%else%>
+                  <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> class="index-states"><%="#{i}"%></p>  
+                <%end%>
+
+              <%end%>
+            </div>
+            <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
+            </div>
+        </div>
+<!--
+  <div class="container-carrucel">
+    <div class="carousel-indicators">
+      <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
+        <div class="index-image-carrucel-container">
+          <%@states.each_with_index do |states,i|%>
+          
+            <%if i == 0%>
+              <p data-target="#carouselExampleIndicators" data-slide-to=<%="#{i}"%> class="active"><%="#{i}"%></p>
+            <%else%>
+              <p class="index-states" data-target="#carouselExampleIndicators" data-slide-to=<%"#{i}"%>><%="#{i}"%></p>  
+            <%end%>
+
+          <%end%>
+        </div>
+      <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
+    </div>  
+  </div>
+
+    -->
 
 
 
