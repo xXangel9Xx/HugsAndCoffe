@@ -17,7 +17,7 @@
     </div>
 
            <div class="index-galery">
-            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">  
+            <div id="myCarousel" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
                 <div class="carousel-inner">
                   <%@states.each_with_index do |states,i|%>
                     <%if i == 0%>
@@ -32,25 +32,18 @@
 
                   <%end%>
                 </div>
-
-                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                 <span class="glyphicon glyphicon-chevron-left"></span>
-                 <span class="sr-only">Previous</span>
-                </a>
-
-                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-
             </div> 
           </div>
 
 
 
         <div class="container-carrucel">
+        
            <div class="carousel-indicators">
-            <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
+                <a class="carousel-control" href="#myCarousel" data-slide="prev">
+                  <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
+                </a>
+            
              <div class="index-image-carrucel-container">
               <%@states.each_with_index do |states,i|%>
                 <%if i == 0%>
@@ -61,7 +54,9 @@
 
               <%end%>
             </div>
-            <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
+                <a class="carousel-control" href="#myCarousel" data-slide="next">
+                  <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
+               </a>
             </div>
         </div>
 <!--
