@@ -4,6 +4,8 @@ class PerfilsController < ApplicationController
     before_action :params_update, only:[:update]
     before_action :search, only: [:update,:destroy,:show]
     before_action :states, only: [:show]
+    before_action :thanks, only: [:show]
+    before_action :editOrNot, only: [:show]
 
     def index
       @perfils = Perfil.all
@@ -57,6 +59,14 @@ class PerfilsController < ApplicationController
 
     def states 
         @states = Perfil.find_by(id: params[:id]).galery.all
+    end
+
+    def thanks
+        @thankPerfil = Perfil.find_by(id:params[:id]).thank.all
+    end
+
+    def editOrNot
+       @editOrNot = current_user.id != Perfil.find_by(id:params[:id]).id
     end
 end  
 #      array = []

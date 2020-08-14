@@ -1,3 +1,3 @@
 class Thank < ApplicationRecord
-  has_one :galery, dependent: :destroy
+  has_one :perfil, dependent: :destroy
 end

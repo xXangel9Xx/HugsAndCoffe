@@ -1,7 +1,7 @@
 class Perfil < ApplicationRecord
   has_one :user, dependent: :destroy
   has_many :galery, dependent: :destroy
- # has_many :thank, dependent: :destroy
+  has_many :thank, dependent: :destroy
   
   has_one_attached :image
 

@@ -15,79 +15,100 @@
                     </div></p>
 -->  
     </div>
-
-           <div class="index-galery">
-            <div id="myCarousel" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
-                <div class="carousel-inner">
-                  <%@states.each_with_index do |states,i|%>
-                    <%if i == 0%>
-                    <div class="item active">
-                       <%= image_tag(states.image, :class=>"photos-state") %>
-                    </div>
-                    <%else%>
-                    <div class="item">
-                       <%= image_tag(states.image, :class=>"photos-state") %>
-                    </div>
-                    <%end%>
-
-                  <%end%>
-                </div>
-            </div> 
-          </div>
-
-
-
-        <div class="container-carrucel">
-        
-           <div class="carousel-indicators">
-                <a class="carousel-control" href="#myCarousel" data-slide="prev">
-                  <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
-                </a>
-            
-             <div class="index-image-carrucel-container">
-              <%@states.each_with_index do |states,i|%>
-                <%if i == 0%>
-                  <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> class="index-states active"><%="#{i}"%></p>
-                <%else%>
-                  <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> class="index-states"><%="#{i}"%></p>  
-                <%end%>
-
-              <%end%>
-            </div>
-                <a class="carousel-control" href="#myCarousel" data-slide="next">
-                  <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
-               </a>
-            </div>
-        </div>
-<!--
-  <div class="container-carrucel">
-    <div class="carousel-indicators">
-      <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
-        <div class="index-image-carrucel-container">
-          <%@states.each_with_index do |states,i|%>
-          
+ <% if @states.length > 0 %>
+  <div class="index-galery">
+    <div id="myCarousel" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
+      <div class="carousel-inner">
+        <%@states.each_with_index do |states,i|%>
             <%if i == 0%>
-              <p data-target="#carouselExampleIndicators" data-slide-to=<%="#{i}"%> class="active"><%="#{i}"%></p>
+              <div class="item active">
+                  <%= image_tag(states.image, :class=>"photos-state") %>
+              </div>
             <%else%>
-              <p class="index-states" data-target="#carouselExampleIndicators" data-slide-to=<%"#{i}"%>><%="#{i}"%></p>  
+              <div class="item">
+                  <%= image_tag(states.image, :class=>"photos-state") %>
+              </div>
             <%end%>
-
-          <%end%>
-        </div>
-      <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
-    </div>  
+        <%end%>
+      </div>
+    </div> 
   </div>
 
-    -->
+  <div class="container-carrucel">
+    <div class="carousel-indicators">
+        <a class="carousel-control" href="#myCarousel" data-slide="prev">
+          <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
+        </a>
+        <div class="index-image-carrucel-container">
+          <%@states.each_with_index do |states,i|%>
+              <%if i == 0%>
+                <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> class="index-states active"><%="#{i}"%></p>
+              <%else%>
+                <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> class="index-states"><%="#{i}"%></p>  
+              <%end%>
+          <%end%>
+        </div>
+        <a class="carousel-control" href="#myCarousel" data-slide="next">
+          <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
+        </a>
+      </div>
+    </div>    
+  <% end %>
+    <!--////////////////////////////////////////////////////////////////-->
+  <% if @thankPerfil.length > 0 %>
+    <div class="index-galery">
+    <div id="myCarouselThanks" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
+      <div class="carousel-inner">
+        <%@thankPerfil.each_with_index do |states,i|%>
+            <%if i == 0%>
+              <div class="item active">
+             
+              </div>
+            <%else%>
+              <div class="item">
+                <!--<%= image_tag(states.image, :class=>"photos-state") %>-->   
+              </div>
+            <%end%>
+        <%end%>
+      </div>
+    </div> 
+  </div>
+
+  <div class="container-carrucel">
+    <div class="carousel-indicators">
+        <a class="carousel-control" href="#myCarouselThanks" data-slide="prev">
+          <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
+        </a>
+        <div class="index-image-carrucel-container">
+          <%@thankPerfil.each_with_index do |states,i|%>
+              <%if i == 0%>
+                <p data-target="#myCarouselThanks" data-slide-to=<%="#{i}"%> class="index-states active"><%="#{i}"%></p>
+              <%else%>
+                <p data-target="#myCarouselThanks" data-slide-to=<%="#{i}"%> class="index-states"><%="#{i}"%></p>  
+              <%end%>
+          <%end%>
+        </div>
+        <a class="carousel-control" href="#myCarouselThanks" data-slide="next">
+          <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
+        </a>
+      </div>
+    </div>   
+  <% end %>
+  
+  <%if  current_user.id == Perfil.find_by(id:params[:id]).id%>
+      <div class="link-thanks-new">
+        <%= link_to 'Editar perfil', edit_perfil_path(@perfil), :class=>"link-thank-new-color" %>
+      </div>
+  <% else %>
+      <div class="link-thanks-new">
+        <%= link_to 'Agradecer', new_perfil_thank_path(@perfil), :class=>"link-thank-new-color" %>
+      </div>
+  <% end %>
 
 
-
-
-    
-
-    <%else%>
+ <%else%>
         <%=render partial: 'nav_logout', layout: 'nav_logout'%>
-    <% end %>
+ <% end %>
 
 
 

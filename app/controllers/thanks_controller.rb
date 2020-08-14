@@ -10,6 +10,7 @@ class ThanksController < ApplicationController
    
     def create 
        @thank = Thank.new(params_create)
+       @thank.perfil_id = params[:perfil_id]
        if @thank.save
          flash[:notice] = "Su agradecimiento se realizo correctamente"
          #redirect_to 'path'
