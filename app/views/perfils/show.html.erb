@@ -95,7 +95,7 @@
     </div>   
   <% end %>
   
-  <%if  current_user.id == Perfil.find_by(id:params[:id]).id%>
+  <%if @editOrNot%>
       <div class="link-thanks-new">
         <%= link_to 'Editar perfil', edit_perfil_path(@perfil), :class=>"link-thank-new-color" %>
       </div>

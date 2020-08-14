@@ -20,18 +20,20 @@
          <p class="type-date">total:1200</p>
       </div>
     </div>
+      
       <div class="container-dates-user-bank">
       <h1>Datos de Salvador</h1>
+      <%@user_bank_account.each do |bank_account|%>
       <br>
-      <p class="type-date">Entidad: <span class="dates">Banco Banana Republic</span> </p>
-      <p class="type-date">Email: <span class="dates">xyz@xyz.xyz</span></p>
-      <p class="type-date">Nro de cuenta:<span class="dates"> 12345678912345678912</span> </p>
-      <p class="type-date">identificacion:<span class="dates">27623280</span></p>
-      <hr>
-      <p class="type-date">Entidad: <span class="dates">Paypal</span></p>
-      <p class="type-date">Email:<span class="dates">xyz@</span></p>
-      <p>..</p>
+      <p class="type-date">Entidad: <span class="dates"><%=bank_account.entidad%></span> </p>
+      <p class="type-date">Email: <span class="dates"><%=bank_account.email%></span></p>
+      <p class="type-date">Nro de cuenta:<span class="dates"><%=bank_account.account%></span> </p>
+      <p class="type-date">identificacion:<span class="dates"><%=bank_account.identification%></span></p>
+      <hr style="border-top: 4px solid #eeeeee;">
+      <br> 
+      <% end %>
       </div>
+
       <div class="container_date_person">      
        <p class="type-date">Nombre</p>
        <br>
