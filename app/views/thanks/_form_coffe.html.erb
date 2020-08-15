@@ -16,8 +16,8 @@
           <div class="valueMultipl_coffe_thanks" value="4">4</div>
           <div class="valueMultipl_coffe_thanks" value="5">5</div>
          </div>
-         <p class="type-date">560</p>
-         <p class="type-date">total:1200</p>
+         <p class="type-date"><%=Perfil.find_by(id:params[:perfil_id]).amountCoffe%></p>
+         <p class="type-date">total:<span id="total-pay"><%=Perfil.find_by(id:params[:perfil_id]).amountCoffe%></span></p>
       </div>
     </div>
       
@@ -33,8 +33,7 @@
       <br> 
       <% end %>
       </div>
-
-      <div class="container_date_person">      
+      <div class="container_date_person">   
        <p class="type-date">Nombre</p>
        <br>
        <%=f.text_field(:name, :class=>"input-thank" )%>

@@ -3,7 +3,10 @@ export default function HugsOrCoffe(){
         return document.querySelector("[data-context]").dataset['context'];
     };
 
+   this.perfilIdForm = function(){
 
+
+   }
 
     this.containerFollowing = function(){
         let container_following = document.getElementsByClassName('container-following');

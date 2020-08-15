@@ -14,10 +14,11 @@ require("channels")
 
 
 import LoadContent from "../utils"
-import Nav from "./general/nav"
-import Multiplicador from './general/new_multiplicador'
+import Nav from "./main/nav"
+import Multiplicador from './perfils/new_multiplicador'
 import HugsOrCoffe from "./thanks/thanks_new"
 import Hug from "./thanks/hug_new"
+import MultiplicadorCoffe from "./thanks/multiplicator_coffe"
 import Show from "./perfils/show"
 
 const load = new LoadContent()
@@ -28,7 +29,6 @@ load.ready(function(){
 
 
 const nav = new Nav()
-
  if (nav.context() == 'general--nav'){
      nav.burger()
      nav.exitMenuMovile()
@@ -41,6 +41,12 @@ const nav = new Nav()
  if (multiplicadorPerfil.context() == 'general--nav'){
      multiplicadorPerfil.multiplicador()
  };
+
+const multiplicadorCoffe = new MultiplicadorCoffe()
+if (multiplicadorCoffe.context() == 'thanks--new'){
+  multiplicadorCoffe.multiplicadorCoffe()
+
+}
 
 const hugsOrCoffe = new HugsOrCoffe()
  if (hugsOrCoffe.context() == 'thanks--new'){

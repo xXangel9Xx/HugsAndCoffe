@@ -4,7 +4,6 @@ export default function Multiplicador(){
     };
 
     this.multiplicador= function(){ 
- 
         let valueMultiplication = document.getElementsByClassName('valueMultipl');
         let input_coffe_value = document.getElementById('monto-coffe-value');
         

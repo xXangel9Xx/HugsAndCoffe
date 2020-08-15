@@ -1,16 +1,19 @@
 
 <div data-context="thanks--new">
-  <nav  class="navthank">
-        <div class="logoAB-profile-thank">
-            <p class="p-logoAb-thank">A&B</p>
-        </div>
-        <div class="profile-thank">
-            <div class="image-profile-thank">  
+ <div class="nav_show_perfil_logout">
+      <div class="container-dates-user-logout-nav">
+              <%=image_tag(User.find_by(id: params[:perfil_id]).perfil.image, :class=>"image-profile-logout")  %>
+            <div class="name-and-ocupation">
+             <h1 class="date-user-logout">
+             <%=User.find_by(id: params[:perfil_id]).perfil.full_name%>
+             </h1>
+             <h2 class="ocupation">Ocupacion: <%=User.find_by(id: params[:perfil_id]).perfil.ocupacion%></h2>
             </div>
-            <h1 class="name-user-thank">angel Gonzalez</h1>
-        </div>
-    </nav>
-
+              <div class="logoAB-logout">
+                <p class="p-logoAb">A&B</p>
+              </div>
+      </div>
+</div>
   <%=render partial: 'selection', layout: 'selection'%>
   <%=render partial: 'form_coffe', layout: 'form_coffe'%>
   <%=render partial: 'hug', layout:'hug'%>
