@@ -58,6 +58,7 @@ class PerfilsController < ApplicationController
     end
 
     def states 
+        gon.watch.statesLength = Perfil.find_by(id:1).galery.length
         @states = Perfil.find_by(id: params[:id]).galery.all
     end
 

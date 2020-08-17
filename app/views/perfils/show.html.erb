@@ -17,7 +17,7 @@
     </div>
  <% if @states.length > 0 %>
   <div class="index-galery">
-    <div id="myCarousel" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
+    <div id="myCarousel" class="carousel slid carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
         <%@states.each_with_index do |states,i|%>
             <%if i == 0%>
@@ -37,36 +37,40 @@
   <div class="container-carrucel">
     <div class="carousel-indicators">
         <a class="carousel-control" href="#myCarousel" data-slide="prev">
-          <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
+          <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel-state' %>
         </a>
         <div class="index-image-carrucel-container">
           <%@states.each_with_index do |states,i|%>
               <%if i == 0%>
-                <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> class="index-states active"><%="#{i}"%></p>
+                <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> id="mark-index-states" class="index-states follower-state active"><%="#{i}"%></p>
               <%else%>
-                <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> class="index-states"><%="#{i}"%></p>  
+                <p data-target="#myCarousel" data-slide-to=<%="#{i}"%> class="index-states follower-state"><%="#{i}"%></p>  
               <%end%>
           <%end%>
         </div>
         <a class="carousel-control" href="#myCarousel" data-slide="next">
-          <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
+          <%= image_tag 'next.png', :class=>"next-image-carrucel", :id=>'next-carrucel-state' %>
         </a>
       </div>
     </div>    
   <% end %>
     <!--////////////////////////////////////////////////////////////////-->
   <% if @thankPerfil.length > 0 %>
-    <div class="index-galery">
+    <div class="index-thanks">
     <div id="myCarouselThanks" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
-        <%@thankPerfil.each_with_index do |states,i|%>
+        <%@thankPerfil.each_with_index do |thanks,i|%>
             <%if i == 0%>
               <div class="item active">
-             
+                 <p><%=thanks.name%></p>
+                 <p><%=thanks.ocupacion%></p>
+                 <p><%=thanks.message%></p>
               </div>
             <%else%>
               <div class="item">
-
+                 <p><%=thanks.name%></p>
+                 <p><%=thanks.ocupacion%></p>
+                 <p><%=thanks.message%></p>
               </div>
             <%end%>
         <%end%>
@@ -74,22 +78,22 @@
     </div> 
   </div>
 
-  <div class="container-carrucel">
+  <div class="container-carrucel-states">
     <div class="carousel-indicators">
         <a class="carousel-control" href="#myCarouselThanks" data-slide="prev">
-          <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel' %>
+          <%= image_tag 'Back.png', :class=>"back-image-carrucel", :class=>'back-carrucel' %>
         </a>
         <div class="index-image-carrucel-container">
           <%@thankPerfil.each_with_index do |states,i|%>
               <%if i == 0%>
-                <p data-target="#myCarouselThanks" data-slide-to=<%="#{i}"%> class="index-states active"><%="#{i}"%></p>
+                <p data-target="#myCarouselThanks" data-slide-to=<%="#{i}"%> class="index-states follower-thanks active"><%="#{i}"%></p>
               <%else%>
-                <p data-target="#myCarouselThanks" data-slide-to=<%="#{i}"%> class="index-states"><%="#{i}"%></p>  
+                <p data-target="#myCarouselThanks" data-slide-to=<%="#{i}"%> class="index-states follower-thanks"><%="#{i}"%></p>  
               <%end%>
           <%end%>
         </div>
         <a class="carousel-control" href="#myCarouselThanks" data-slide="next">
-          <%= image_tag 'next.png', :class=>"next-image-carrucel", :id => 'next-carrucel' %>
+          <%= image_tag 'next.png', :class=>"next-image-carrucel", :class => 'next-carrucel' %>
         </a>
       </div>
     </div>   

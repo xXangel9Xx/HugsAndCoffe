@@ -96,7 +96,20 @@
         background-color: white !important;
 
     }   
-    
+    .index-thanks{
+        padding: 2%;
+       // position: absolute;
+        margin-top: 15%;
+        margin-left: 40%;
+        width: 41%;
+    }
+    .container-carrucel-states{
+    width: 41%;
+    margin-top: 3%;
+    margin-left: 40%;
+    display: inline-flex;
+    justify-content: center;
+    }
     .link-thanks-new{
         width: 150px;
         height: 50px;
@@ -104,9 +117,15 @@
         padding-top: 20px;
         background-color: #EE4380;
         margin-left: 55%;
+        margin-bottom: 28px;
     }
     .link-thank-new-color{
         position: relative;
         color: white;
     }
+    #mark-index-states{
+      background-color: #EE4380 !important;
+      color: white;
+    }
+
 }

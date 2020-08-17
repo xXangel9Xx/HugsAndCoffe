@@ -66,7 +66,9 @@ const hug = new Hug
  
  const show = new Show()
 if (show.context()=='perfil--nav'){
-  show.carrucel()
+  show.carrucelMarkState()
+  show.CarrucelIncrementIndexState()
+  show.CarrucelDecrementIndexState()
   nav.burger()
   nav.exitMenuMovile()
 
