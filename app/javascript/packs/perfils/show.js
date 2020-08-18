@@ -16,29 +16,41 @@ export default function Show(){
     this.CarrucelIncrementIndexState = function(){
          let nextCarrucelState = document.getElementById('next-carrucel-state');
          let followerState = document.getElementsByClassName('follower-state');  
-         let statesLength = gon.statesLength
-
+        let statesIdLast = gon.statesIdLast
+        --statesIdLast
         nextCarrucelState.addEventListener('click',(e)=>{
             let positionNow = $("#mark-index-states.follower-state").index()
              ++positionNow
             if(positionNow < followerState.length){
                 followerState[positionNow].setAttribute("id","mark-index-states");
                 followerState[--positionNow].removeAttribute("id");
-
-            } /*
-            else if(positionNow>=followerState[followerState.length].dataset.slideTo && positionNow <= statesLength){
-
-            }*/
-
-            
-            else if(positionNow >= statesLength){
+            } 
+            else if(positionNow >= followerState[followerState.length-1].dataset.slideTo && followerState[followerState.length-1].dataset.slideTo >= statesIdLast){
                 followerState[followerState.length-1].removeAttribute("id");
-                followerState[0].setAttribute("id","mark-index-states");
+                for(let i = 0;i <= followerState.length-1; i+=1){
+                    if(i == 0){
+                        followerState[i].setAttribute("id","mark-index-states")
+                        followerState[i].dataset.slideTo = i
+                        followerState[i].innerHTML = `${i}`                        
+                    }
+                 followerState[i].dataset.slideTo = i
+                 followerState[i].innerHTML = `${i}`
+                }
             }
-           
+            else if(positionNow>=followerState[followerState.length-1].dataset.slideTo && followerState[followerState.length-1].dataset.slideTo < statesIdLast){
+                 for(let i = 0; i <= followerState.length-1; i+=1){
+                         let follower = parseInt(followerState[i].dataset.slideTo) 
+                         follower+=1
+                         followerState[i].dataset.slideTo = `${follower}`
+                         followerState[i].innerHTML = `${follower}`
+                 }
+            }
+            
+
+
          },true)
     }
-
+//statesLength
     this.CarrucelDecrementIndexState = function(){
         let backCarrucelState = document.getElementById('back-carrucel-state')
         let followerState = document.getElementsByClassName('follower-state'); 
@@ -50,8 +62,34 @@ export default function Show(){
         },true)
     }
 
+/*   else if(positionNow>=followerState[followerState.length-1].dataset.slideTo && positionNow <= statesIdLast){
+                console.log('estoy en el 2 else if ')
+               for(let i=0;i < followerState.length-1 ; i+=1){
+                    followerState[i].innerHTML = `<p data-target="#myCarousel" data-slide-to="${++followerState[i].dataset.slideTo}" class="index-states follower-state active">${++followerState[i].dataset.slideTo}</p>`
+               }
+               followerState[followerState.length-2].removeAttribute("id");
+               followerState[followerState.length-1].setAttribute("id","mark-index-states");
+            }*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+         //      for(let i = 0; i < followerState.length-1; i+=1){
+          //          if(i == 0){
+          //              followerState[i].innerHTML = `<p data-target="#myCarousel" data-slide-to="${i}" id="mark-index-states" class="index-states follower-state active">${i}</p>`
+          //          }
+          //          followerState[i].innerHTML = `<p data-target="#myCarousel" data-slide-to="${i}" class="index-states follower-state active">${i}</p>`
+          //      }
 
 
         /*  //  let markIndexState = document.querySelector("#mark-index-states.follower-state"); 
