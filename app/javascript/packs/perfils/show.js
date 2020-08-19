@@ -12,11 +12,12 @@ export default function Show(){
                 followerState[i].setAttribute("id","mark-index-states");
             },true)
         }
-        
+    }
+
     this.CarrucelIncrementIndexState = function(){
          let nextCarrucelState = document.getElementById('next-carrucel-state');
          let followerState = document.getElementsByClassName('follower-state');  
-        let statesIdLast = gon.statesIdLast
+         let statesIdLast = gon.statesIdLast
         --statesIdLast
         nextCarrucelState.addEventListener('click',(e)=>{
             let positionNow = $("#mark-index-states.follower-state").index()
@@ -45,91 +46,29 @@ export default function Show(){
                          followerState[i].innerHTML = `${follower}`
                  }
             }
-            
-
-
          },true)
     }
-//statesLength
     this.CarrucelDecrementIndexState = function(){
         let backCarrucelState = document.getElementById('back-carrucel-state')
-        let followerState = document.getElementsByClassName('follower-state'); 
-        
+        let followerState = document.getElementsByClassName('follower-state');    
+        let statesIdLast = gon.statesIdLast  
+        --statesIdLast
         backCarrucelState.addEventListener('click',(e)=>{
-            let positionNow = $("#mark-index-states.follower-state").index()
-            followerState[positionNow].removeAttribute("id");
-            followerState[--positionNow].setAttribute("id","mark-index-states");
+        let positionNow = $("#mark-index-states.follower-state").index()  
+        if (positionNow == 0 ){ 
+            for(let i=0; i   <= followerState.length-1; i+=1){
+                    followerState[followerState.length-1-i].dataset.slideTo = `${statesIdLast-i}`
+                    followerState[followerState.length-1-i].innerHTML = `${statesIdLast-i}`
+                }
+                followerState[followerState.length-1].setAttribute("id","mark-index-states");
+                followerState[0].removeAttribute("id");
+            }else {
+                followerState[positionNow].removeAttribute("id");
+                followerState[--positionNow].setAttribute("id","mark-index-states");  
+            }
         },true)
     }
 
-/*   else if(positionNow>=followerState[followerState.length-1].dataset.slideTo && positionNow <= statesIdLast){
-                console.log('estoy en el 2 else if ')
-               for(let i=0;i < followerState.length-1 ; i+=1){
-                    followerState[i].innerHTML = `<p data-target="#myCarousel" data-slide-to="${++followerState[i].dataset.slideTo}" class="index-states follower-state active">${++followerState[i].dataset.slideTo}</p>`
-               }
-               followerState[followerState.length-2].removeAttribute("id");
-               followerState[followerState.length-1].setAttribute("id","mark-index-states");
-            }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         //      for(let i = 0; i < followerState.length-1; i+=1){
-          //          if(i == 0){
-          //              followerState[i].innerHTML = `<p data-target="#myCarousel" data-slide-to="${i}" id="mark-index-states" class="index-states follower-state active">${i}</p>`
-          //          }
-          //          followerState[i].innerHTML = `<p data-target="#myCarousel" data-slide-to="${i}" class="index-states follower-state active">${i}</p>`
-          //      }
-
-
-        /*  //  let markIndexState = document.querySelector("#mark-index-states.follower-state"); 
-            //let item = document.getElementsByClassName('item').length;       
-            console.log(followerState[i].dataset.slideTo)
-         console.log(nex)
-+ 1               let nex = $('div.active').index() ;
-        var currentItem = $("#myCarouselThanks .item.active" );
-        var currentIndex = $('#carousel-1 .item').index(currentItem) + 1;
-
-                let backPng = document.getElementsByClassName('back-carrucel')
-        let nexPng = document.getElementsByClassName('next-carrucel')
-        let nex 
-        let back
-        function indexNex(){
-            nex = $('div.active').index() + 1;
-             
-        }
-        function indexBack(){
-            back = $('div.active').index() + 1;
-        }
-  
-
-        for(let i = 0; i< backPng.length;i+=1){
-            backPng[i].addEventListener('click',(e)=>{
-                indexBack()
-            },true)
-        }
-
-        for(let i = 0; i< nexPng.length;i+=1){
-            nexPng[i].addEventListener('click',(e)=>{
-                indexNex()
-            },true)
-        }
-        //setInterval(indexActive,1000)
-        //console.log(active)
-        //console.log('este es el item ' + item)
-
-     */   
-    }
 
 }
 
