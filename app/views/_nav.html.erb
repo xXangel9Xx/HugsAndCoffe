@@ -6,12 +6,12 @@
                 <%= link_to 'Perfil', perfil_path(current_user.id),:class=>"link_movile_nav" %>
              </div>
 
-            <div class="container_link_movile_nav">
-             <%= link_to 'Imagenes', perfil_galeries_path(current_user.id), :class=>"link_movile_nav"%> 
-            </div>
-            <div class="container_link_movile_nav">
-          <%= link_to 'Cuentas', perfil_bank_accounts_path(current_user.id), :class=>"link_movile_nav" %>
-            </div>
+             <div class="container_link_movile_nav">
+                <%= link_to 'Imagenes', perfil_galeries_path(current_user.id), :class=>"link_movile_nav"%> 
+             </div>
+             <div class="container_link_movile_nav">
+                <%= link_to 'Cuentas', perfil_bank_accounts_path(current_user.id), :class=>"link_movile_nav" %>
+             </div>
             <div class="container_link_movile_nav"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class=>"link_movile_nav"%></div>
         </nav>
 
@@ -26,5 +26,4 @@
             <h1 class="name-user"><%=User.find_by(id: params[:perfil_id]).perfil.full_name%></h1>
         </div>
     </nav>
-</div><!--            <div class="image-profile">  
-            </div>angel Gonzalez-->
+</div>

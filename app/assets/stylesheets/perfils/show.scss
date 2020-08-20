@@ -1,12 +1,7 @@
 @media screen and(min-width:300px){
     .item{
       width: 100% !important ;
-      height: 300px !important;
-    }
-    .index-galery{
-        position: absolute;
-        margin-top: 15%;
-        margin-left: 50%;
+      height: 143px !important;
     }
     .photos-state{
         height: 100% !important;
@@ -17,12 +12,28 @@
         height: 269px;
         width: 127px;
     }
-}
-@media screen and(min-width: 1000px){
-
-    .carousel-control{
-        position: relative !important;
+    .container-biografia-perfil{
+        margin-top: 8%;
+        text-align: center;
+        height: 40px;
+        width: 61%;
+        margin-left: 21%;
     }
+    .biography{
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .index-galery{
+        margin-top: 5%;
+        height: 143px;
+    }
+    .container-carrucel{
+        width: 41%;
+        margin-top: 8%;
+        margin-left: 32%;
+        display: inline-flex;
+        justify-content: center;
+    }  
     .carousel-indicators{
         position: relative !important;
         margin-left: 0% !important;
@@ -31,46 +42,29 @@
         display: flex;
         justify-content: center;
     }
-
-    .container-biografia-perfil{
-        height: 14%;
-        text-align: center;
-        margin-top: 7%;
-        position: absolute;
-        margin-left: 42%;
-        width: 39%;
+    .carousel-control{
+        position: relative !important;
     }
-    .index-galery{
-        position: absolute;
-        margin-top: 15%;
-        margin-left: 40%;
-        width: 41%;
-    }
-    .photos-state{
-        height: 100% !important;
-        width: 100% !important;
-    }
-    .container-index-states-photos{
-        margin-top: 14%;
-    }
-    .subtitle-state{
-        height: 60px;
-    }
-
     .index-image-carrucel-container{
         display: inline-flex;
     }
-    .container-carrucel{
-        width: 41%;
-        margin-top: 40%;
-        margin-left: 40%;
-        display: inline-flex;
-        justify-content: center;
+    .index-thanks{
+        width: 100%;
     }
-    .back-image-carrucel{
-        margin-right: 5px;
+    .container-thanks-image-thank{
+        display: flex;
     }
-
+    .name-thank{
+        margin-right: 72%;
+        color: black;
+    }
+    .coffe-thanks{
+        height: 66px;
+    }
+    .message-thanks{
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
     .index-states{
         width: auto !important;
         height: auto !important;
@@ -82,11 +76,76 @@
         padding: 2px;
         padding-left: 3px;
         background-color: white !important;
-
     }   
+    #mark-index-states{
+        background-color: #EE4380 !important;
+        color: white;
+    }
+    #mark-index-thanks{
+        background-color: #EE4380 !important;
+        color: white;
+    }
+    .link-thanks-new{
+        text-align: center;
+        background-color: #EE4380;
+        padding-top: 20px;
+        width: 150px;
+        height: 50px;
+        margin-bottom: 28px;
+        margin-left: 26%;
+    }
+    .link-thank-new-color{
+        position: relative;
+        color: white;
+    }
+    .container-carrucel-states{
+        margin-top: 10%;
+    }
+}
+@media screen and(min-width: 1000px){   
+    .container-biografia-perfil{
+        height: 14%;
+        margin-top: 7%;
+        position: absolute;
+        margin-left: 42%;
+        width: 39%;
+    }   
+    .index-galery{
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 40%;
+        width: 41%;
+        height: 400px;
+    }     
+    .item{
+        height: 400px !important;
+    }
+    .carousel-indicators{
+        margin-top: 40%;
+        margin-left: 40%;
+    }    
+    .photos-state{
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .container-index-states-photos{
+        margin-top: 14%;
+    }
+    .subtitle-state{
+        height: 60px;
+    }
+    .container-carrucel{
+        width: 41%;
+        margin-top: 29%;
+        margin-left: 40%;
+        display: inline-flex;
+        justify-content: center;
+    }
+    .back-image-carrucel{
+        margin-right: 5px;
+    }
     .index-thanks{
         padding: 2%;
-       // position: absolute;
         margin-top: 15%;
         margin-left: 40%;
         width: 41%;
@@ -99,29 +158,7 @@
     justify-content: center;
     }
     .link-thanks-new{
-        width: 150px;
-        height: 50px;
-        text-align: center;
-        padding-top: 20px;
-        background-color: #EE4380;
         margin-left: 55%;
-        margin-bottom: 28px;
-    }
-    .link-thank-new-color{
-        position: relative;
-        color: white;
-    }
-    #mark-index-states{
-      background-color: #EE4380 !important;
-      color: white;
-    }
-    #mark-index-thanks{
-        background-color: #EE4380 !important;
-        color: white;
-    }
-    .name-thank{
-        margin-right: 72%;
-        color: black;
     }
     .value-coffes-or-hug-thank{
         height: 21px;
@@ -131,11 +168,7 @@
         border: 1px solid #EE4380;
         box-sizing: border-box;
         border-radius: 59%;}
-    .container-thanks-image-thank{
-        display: flex;
-    }
     .message-thanks{
         height: 90px;
-        overflow: scroll;
     }
 }
