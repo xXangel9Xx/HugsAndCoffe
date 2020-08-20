@@ -79,9 +79,12 @@ if (show.context()=='perfil--nav'){
   let nextCarrucelState = document.getElementById('next-carrucel-state');
   let statesIdLast = gon.statesIdLast;
     let backCarrucelState = document.getElementById('back-carrucel-state');
-  show.carrucelMarkState(followerState,markIndexIdClass,markIndex);
-  show.carrucelIncrementIndexState(nextCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex)
-  show.carrucelDecrementIndexState(backCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex)
+    if(statesIdLast){
+       show.carrucelMarkState(followerState,markIndexIdClass,markIndex);
+       show.carrucelIncrementIndexState(nextCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex)
+       show.carrucelDecrementIndexState(backCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex) 
+    }
+
   ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
     ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
       ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
@@ -95,9 +98,12 @@ if (show.context()=='perfil--nav'){
   let nextCarrucelThanks = document.getElementById('next-carrucel-thanks');
   let thanksIdLast = gon.thanksIdLast;
   let backCarrucelThanks = document.getElementById('back-carrucel-thanks');  
-  show.carrucelMarkState(followerThanks,markIndexThanks,markIndexid,statesIdLast)
-  show.carrucelIncrementIndexState(nextCarrucelThanks,followerThanks,thanksIdLast,markIndexThanks,markIndexid)
-  show.carrucelDecrementIndexState(backCarrucelThanks,followerThanks,thanksIdLast,markIndexThanks,markIndexid)
+  if(thanksIdLast){
+    show.carrucelMarkState(followerThanks,markIndexThanks,markIndexid,statesIdLast)
+    show.carrucelIncrementIndexState(nextCarrucelThanks,followerThanks,thanksIdLast,markIndexThanks,markIndexid)
+    show.carrucelDecrementIndexState(backCarrucelThanks,followerThanks,thanksIdLast,markIndexThanks,markIndexid)    
+  }
+ 
   nav.burger()
   nav.exitMenuMovile()
 
