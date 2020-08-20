@@ -66,9 +66,38 @@ const hug = new Hug
  
  const show = new Show()
 if (show.context()=='perfil--nav'){
-  show.carrucelMarkState()
-  show.CarrucelIncrementIndexState()
-  show.CarrucelDecrementIndexState()
+    ///////////////////////////////////////////>>>>>>>>Carrucel States<<<<<<</////////////////////////////////////////
+    ///////////////////////////////////////////>>>>>>>>Carrucel States<<<<<<</////////////////////////////////////////
+      ///////////////////////////////////////////>>>>>>>>Carrucel States<<<<<<</////////////////////////////////////////
+        ///////////////////////////////////////////>>>>>>>>Carrucel States<<<<<<</////////////////////////////////////////
+      ///////////////////////////////////////////>>>>>>>>Carrucel States<<<<<<</////////////////////////////////////////
+    ///////////////////////////////////////////>>>>>>>>Carrucel States<<<<<<</////////////////////////////////////////
+  ///////////////////////////////////////////>>>>>>>>Carrucel States<<<<<<<///////////////////////////////////////// 
+  let followerState = document.getElementsByClassName('follower-state');
+  let markIndexIdClass = "#mark-index-states.follower-state";
+  let markIndex = "mark-index-states";
+  let nextCarrucelState = document.getElementById('next-carrucel-state');
+  let statesIdLast = gon.statesIdLast;
+    let backCarrucelState = document.getElementById('back-carrucel-state');
+  show.carrucelMarkState(followerState,markIndexIdClass,markIndex);
+  show.carrucelIncrementIndexState(nextCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex)
+  show.carrucelDecrementIndexState(backCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex)
+  ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
+    ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
+      ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
+        ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
+      ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
+    ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
+  ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<<///////////////////////////////////////// 
+  let followerThanks = document.getElementsByClassName('follower-thanks');
+  let markIndexThanks = "#mark-index-thanks.follower-thanks";
+  let markIndexid  = "mark-index-thanks";
+  let nextCarrucelThanks = document.getElementById('next-carrucel-thanks');
+  let thanksIdLast = gon.thanksIdLast;
+  let backCarrucelThanks = document.getElementById('back-carrucel-thanks');  
+  show.carrucelMarkState(followerThanks,markIndexThanks,markIndexid,statesIdLast)
+  show.carrucelIncrementIndexState(nextCarrucelThanks,followerThanks,thanksIdLast,markIndexThanks,markIndexid)
+  show.carrucelDecrementIndexState(backCarrucelThanks,followerThanks,thanksIdLast,markIndexThanks,markIndexid)
   nav.burger()
   nav.exitMenuMovile()
 
