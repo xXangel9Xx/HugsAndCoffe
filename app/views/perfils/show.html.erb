@@ -30,7 +30,7 @@
 
 
   <div class="container-carrucel">
-    <div class="carousel-indicators">
+    <div class="carousel-indicators" id="carousel-indicators">
         <a class="carousel-control" href="#myCarousel" data-slide="prev">
           <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel-state' %>
         </a>
@@ -108,7 +108,7 @@
 
 
     <div class="container-carrucel-states">
-      <div class="carousel-indicators">
+      <div class="carousel-indicators" id="carousel-indicators-thanks">
         <a class="carousel-control" href="#myCarouselThanks" data-slide="prev">
           <%= image_tag 'Back.png',:id=>'back-carrucel-thanks', :class=>"back-image-carrucel back-carrucel"%>
         </a>
@@ -168,7 +168,7 @@
 
 
   <div class="container-carrucel">
-    <div class="carousel-indicators">
+    <div class="carousel-indicators" id="carousel-indicators">
         <a class="carousel-control" href="#myCarousel" data-slide="prev">
           <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel-state' %>
         </a>
@@ -182,7 +182,6 @@
               <%end%>
            <% end %>
           <%end%>
-          
         </div>
         <a class="carousel-control" href="#myCarousel" data-slide="next">
           <%= image_tag 'next.png', :class=>"next-image-carrucel", :id=>'next-carrucel-state' %>
@@ -193,7 +192,6 @@
     <!--////////////////////////////////////////////////////////////////-->
 
   <% if @thankPerfil.length > 0 %>
- 
     <div class="index-thanks">
     <div id="myCarouselThanks" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
@@ -246,7 +244,7 @@
 
 
   <div class="container-carrucel-states">
-    <div class="carousel-indicators">
+    <div class="carousel-indicators" id="carousel-indicators-thanks">
         <a class="carousel-control" href="#myCarouselThanks" data-slide="prev">
           <%= image_tag 'Back.png',:id=>'back-carrucel-thanks', :class=>"back-image-carrucel back-carrucel"%>
         </a>

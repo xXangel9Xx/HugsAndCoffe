@@ -20,6 +20,7 @@
         margin-left: 21%;
     }
     .biography{
+        height: 100%;
         overflow-x: hidden;
         overflow-y: scroll;
     }
@@ -34,7 +35,7 @@
         display: inline-flex;
         justify-content: center;
     }  
-    .carousel-indicators{
+    #carousel-indicators, #carousel-indicators-thanks{
         position: relative !important;
         margin-left: 0% !important;
         left: 0% !important;
@@ -50,6 +51,7 @@
     }
     .index-thanks{
         width: 100%;
+        box-shadow: 0px 1px 42px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
     }
     .container-thanks-image-thank{
         display: flex;
@@ -62,6 +64,7 @@
         height: 66px;
     }
     .message-thanks{
+        text-align: center;
         overflow-x: hidden;
         overflow-y: scroll;
     }
@@ -102,26 +105,48 @@
         margin-top: 10%;
     }
 }
-@media screen and(min-width: 1000px){   
+@media screen and(min-width: 350px){
+    .link-thanks-new{margin-left: 28%;}
+}
+@media screen and(min-width:400px){
+    .link-thanks-new{margin-left: 28%;}
+    .index-galery{    
+        width: 90%;
+        margin-left: 5%;
+    }
+    .index-thanks{
+        margin-left: 5%;
+        width: 90%;
+    }
+}
+@media screen and(min-width:500px){.link-thanks-new{margin-left: 34%;}
+}
+@media screen and(min-width:600px){.link-thanks-new{margin-left: 39%;}
+}
+@media screen and(min-width:800px){.link-thanks-new{margin-left: 41%;}
+}
+@media screen and(min-width:1000px){   
     .container-biografia-perfil{
         height: 14%;
-        margin-top: 7%;
+        margin-top: 2%;
         position: absolute;
-        margin-left: 42%;
-        width: 39%;
+        margin-left: 33%;
+        width: 39%;    
     }   
     .index-galery{
         position: absolute;
-        margin-top: 15%;
-        margin-left: 40%;
-        width: 41%;
+        margin-top: 14%;
         height: 400px;
     }     
     .item{
         height: 400px !important;
     }
-    .carousel-indicators{
-        margin-top: 40%;
+    #carousel-indicators-thanks{
+        margin-top: 5%;
+        width: 41% !important;
+    }
+    #carousel-indicators{
+        margin-top: 5px;
         margin-left: 40%;
     }    
     .photos-state{
@@ -136,29 +161,30 @@
     }
     .container-carrucel{
         width: 41%;
-        margin-top: 29%;
-        margin-left: 40%;
+       // margin-top: 44%;
+        margin-top: 57%;
+        margin-left: 31%;
         display: inline-flex;
         justify-content: center;
     }
+    
     .back-image-carrucel{
         margin-right: 5px;
     }
     .index-thanks{
         padding: 2%;
-        margin-top: 15%;
-        margin-left: 40%;
-        width: 41%;
+        margin-top: 2%;
+        margin-left: 5%;
     }
     .container-carrucel-states{
-    width: 41%;
-    margin-top: 3%;
-    margin-left: 40%;
-    display: inline-flex;
-    justify-content: center;
+        margin-top: 0%;
+        width: 41%;
+        margin-left: 31%;
+        display: inline-flex;
+        justify-content: center; 
     }
     .link-thanks-new{
-        margin-left: 55%;
+        margin-left: 44%;
     }
     .value-coffes-or-hug-thank{
         height: 21px;
@@ -169,6 +195,29 @@
         box-sizing: border-box;
         border-radius: 59%;}
     .message-thanks{
-        height: 90px;
+        height: 70%;
     }
+
+}    
+@media screen and(min-width:1100px){.container-carrucel{margin-top: 53%;}}
+@media screen and(min-width:1200px){.container-carrucel{margin-top: 50%;}}
+@media screen and(min-width:1300px){
+        .link-thanks-new{margin-left: 46%;}
+        .container-carrucel{margin-top: 48%;}
+    
+}
+@media screen and(min-width:1400px){.container-carrucel{margin-top: 45%;}
+}
+@media screen and(min-width:1500px){.container-carrucel{margin-top: 43%;}
+}
+@media screen and(min-width:1600px){.container-carrucel{margin-top: 41%;}
+}
+
+@media screen and(min-width:1700px){.link-thanks-new{margin-left: 47%;}
+.container-carrucel{margin-top: 39%;}
+}  
+@media screen and(min-width:1900px){.container-carrucel{margin-top: 37%;}
+} 
+@media screen and(min-width:2000px){.link-thanks-new{margin-left: 48%;}
+.container-carrucel{margin-top: 36%;}
 }
