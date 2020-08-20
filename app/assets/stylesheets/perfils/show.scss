@@ -27,17 +27,9 @@
         position: relative !important;
         margin-left: 0% !important;
         left: 0% !important;
-        /* width: auto; */
         width: 100% !important;
-        /* justify-content: center; */
         display: flex;
         justify-content: center;
-
-        //left: 40% !important;
-        //margin-top: 8% !important;
-       // margin-left: 0% !important;
-       // display: inline-flex;
-       // justify-content: space-around;
     }
 
     .container-biografia-perfil{
@@ -61,10 +53,6 @@
     .container-index-states-photos{
         margin-top: 14%;
     }
-   // .container-photos-states{
-   //     display: flex;
-   //     justify-content: space-between;
-   // }
     .subtitle-state{
         height: 60px;
     }
@@ -130,5 +118,24 @@
     #mark-index-thanks{
         background-color: #EE4380 !important;
         color: white;
+    }
+    .name-thank{
+        margin-right: 72%;
+        color: black;
+    }
+    .value-coffes-or-hug-thank{
+        height: 21px;
+        text-align: center;
+        width: 35px;
+        border-top-style: solid;
+        border: 1px solid #EE4380;
+        box-sizing: border-box;
+        border-radius: 59%;}
+    .container-thanks-image-thank{
+        display: flex;
+    }
+    .message-thanks{
+        height: 90px;
+        overflow: scroll;
     }
 }

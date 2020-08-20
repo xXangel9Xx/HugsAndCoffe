@@ -66,16 +66,46 @@
         <%@thankPerfil.each_with_index do |thanks,i|%>
             <%if i == 0%>
               <div class="item active">
-                 <p><%=thanks.name%></p>
+                <%if thanks.coffe%>
+                 <div class="container-coffe-image-thank">
+                    <p class="name-thank"><strong><%=thanks.name%></strong></p>
+                    <%= image_tag 'coffe.png', :class=>"coffe-thanks" %>
+                    <p class="value-coffes-or-hug-thank"><%=thanks.value_coffes%></p>
+                 </div>
+                <% else %>
+                 <div class="container-thanks-image-thank"> 
+                  <p class="name-thank"><strong><%=thanks.name%></strong></p>
+                   <%= image_tag 'heart.png'%>
+                  <p class="value-coffes-or-hug-thank"><%=thanks.hug%></p> 
+                 </div>                
+                <% end %>
+                 <br>
+                 <br>
                  <p><%=thanks.ocupacion%></p>
-                 <p><%=thanks.message%></p>
+                 <br>
+                 <p class="message-thanks"><%=thanks.message%></p>
               </div>
             <%else%>
               <div class="item">
-                 <p><%=thanks.name%></p>
+                <%if thanks.coffe%>
+                 <div class="container-thanks-image-thank">
+                    <p class="name-thank"><strong><%=thanks.name%></strong></p>
+                    <%= image_tag 'coffe.png', :class=>"coffe-thanks" %>
+                    <p class="value-coffes-or-hug-thank"><%=thanks.value_coffes%></p>
+                 </div>
+                <% else %>
+                 <div class="container-thanks-image-thank"> 
+                  <p class="name-thank"><strong><%=thanks.name%></strong></p>
+                   <%= image_tag 'heart.png',:class=>"hug-thanks" %>
+                  <p class="value-coffes-or-hug-thank"><%=thanks.hug%></p> 
+                 </div>                
+                <% end %>
+                 <br>
+                 <br>
                  <p><%=thanks.ocupacion%></p>
-                 <p><%=thanks.message%></p>
-              </div>
+                 <br>
+                 <p class="message-thanks"><%=thanks.message%></p>
+            </div>
             <%end%>
         <%end%>
       </div>
