@@ -32,7 +32,9 @@
       <hr style="border-top: 4px solid #eeeeee;">
       <br> 
       <% end %>
-      </div>
+      </div>, <!--:id=>"coffe-value"-->
+      <%=f.number_field(:value_coffes, :id=>"coffe-value")%>
+      <%=f.text_field(:coffe, :value => true, :id=>"coffe-boolean")%>
       <div class="container_date_person">   
        <p class="type-date">Nombre</p>
        <br>

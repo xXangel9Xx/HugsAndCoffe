@@ -25,7 +25,7 @@ class ThanksController < ApplicationController
     private
 
     def params_create
-      params.require(:thank).permit(:value_coffes,:hug,:name,:ocupacion,:message)
+      params.require(:thank).permit(:coffe,:value_coffes,:hug,:name,:ocupacion,:message)
     end
     def user_bank_account
       @user_bank_account = User.find_by(id: params[:perfil_id]).bank_account.all

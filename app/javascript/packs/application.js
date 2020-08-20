@@ -84,7 +84,6 @@ if (show.context()=='perfil--nav'){
        show.carrucelIncrementIndexState(nextCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex)
        show.carrucelDecrementIndexState(backCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex) 
     }
-
   ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
     ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
       ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////

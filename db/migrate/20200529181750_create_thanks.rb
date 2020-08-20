@@ -2,7 +2,7 @@ class CreateThanks < ActiveRecord::Migration[6.0]
   def change
     create_table :thanks do |t|
       t.boolean :coffe, default: false
-      t.integer :value_coffes, default: 0
+      t.integer :value_coffes, default: 1
       t.integer :hug, default: 0
       t.string :name
       t.string :ocupacion
