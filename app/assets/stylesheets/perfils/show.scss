@@ -27,6 +27,7 @@
     .index-galery{
         margin-top: 5%;
         height: 143px;
+        margin-left: 5%;
     }
     .container-carrucel{
         width: 41%;
@@ -104,9 +105,28 @@
     .container-carrucel-states{
         margin-top: 10%;
     }
+    .not-loged{ width: 90%;
+        margin-left: 5% !important}
+
+.margin-thanks-null{    
+    margin-top: 56%;
+    margin-bottom: 30px;
+} 
+.found-index{
+    box-shadow: 0px 1px 42px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+}
+.text-aling-not-state{
+    text-align: center;
+}
+.index-thanks{
+    padding: 2%;
+    margin-top: 2%;
+    margin-left: 5%;
+}
 }
 @media screen and(min-width: 350px){
     .link-thanks-new{margin-left: 28%;}
+    .not-loged{ width: 90%;}
 }
 @media screen and(min-width:400px){
     .link-thanks-new{margin-left: 28%;}
@@ -118,12 +138,16 @@
         margin-left: 5%;
         width: 90%;
     }
+    .not-loged{ width: 90%;}
 }
 @media screen and(min-width:500px){.link-thanks-new{margin-left: 34%;}
+.not-loged{ width: 90%;}
 }
 @media screen and(min-width:600px){.link-thanks-new{margin-left: 39%;}
+.not-loged{ width: 90%;}
 }
 @media screen and(min-width:800px){.link-thanks-new{margin-left: 41%;}
+.not-loged{ width: 90%;}
 }
 @media screen and(min-width:1000px){   
     .container-biografia-perfil{
@@ -156,9 +180,8 @@
     .container-index-states-photos{
         margin-top: 14%;
     }
-    .subtitle-state{
-        height: 60px;
-    }
+    .subtitle-state{height: 60px;}
+    
     .container-carrucel{
         width: 41%;
        // margin-top: 44%;
@@ -167,10 +190,8 @@
         display: inline-flex;
         justify-content: center;
     }
-    
-    .back-image-carrucel{
-        margin-right: 5px;
-    }
+    .back-image-carrucel{margin-right: 5px;}
+
     .index-thanks{
         padding: 2%;
         margin-top: 2%;
@@ -183,9 +204,8 @@
         display: inline-flex;
         justify-content: center; 
     }
-    .link-thanks-new{
-        margin-left: 44%;
-    }
+    .link-thanks-new{margin-left: 44%;}
+
     .value-coffes-or-hug-thank{
         height: 21px;
         text-align: center;
@@ -194,30 +214,117 @@
         border: 1px solid #EE4380;
         box-sizing: border-box;
         border-radius: 59%;}
-    .message-thanks{
-        height: 70%;
-    }
 
-}    
-@media screen and(min-width:1100px){.container-carrucel{margin-top: 53%;}}
-@media screen and(min-width:1200px){.container-carrucel{margin-top: 50%;}}
+    .message-thanks{height: 70%;}
+
+    .login-biography{margin-left: 44%;}
+    .index-galery-login{    
+        width: 47%;
+        margin-left: 41%;
+    }
+    .container-carrucel-index-states{margin-left: 42%;}
+    .margin-thanks-null{    
+        margin-top: 56%;
+        margin-bottom: 30px;
+    } 
+    .not-loged{ width: 90%;}
+    
+}       
+
+@media screen and(min-width:1100px){.container-carrucel{margin-top: 53%;}
+    .login-biography{margin-left: 44%;}
+    .index-galery-login{    
+        width: 47%;
+        margin-left: 41%;
+    }
+    .container-carrucel-index-states{margin-left: 44%;}
+    .margin-thanks-null {margin-top: 55%;}
+    .not-loged{ width: 90%;}
+}
+@media screen and(min-width:1200px){.container-carrucel{margin-top: 50%;}
+        .login-biography{margin-left: 44%;}
+        .index-galery-login{    
+            width: 47%;
+            margin-left: 41%;
+        }
+        .container-carrucel-index-states{margin-left: 46%;}
+        .margin-thanks-null {margin-top: 51%;}
+        .not-loged{ width: 90%;}
+}
 @media screen and(min-width:1300px){
         .link-thanks-new{margin-left: 46%;}
         .container-carrucel{margin-top: 48%;}
-    
+        .login-biography{margin-left: 44%;}
+        .index-galery-login{    
+            width: 47%;
+            margin-left: 41%;
+        }
+        .margin-not-found{margin-left: 59%;}
+        .margin-thanks-null {margin-top: 48%;}
+        .not-loged{ width: 90%;}
 }
 @media screen and(min-width:1400px){.container-carrucel{margin-top: 45%;}
+.login-biography{margin-left: 44%;}
+.index-galery-login{    
+    width: 47%;
+    margin-left: 41%;
 }
+.margin-thanks-null{margin-top: 46%;}
+.not-loged{ width: 90%;}
+}
+
 @media screen and(min-width:1500px){.container-carrucel{margin-top: 43%;}
+.login-biography{margin-left: 44%;}
+.index-galery-login{    
+    width: 47%;
+    margin-left: 41%;
 }
+.margin-thanks-null {margin-top: 44%;}
+.not-loged{ width: 90%;}
+}
+
 @media screen and(min-width:1600px){.container-carrucel{margin-top: 41%;}
+.login-biography{margin-left: 44%;}
+.index-galery-login{    
+    width: 47%;
+    margin-left: 41%;}
+.margin-thanks-null {margin-top: 42%;}
+.not-loged{ width: 90%;}    
 }
+
 
 @media screen and(min-width:1700px){.link-thanks-new{margin-left: 47%;}
 .container-carrucel{margin-top: 39%;}
+.login-biography{margin-left: 44%;}
+.index-galery-login{    
+    width: 47%;
+    margin-left: 41%;
+}
+.margin-thanks-null {margin-top: 40%;}
+.margin-not-found{margin-left: 60%;}
+.not-loged{ width: 90%;}
 }  
-@media screen and(min-width:1900px){.container-carrucel{margin-top: 37%;}
+@media screen and(min-width:1900px){
+    .container-carrucel{margin-top: 37%;}
+    .login-biography{margin-left: 44%;}
+    .index-galery-login{    
+        width: 47%;
+        margin-left: 41%;
+    }
+    .margin-thanks-null {margin-top: 37%;}
+    .not-loged{ width: 90%;}
+
 } 
-@media screen and(min-width:2000px){.link-thanks-new{margin-left: 48%;}
+@media screen and(min-width:2000px){
+.link-thanks-new{margin-left: 60%;}
 .container-carrucel{margin-top: 36%;}
+.login-biography{margin-left: 44%;}
+    .index-galery-login{    
+        width: 47%;
+        margin-left: 41%;
+    }
+    .margin-thanks-null {
+        margin-top: 40%;
+    }
+    .not-loged{ width: 90%;}
 }

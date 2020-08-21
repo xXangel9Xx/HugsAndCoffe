@@ -4,13 +4,13 @@
  
     <%=render partial: 'nav_logout', layout: 'nav_logout'%>
     <%= render partial: './nav_desktop', layout: './nav_desktop'%>
-    <div class="container-biografia-perfil">
+    <div class="container-biografia-perfil login-biography">
      <p class="biography"><%=Perfil.find_by(id: params[:id]).biografia%></p> 
     </div>
 
 
  <% if @states.length > 0 %>
-  <div class="index-galery">
+  <div class="index-galery index-galery-login">
     <div id="myCarousel" class="carousel slid carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
         <%@states.each_with_index do |states,i|%>
@@ -29,7 +29,7 @@
   </div>
 
 
-  <div class="container-carrucel">
+  <div class="container-carrucel container-carrucel-index-states">
     <div class="carousel-indicators" id="carousel-indicators">
         <a class="carousel-control" href="#myCarousel" data-slide="prev">
           <%= image_tag 'Back.png', :class=>"back-image-carrucel", :id=>'back-carrucel-state' %>
@@ -51,11 +51,15 @@
         </a>
       </div>
     </div>    
+    <% else %>
+   <div class="index-galery index-galery-login text-aling-not-state found-index">
+       <p>No tiene estados para mostrar</p>
+   </div>
   <% end %>
     <!--////////////////////////////////////////////////////////////////-->
 
   <% if @thankPerfil.length > 0 %>
-   <div class="index-thanks">
+   <div class="index-thanks index-galery-login">
     <div id="myCarouselThanks" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
         <%@thankPerfil.each_with_index do |thanks,i|%>
@@ -107,7 +111,7 @@
    </div>
 
 
-    <div class="container-carrucel-states">
+    <div class="container-carrucel-states container-carrucel-index-states">
       <div class="carousel-indicators" id="carousel-indicators-thanks">
         <a class="carousel-control" href="#myCarouselThanks" data-slide="prev">
           <%= image_tag 'Back.png',:id=>'back-carrucel-thanks', :class=>"back-image-carrucel back-carrucel"%>
@@ -127,17 +131,26 @@
           <%= image_tag 'next.png',:id=>'next-carrucel-thanks', :class=>"next-image-carrucel next-carrucel"  %>
         </a>
       </div>
-    </div>     
+    </div>   
+    <% else %>
+           <div class="index-thanks index-galery-login text-aling-not-state margin-thanks-null ">
+            <p>No tiene agradecimientos para mostrar</p>
+          </div> 
   <% end %>
 
   <%if @editOrNot%>
-      <div class="link-thanks-new">
+      <div class="link-thanks-new margin-not-found">
         <%= link_to 'Editar perfil', edit_perfil_path(@perfil), :class=>"link-thank-new-color" %>
       </div>
   <% else %>
-      <div class="link-thanks-new">
+   <!-- <% if @states.length == 0 && @thankPerfil.length == 0  %>
+      <div class="link-thanks-new null-state-and-thanks">
         <%= link_to 'Agradecer', new_perfil_thank_path(@perfil), :class=>"link-thank-new-color" %>
       </div>
+  <% end %>-->
+     <div class="link-thanks-new margin-not-found">
+        <%= link_to 'Agradecer', new_perfil_thank_path(@perfil), :class=>"link-thank-new-color" %>
+      </div> 
   <% end %>
 
 </div>
@@ -187,7 +200,11 @@
           <%= image_tag 'next.png', :class=>"next-image-carrucel", :id=>'next-carrucel-state' %>
         </a>
       </div>
-    </div>   
+    </div>  
+  <% else %>
+   <div class="index-galery index-galery-login text-aling-not-state found-index not-loged">
+       <p>No tiene estados para mostrar</p>
+   </div>
   <% end %>
     <!--////////////////////////////////////////////////////////////////-->
 
@@ -237,6 +254,7 @@
                  <p class="message-thanks"><%=thanks.message%></p>
             </div>
             <%end%>
+   
         <%end%>
       </div>
     </div> 
@@ -264,14 +282,18 @@
         </a>
       </div>
     </div>   
+    <% else %>
+          <div class="index-thanks index-galery-login text-aling-not-state margin-thanks-null not-loged">
+            <p>No tiene agradecimientos para mostrar</p>
+          </div> 
   <% end %>
 
   <%if @editOrNot%>
-      <div class="link-thanks-new">
+      <div class="link-thanks-new margin-not-found-not-loged">
         <%= link_to 'Editar perfil', edit_perfil_path(@perfil), :class=>"link-thank-new-color" %>
       </div>
   <% else %>
-      <div class="link-thanks-new">
+      <div class="link-thanks-new margin-not-found-not-loged">
         <%= link_to 'Agradecer', new_perfil_thank_path(@perfil), :class=>"link-thank-new-color" %>
       </div>
   <% end %>     
