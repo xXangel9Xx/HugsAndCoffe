@@ -14,6 +14,7 @@ require("channels")
 
 
 import LoadContent from "../utils"
+import NewPerfil from "./perfils/new"
 import Nav from "./main/nav"
 import Multiplicador from './perfils/new_multiplicador'
 import HugsOrCoffe from "./thanks/thanks_new"
@@ -32,10 +33,12 @@ const nav = new Nav()
  if (nav.context() == 'general--nav'){
      nav.burger()
      nav.exitMenuMovile()
-     
  };
-
-
+const newPerfil = new NewPerfil()
+if (newPerfil.context() == 'general--nav'){
+  newPerfil.publicFalseToTruePerfil()
+  newPerfil.publicTrueToFalsePerfil()
+}
 
  const multiplicadorPerfil = new Multiplicador()
  if (multiplicadorPerfil.context() == 'general--nav'){

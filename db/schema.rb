@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
   end
 
   create_table "perfils", force: :cascade do |t|
+    t.boolean "public", default: false
     t.integer "amountCoffe"
     t.text "currencySymbol"
     t.string "full_name"
@@ -67,7 +68,7 @@ ActiveRecord::Schema.define(version: 2020_05_29_181750) do
 
   create_table "thanks", force: :cascade do |t|
     t.boolean "coffe", default: false
-    t.integer "value_coffes", default: 0
+    t.integer "value_coffes", default: 1
     t.integer "hug", default: 0
     t.string "name"
     t.string "ocupacion"

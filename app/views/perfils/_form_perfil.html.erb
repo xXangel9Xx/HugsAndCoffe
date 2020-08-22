@@ -1,21 +1,27 @@
 <div class="dates-usuario">
 <%=form_with model:@perfil, local: true do |f| %>
+
+  <%=f.text_field(:public, :id=>"public-perfil")%>
+
   <div class="add_full_name-and-ocupation">
-  <div  class="container-input-full-name-perfil-form">
+    <div  class="container-input-full-name-perfil-form">
+      <br>
+
+      <!-- <%= f.label :full_name%>--> 
+      <br>
+      <p>Primer Nombre y Primer apellido</p>      
+      <%= f.text_field(:full_name)%>
+      <br>
+    </div>
+
+    <div>
     <br>
-     <p>Primer Nombre y Primer apellido</p>
-    <!-- <%= f.label :full_name%>--> 
-    <br>
-      <%= f.text_field( :full_name)%>
-    <br>
-  </div>
-  <div>
-    <br>
-      <%=f.label :ocupation%>
-    <br>
-      <%=f.text_field(:ocupacion)%>
-    <br>
-  </div>  
+      <br>
+        <%=f.label :ocupation%>
+      <br>
+        <%=f.text_field(:ocupacion)%>
+      <br>
+    </div>  
   </div>
 
 

@@ -20,7 +20,7 @@
         </div>
     </nav>
 </div>
-<!--angel Gonzalez-->
+
 <div>
 
 <div class="container-Perfils-new">
@@ -40,7 +40,8 @@
 <div class="container-publicar-perfil">
     <h1 class="perfil-usuario-text-on-perfil">Perfil Del Usuario</h1>
     <div>
-    <%= image_tag 'Switch_Off.png' %>
+    <%=image_tag('Switch_Off.png', :id=>"not-public", data:{public:false}) %>
+    <%=image_tag('Switch_Open.png', :id=>"perfil-public-true", data:{public:true}) %>
     <p class="publicar-perfil">
     publicar perfil</p>
     </div>

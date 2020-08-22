@@ -46,11 +46,11 @@ class PerfilsController < ApplicationController
     end
     private 
     def params_create
-        params.require(:perfil).permit(:full_name, :ocupacion ,:biografia, :amountCoffe,:currencySymbol,:image)
+        params.require(:perfil).permit(:public,:full_name, :ocupacion ,:biografia, :amountCoffe,:currencySymbol,:image)
     end 
 
     def params_update
-        params.require(:perfil).permit(:full_name, :ocupacion,:biografia,:amountCoffe,:currencySymbol,:image)
+        params.require(:perfil).permit(:public,:full_name, :ocupacion,:biografia,:amountCoffe,:currencySymbol,:image)
     end
 
     def search 
