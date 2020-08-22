@@ -15,7 +15,13 @@
     .name-and-ocupation{
         width: 123px;
         margin-top: 1%;
-    }
+        overflow:hidden;
+    }       
+    
+    .name-and-ocupation:hover{
+        overflow-x: scroll; 
+        overflow-y: scroll;} 
+       
     .full-name-date{
         font-size: 90%;
     }
@@ -23,7 +29,7 @@
     .ocupation{
         font-weight: 100;
         font-size: 90%;
-        width: max-content;
+        width: auto;
     }
     .logoAB-logout{
         background-color: #EE4380;

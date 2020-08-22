@@ -2,7 +2,12 @@
 
  <%if user_signed_in? && current_user.id == Perfil.find_by(id:params[:id]).id  %>
     <%=render partial: 'perfil_signed', layout: 'perfil_signed'%>
- <%else%>
+  <%elsif @perfil.public == true%>
     <%=render partial: 'perfil_signed_not', layout: 'perfil_signed_not'%>
+  <%elsif @perfil.public == false %>
+      <%=render partial: 'nav_logout', layout: 'nav_logout'%>
+      <div id="not-public-perfil-show">
+        <p>Este perfil no es publico</p>
+      </div>
   <% end %>
 </div>

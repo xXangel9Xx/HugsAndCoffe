@@ -5,7 +5,7 @@
    </div>
 
 <div class="container-send-hug">
- <p class="text-send-hug">Enviando un abrazo de: <span class="send-hug-of"></span> </p>
+ <p class="text-send-hug">Enviando un abrazo de: <span class="send-hug-of"></span></p>
 </div>
 <div class="container-form-thanks-hug"> 
 <%=form_with(url:thanks_path, model:@thank, local:true)  do |f|%>
@@ -13,7 +13,6 @@
  <p class="your-dates-text">Tus datos</p>
  <br>
  <br>
-
  <%=f.number_field :hug, :id=>"abrazo"%>
  <%=f.label :name%>
  <%=f.text_field(:name, :class=>"input-form-thank")%>
