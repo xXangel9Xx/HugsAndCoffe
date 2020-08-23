@@ -8,7 +8,7 @@ export default function MultiplicatorCoffe(){
     let coffeValue = document.getElementById("coffe-value");
     let valueAmountCoffe = document.getElementById('total-pay').textContent;
     valueAmountCoffe = parseInt(valueAmountCoffe)
-    console.log(coffeValue)
+
 
     for(let i = 0; i < valueMultiplication.length; i+=1){
         valueMultiplication[i].addEventListener('click', (e)=>{
