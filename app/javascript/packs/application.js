@@ -21,6 +21,7 @@ import HugsOrCoffe from "./thanks/thanks_new"
 import Hug from "./thanks/hug_new"
 import MultiplicadorCoffe from "./thanks/multiplicator_coffe"
 import Show from "./perfils/show"
+import Error from "./error/error"
 import "controllers"
 //import "stylesheets/application"
 
@@ -113,6 +114,11 @@ if (show.context()=='perfil--nav'){
 
 };
 
+const error = new Error()
+if(error.context() =='error--error'){
+   error.ip()
+   error.ipPublic()
+}
 });
 
 
