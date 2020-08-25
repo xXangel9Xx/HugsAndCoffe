@@ -10,7 +10,8 @@
         padding-top: 2%;
     }
     .container_link_movile_nav{
-        margin-left: 10%;
+       // margin-left: 10%;
+        padding-left: 10%;
         margin-top: 10%;
     }
     .link_movile_nav{
@@ -31,7 +32,10 @@
         margin-left: 80%;
         margin-top: 10%;
     }
-    .container_link_movile_nav:hover{
+    .container_link_movile_nav:hover, .link_movile_nav:hover{
+            background-color: #EE4380;
+            color: white !important;
+            text-decoration:none;
 
     }
 }
