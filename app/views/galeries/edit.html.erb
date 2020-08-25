@@ -1,18 +1,37 @@
-  <%if user_signed_in?%> 
+ <%if user_signed_in?%> 
  <%= render partial: './nav', layout: './nav' %>
 <div>
-  <div class="subtitulo-text-edit">
+<%= render partial: './nav_desktop', layout: './nav_desktop'%>
+<!--
+<% flash.each do | type, msg | %>
+  <% if type == "notice" %>
+    <div class="message-flash">
+      <%= msg%>
+    </div>
+  <%else%>
+    <div class="message-flash red-flash">
+      <%= msg%>
+    </div>
+  <% end %>
+<% end %>
+-->
+
+
+ <div  class="text-crearImage">
+    <p class="lema-subtitle">Crear Imagen</p>
+  </div> 
+
+
+  <div class="sutitle-galeries-text">
    <h1>Subtitulo</h1>
-   <p>Agrega un subtitulo que otorgue vida a tu imagen.</p>
+   <p class="lema-subtitle">Agrega un subtitulo que otorgue vida a tu imagen.</p>
   </div>
-  
-  <div class="text-edit-imagen">
+
+  <div class="text-h1-p">
       <h1>Imagen</h1>
       <p>Comparte imagenes que conecten con las personas y muestren a que te dedicas.</p>
-  
   </div>
- <%= render partial: './nav_desktop', layout: './nav_desktop'%>
-  <%= render partial: 'form_galeries', layout:'form_galeries' %>
-  <%=  render partial: 'form_galeries_movile', layout:'form_galeries_movile'%>
+<%= render partial: 'form_galeries', layout:'form_galeries' %>
+<%=  render partial: 'form_galeries_movile', layout:'form_galeries_movile'%>
 </div>
 <% end %>
