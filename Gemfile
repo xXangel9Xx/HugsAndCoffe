@@ -57,3 +57,5 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'gon'
+#gem "aws-sdk-s3", require: false
+#gem 'mini_magick', '~> 4.8'

@@ -32,14 +32,60 @@
     .form-image-container-galeries{
         padding-left: 12%;
     }
+    .message-flash{
+        position: absolute;
+        margin-top: 7%;
+        margin-left: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: lime;
+
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .red-flash{
+        background-color: red;
+        color: white;
+    }
 }
-@media screen and (min-width: 1000px){
+@media screen and (min-width:400px){
+    .message-flash{
+        margin-top: 0%;
+        margin-left: 13%;
+    }
+}
+@media screen and (min-width:500px){
+    .message-flash{
+        margin-left: 19%;
+    }
+}
+@media screen and (min-width:600px){
+    .message-flash{
+        margin-left: 21%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+@media screen and (min-width:800px){
+    .message-flash{
+        margin-left: 28%;
+    }
+}
+@media screen and (min-width:1000px){
         .logoAB-galeries{
         background-color: #EE4380;
         width: 100%;
         color: white;
         text-align: center;
         padding-top: 2%;
+    }
+    .message-flash{
+        margin-top: 7%;
+        margin-left: 33%;
+        padding-left: 128px;
+        padding-right: 128px;
+
     }
     .new-photo-galeries{
         position: absolute;
@@ -72,5 +118,15 @@
         margin-top: 16%;
         margin-left: 66%;
         padding: 1%;
+    }
+}
+@media screen and(min-width:1200px){
+    .message-flash{
+        margin-left: 44%;
+    }
+}
+@media screen and(min-width:2000px){
+    .message-flash{
+        margin-left: 48%;
     }
 }

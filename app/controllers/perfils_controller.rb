@@ -58,8 +58,8 @@ class PerfilsController < ApplicationController
     end
 
     def states 
-        gon.watch.statesIdLast = Perfil.find_by(id: params[:id]).galery.last.id if Perfil.find_by(id: params[:id]).galery.all.exists? 
-        gon.watch.thanksIdLast = Perfil.find_by(id: params[:id]).thank.last.id if Perfil.find_by(id: params[:id]).galery.all.exists? 
+        gon.watch.statesIdLast = Perfil.find_by( id: params[:id]).galery.last.id if Perfil.find_by(id: params[:id]).galery.all.exists? 
+        gon.watch.thanksIdLast = Perfil.find_by( id: params[:id]).thank.last.id if Perfil.find_by(id: params[:id]).thank.all.exists? 
         @states = Perfil.find_by(id: params[:id]).galery.all
     end
 

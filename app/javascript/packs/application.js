@@ -66,7 +66,7 @@ const hug = new Hug
    hug.hugSeconds()
   /*hug.animationHug()*/
  };
- 
+
  const show = new Show()
 if (show.context()=='perfil--nav'){
     ///////////////////////////////////////////>>>>>>>>Carrucel States<<<<<<</////////////////////////////////////////

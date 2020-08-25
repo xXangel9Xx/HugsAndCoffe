@@ -27,11 +27,11 @@ let contador = 0
     circleHug.addEventListener('mousedown', (e)=>{
       let contar = function(){
       let circleHugID = window.getComputedStyle(elementCircleHugId).getPropertyValue("height")
-      let heigthCircleHugId = parseInt(circleHugID)
+      let heigthCircleHugIdParseInt = parseInt(circleHugID)
         contador++
         if (contador<=60){
        
-       let heigNow = heigthCircleHugId - 5 + "px"
+       let heigNow = heigthCircleHugIdParseInt - 5 + "px"
        elementCircleHugId.style.height = heigNow
 
          hug.value = contador

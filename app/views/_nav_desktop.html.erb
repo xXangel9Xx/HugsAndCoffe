@@ -1,7 +1,5 @@
 <div class="container-Perfils-new">
   <div class="nav-perfil-images-cuentas">
-  <%if current_user.id == Perfil.find_by(id:params[:id]).id %>
-    
     <div>
       <%= image_tag 'icon.svg'%><%= link_to 'Perfil', perfil_path(current_user.id,@perfil) %>
     </div>
@@ -18,6 +16,6 @@
        <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete%>
     </div>
      <br>
-  <% end %>
+
   </div>
 </div>

@@ -11,10 +11,10 @@ class GaleriesController < ApplicationController
            @galery = Galery.new(params_create)
            @galery.perfil_id = current_user.id
            if @galery.save
-               flash[:notice] = "Su perfil fue creada exitosamente"
+               flash[:notice] = "Su foto fue creada exitosamente"
                redirect_to perfil_galeries_path(current_user.id)
            else
-            flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+               flash[:alert] = "Lamentamos informar que ha ocurrido un error"
                redirect_to new_perfil_galery_path
            end
         end
@@ -28,10 +28,10 @@ class GaleriesController < ApplicationController
 
         def update
             if @galery.update(params_update)
-               flash[:notice] = "Su perfil fue creada exitosamente"
+               flash[:notice] = "Su foto fue actualizada exitosamente"
                redirect_to perfil_galeries_path(current_user.id)
             else
-               flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+               flash[:alert] = "Lamentamos informar que ha ocurrido un error"
                redirect_to '/galeries'
             end
         end
@@ -46,7 +46,8 @@ class GaleriesController < ApplicationController
         end
      
         private
-        
+
+
         def params_create
          params.require(:galery).permit(:subtitulo, :image)
         end
