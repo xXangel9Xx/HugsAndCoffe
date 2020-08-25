@@ -21,6 +21,8 @@ import HugsOrCoffe from "./thanks/thanks_new"
 import Hug from "./thanks/hug_new"
 import MultiplicadorCoffe from "./thanks/multiplicator_coffe"
 import Show from "./perfils/show"
+import "controllers"
+//import "stylesheets/application"
 
 const load = new LoadContent()
 

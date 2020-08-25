@@ -14,18 +14,21 @@
        </div>
        <br>
 
-       <div class="container-galery-image-new-movile">
+       <div class="container-galery-image-new-movile" dropzone dropzone-default dz-clickable" data-controller="dropzone" data-dropzone-max-file-size="2" data-dropzone-max-files="1">
           <div class="text-h1-p-movile">
                <h1>Imagen</h1>
                <p>Comparte imagenes que conecten con las personas y muestren a que te dedicas.</p>
           </div>
 
-            <%=f.file_field(:image)%>
-            <div class="form-image-container-galeries">
-            <%= image_tag 'message.png' %>
+            <%=f.file_field(:image, direct_upload: true, data: { target: 'dropzone.input' }, :id=>"imagen")%>
+                <div class="form-image-container-galeries background dropzone-msg dz-message needsclick text-gray-600">
+               <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
+               <span class="dropzone-msg-desc text-sm">2 MB file size maximum. Allowed file types png, jpg.</span>
             </div>
         </div>
-
+       <!--<div class="form-image-container-galeries">
+            <%= image_tag 'message.png' %>
+            </div>--> 
          <hr>
 
         <div class="container-save-form-galeries">

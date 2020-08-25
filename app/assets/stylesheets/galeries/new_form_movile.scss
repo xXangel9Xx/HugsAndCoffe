@@ -45,6 +45,10 @@
     .text-h1-p-movile{
         margin-bottom: 9%;
     }
+    .background{
+        box-shadow: 4px 4px 4px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
+    }
 }
 @media screen and (min-width:700px){
     .container-subtitle-image-movile{

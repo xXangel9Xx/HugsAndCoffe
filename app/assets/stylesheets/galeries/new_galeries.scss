@@ -28,9 +28,11 @@
     }
     .container-galery-image-new{
         margin-top: 30%;
+        box-shadow: 4px 4px 4px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+        border-radius: 5px;
     }
     .form-image-container-galeries{
-        padding-left: 12%;
+        padding: 5%;
     }
     .message-flash{
         position: absolute;
@@ -106,12 +108,6 @@
         border: 1px solid #C4CDD5;
         box-sizing: border-box;
         border-radius: 4px;
-    }
-    .container-galery-image-new{
-        margin-top: 30%;
-    }
-    .form-image-container-galeries{
-        padding-left: 12%;
     }
     .new-photo-galeries{
         position: absolute;

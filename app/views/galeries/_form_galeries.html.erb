@@ -7,13 +7,13 @@
         <br>
        </div>
        <br>
-       <div class="container-galery-image-new">
-            <%=f.file_field(:image, :id=>"imagen")%>
-            <div class="form-image-container-galeries">
-           <%= image_tag 'message.png' %>
+       <div class="container-galery-image-new dropzone dropzone-default dz-clickable" data-controller="dropzone" data-dropzone-max-file-size="2" data-dropzone-max-files="1">
+            <%=f.file_field(:image, direct_upload: true, data: { target: 'dropzone.input' }, :id=>"imagen")%>
+            <div class="form-image-container-galeries dropzone-msg dz-message needsclick text-gray-600">
+               <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
+               <span class="dropzone-msg-desc text-sm">2 MB file size maximum. Allowed file types png, jpg.</span>
             </div>
         </div>
- 
 
          <hr>
 
@@ -21,4 +21,4 @@
         <%=f.submit 'Guardar', :class =>'save' %>
         </div>
      <%end%>
-</div><!--, local:true-->
+</div><!--, l           <%= image_tag 'message.png' %>ocal:true-->
