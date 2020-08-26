@@ -31,7 +31,73 @@
       <h1>Imagen</h1>
       <p>Comparte imagenes que conecten con las personas y muestren a que te dedicas.</p>
   </div>
-<%= render partial: 'form_galeries', layout:'form_galeries' %>
-<%=  render partial: 'form_galeries_movile', layout:'form_galeries_movile'%>
+<!--DESKTOP-->
+<div class="new-photo-galeries">
+     <%=form_with(url:galery_path, model:@galery) do |f|%>
+       <div class="container-subtitle-image">
+        <%=f.label :subtitulo%>
+        <br>
+        <%=f.text_field(:subtitulo, :class=>"input-subtitle") %>
+        <br>
+       </div>
+       <br>
+       <div class="container-galery-image-new dropzone dropzone-default dz-clickable" data-controller="dropzone" data-dropzone-max-file-size="2" data-dropzone-max-files="1">
+            <%=f.file_field(:image, direct_upload: true, data: { target: 'dropzone.input' }, :id=>"imagen")%>
+            <div class="form-image-container-galeries dropzone-msg dz-message needsclick text-gray-600">
+               <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
+               <span class="dropzone-msg-desc text-sm">2 MB file size maximum. Allowed file types png, jpg.</span>
+            </div>
+        </div>
+
+         <hr>
+
+        <div class="container-save-form-galeries">
+        <%=f.submit 'Guardar', :class =>'save' %>
+        </div>
+     <%end%>
+</div>  
+
+<!--MOVILE-->
+
+
+
+<div class="new-photo-galeries-movile">
+ <div  class="text-crearImage-movile">
+    <p class="lema-subtitle-movile">Crear Imagen</p>
+  </div> 
+     <%=form_with(url:galery_path, model:@galery, local:true )do |f|%>
+       <div class="sutitle-galeries-text-movile">
+          <p class="lema-subtitle-movile">Agrega un subtitulo que otorgue vida a tu imagen.</p>
+       </div>
+       <div class="container-subtitle-image-movile">
+        <%=f.label :subtitulo%>
+        <br>
+        <%=f.text_field(:subtitulo, :class=>"input-subtitle") %>
+        <br>
+       </div>
+       <br>
+
+       <div class="container-galery-image-new-movile" dropzone dropzone-default dz-clickable" data-controller="dropzone" data-dropzone-max-file-size="2" data-dropzone-max-files="1">
+          <div class="text-h1-p-movile">
+               <h1>Imagen</h1>
+               <p>Comparte imagenes que conecten con las personas y muestren a que te dedicas.</p>
+          </div>
+
+            <%=f.file_field(:image, direct_upload: true, data: { target: 'dropzone.input' }, :id=>"imagen")%>
+                <div class="form-image-container-galeries background dropzone-msg dz-message needsclick text-gray-600">
+               <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
+               <span class="dropzone-msg-desc text-sm">2 MB file size maximum. Allowed file types png, jpg.</span>
+            </div>
+        </div>
+       <!--<div class="form-image-container-galeries">
+            <%= image_tag 'message.png' %>
+            </div>--> 
+         <hr>
+
+        <div class="container-save-form-galeries">
+        <%=f.submit 'Guardar', :class =>'save' %>
+        </div>
+     <%end%>
+</div>
 </div>
 <% end %>

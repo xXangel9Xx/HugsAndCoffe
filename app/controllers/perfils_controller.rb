@@ -1,15 +1,15 @@
 class PerfilsController < ApplicationController
     before_action :authenticate_user!, only: [:create,:uptade]
-    before_action :params_create, only: [:create]
-    before_action :params_update, only:[:update]
+    before_action :params_create, only: [:create,:update]
+   # before_action :params_update, only:[]
     before_action :search, only: [:update,:destroy,:show]
     before_action :states, only: [:show]
     before_action :thanks, only: [:show]
     before_action :editOrNot, only: [:show]
 
-    def index
-      @perfils = Perfil.all
-    end
+ #   def index
+ #     @perfils = Perfil.all
+ #   end
 
     def new 
      @perfil = Perfil.new
@@ -29,60 +29,60 @@ class PerfilsController < ApplicationController
     end
 
     def show
-        @perfil
+        return  @perfil if @perfil
+        redirect_to errors_path
     end
 
     def edit
     end
 
     def update
-     if @perfil.update(params_update)
-        flash[:notice] = "Su perfil fue actualizado exitosamente"
-        #redirect_to 'path'
-     else
-        flash[:notice] = "Lamentamos informar que ha ocurrido un error"
-        #redirect_to 'path'
-     end
+      if @perfil
+        if @perfil.update(params_create)
+            flash[:notice] = "Su perfil fue actualizado exitosamente"
+            redirect_to perfil_path
+        else
+            flash[:notice] = "Lamentamos informar que ha ocurrido un error"
+            redirect_to perfil_path
+        end
+      else
+        redirect_to errors_path
+      end
     end
     private 
     def params_create
         params.require(:perfil).permit(:public,:full_name, :ocupacion ,:biografia, :amountCoffe,:currencySymbol,:image)
     end 
 
-    def params_update
-        params.require(:perfil).permit(:public,:full_name, :ocupacion,:biografia,:amountCoffe,:currencySymbol,:image)
-    end
+   # def params_update
+   #     params.require(:perfil).permit(:public,:full_name, :ocupacion,:biografia,:amountCoffe,:currencySymbol,:image)
+   # end
 
     def search 
         @perfil = Perfil.find_by( id: params[:id])
     end
 
     def states 
+        begin
         gon.watch.statesIdLast = Perfil.find_by( id: params[:id]).galery.last.id if Perfil.find_by(id: params[:id]).galery.all.exists? 
         gon.watch.thanksIdLast = Perfil.find_by( id: params[:id]).thank.last.id if Perfil.find_by(id: params[:id]).thank.all.exists? 
-        @states = Perfil.find_by(id: params[:id]).galery.all
+        @states = Perfil.find_by(id: params[:id]).galery.all            
+        rescue => exception
+            
+        end
+
     end
 
     def thanks
-        @thankPerfil = Perfil.find_by(id:params[:id]).thank.all
+        begin
+            @thankPerfil = Perfil.find_by(id:params[:id]).thank.all           
+        rescue => exception
+            
+        end
+       
     end
 
     def editOrNot
        @editOrNot = current_user.id == Perfil.find_by(id:params[:id]).id if user_signed_in?
     end
 end  
-#      array = []
-#        subtitle = []
-#        signed_id = []
-#        filename = []
-#        array << Perfil.find_by(id: params[:id]).galery.all
-#        large = array[0].length
-#        for i in 0...large
-#           subtitle << Perfil.find_by(id: params[:id]).galery[i].subtitulo
-#           signed_id << Perfil.find_by(id: params[:id]).galery[i].image.signed_id
-#           filename << Perfil.find_by(id: params[:id]).galery[i].image.filename
-#        end
-#        gon.watch.subtitle = subtitle
-#        gon.watch.signedId = signed_id 
-#        gon.watch.filename = filename
-#        gon.watch.large = large

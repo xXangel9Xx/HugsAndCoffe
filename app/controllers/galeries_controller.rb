@@ -20,13 +20,15 @@ class GaleriesController < ApplicationController
         end
         
         def show
-           @galery
+          return @galery if @galery
+          redirect_to errors_path
         end
 
         def edit
         end
 
         def update
+         if @galery
             if @galery.update(params_update)
                flash[:notice] = "Su foto fue actualizada exitosamente"
                redirect_to perfil_galeries_path(current_user.id)
@@ -34,6 +36,9 @@ class GaleriesController < ApplicationController
                flash[:alert] = "Lamentamos informar que ha ocurrido un error"
                redirect_to '/galeries'
             end
+         else
+            redirect_to errors_path
+         end
         end
         
         def destroy

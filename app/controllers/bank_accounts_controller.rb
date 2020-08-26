@@ -13,7 +13,8 @@ class BankAccountsController < ApplicationController
     end
 
     def show
-      render @bank_account
+      return @bank_account if @bank_account
+      redirect_to errors_path
     end
 
     def create
@@ -28,6 +29,7 @@ class BankAccountsController < ApplicationController
         end
     end
    def update
+    if @bank_account
         if @bank_account.update(params_create)
             flash[:notice] = "Fue editado exitosamente"
             redirect_to perfil_bank_accounts_path(current_user.id)
@@ -35,9 +37,14 @@ class BankAccountsController < ApplicationController
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
              #redirect_to 'path'
         end
+    else
+        redirect_to errors_path
+    end
    end
 
-    def edit    
+    def edit  
+     return @bank_account  if @bank_account  
+     redirect_to errors_path
     end
 
     def destroy
@@ -51,7 +58,6 @@ class BankAccountsController < ApplicationController
     end
 
     def params_create
-        #perfil_id
         params.require(:bank_account).permit(:entidad,:email,:account,:identification,:typeAccount)
     end
 

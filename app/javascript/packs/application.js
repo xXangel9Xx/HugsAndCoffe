@@ -34,40 +34,70 @@ load.ready(function(){
 
 const nav = new Nav()
  if (nav.context() == 'general--nav'){
+   try {
      nav.burger()
-     nav.exitMenuMovile()
+     nav.exitMenuMovile()     
+   } catch (error) {
+     console.log(error.message)
+   }
+
  };
 const newPerfil = new NewPerfil()
 if (newPerfil.context() == 'general--nav'){
+  try {
   newPerfil.publicFalseToTruePerfil()
-  newPerfil.publicTrueToFalsePerfil()
+  newPerfil.publicTrueToFalsePerfil()    
+  } catch (error) {
+    console.log(error.message)
+  }
+
 }
 
  const multiplicadorPerfil = new Multiplicador()
  if (multiplicadorPerfil.context() == 'general--nav'){
-     multiplicadorPerfil.multiplicador()
+   try {
+     multiplicadorPerfil.multiplicador()     
+   } catch (error) {
+     console.log(error.message)
+   }
+
  };
 
 const multiplicadorCoffe = new MultiplicadorCoffe()
 if (multiplicadorCoffe.context() == 'thanks--new'){
-  multiplicadorCoffe.multiplicadorCoffe()
+  try {
+  multiplicadorCoffe.multiplicadorCoffe()    
+  } catch (error) {
+    console.log(error.message)
+  }
+
 
 }
 
 const hugsOrCoffe = new HugsOrCoffe()
  if (hugsOrCoffe.context() == 'thanks--new'){
+   try {
     hugsOrCoffe.selectionFormCoffe()
     hugsOrCoffe.selectionFormHug()
     hugsOrCoffe.containerFollowing()
     hugsOrCoffe.exitThankCoffe()
     hugsOrCoffe.exitHug()
-    hugsOrCoffe.exitFormHug()
+    hugsOrCoffe.exitFormHug()     
+   } catch (error) {
+     console.log(error.message)
+   }
+
  };
 const hug = new Hug 
 
  if (hug.context() == 'thanks--new'){
-   hug.hugSeconds()
-  /*hug.animationHug()*/
+   try {
+   hug.hugSeconds()     
+   } catch (error) {
+    console.log(error.message) 
+   }
+
+
  };
 
  const show = new Show()
@@ -86,10 +116,16 @@ if (show.context()=='perfil--nav'){
   let statesIdLast = gon.statesIdLast;
     let backCarrucelState = document.getElementById('back-carrucel-state');
     if(statesIdLast){
+      try {
        show.carrucelMarkState(followerState,markIndexIdClass,markIndex);
        show.carrucelIncrementIndexState(nextCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex)
        show.carrucelDecrementIndexState(backCarrucelState,followerState,statesIdLast,markIndexIdClass,markIndex) 
-    }
+            
+      } catch (error) {
+        console.log(error.message)
+      }
+
+      }
   ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
     ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
       ///////////////////////////////////////////>>>>>>>>Carrucel Thanks<<<<<<</////////////////////////////////////////
@@ -104,13 +140,22 @@ if (show.context()=='perfil--nav'){
   let thanksIdLast = gon.thanksIdLast;
   let backCarrucelThanks = document.getElementById('back-carrucel-thanks');  
   if(thanksIdLast){
+    try {
     show.carrucelMarkState(followerThanks,markIndexThanks,markIndexid,statesIdLast)
     show.carrucelIncrementIndexState(nextCarrucelThanks,followerThanks,thanksIdLast,markIndexThanks,markIndexid)
-    show.carrucelDecrementIndexState(backCarrucelThanks,followerThanks,thanksIdLast,markIndexThanks,markIndexid)    
+    show.carrucelDecrementIndexState(backCarrucelThanks,followerThanks,thanksIdLast,markIndexThanks,markIndexid)        
+    } catch (error) {
+      console.log(error.message)
+    }
+  
   }
- 
+ try {
   nav.burger()
-  nav.exitMenuMovile()
+  nav.exitMenuMovile()   
+ } catch (error) {
+   console.log(error.message)
+ }
+
 
 };
 
