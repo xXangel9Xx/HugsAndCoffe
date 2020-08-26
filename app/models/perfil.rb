@@ -3,7 +3,7 @@ class Perfil < ApplicationRecord
   has_many :galery, dependent: :destroy
   has_many :thank, dependent: :destroy
   
-  has_one_attached :image
+  has_one_attached :image, dependent: :destroy
 
 
   #validates :full_name, format: {with: /\A[a-zA-Z]+\z/ ,message:"only allows letters"}

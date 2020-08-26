@@ -1,15 +1,16 @@
 class PerfilsController < ApplicationController
     before_action :authenticate_user!, only: [:create,:uptade]
-    before_action :params_create, only: [:create,:update]
-   # before_action :params_update, only:[]
-    before_action :search, only: [:update,:destroy,:show]
+
+    before_action :search, only: [:edit,:update,:destroy,:show]    
+    before_action :params_create, only: [:create]
+    before_action :params_update, only:[:update]
+
+   
+   
     before_action :states, only: [:show]
     before_action :thanks, only: [:show]
     before_action :editOrNot, only: [:show]
 
- #   def index
- #     @perfils = Perfil.all
- #   end
 
     def new 
      @perfil = Perfil.new
@@ -38,29 +39,33 @@ class PerfilsController < ApplicationController
 
     def update
       if @perfil
-        if @perfil.update(params_create)
+        if @perfil.update(params_update)
             flash[:notice] = "Su perfil fue actualizado exitosamente"
-            redirect_to perfil_path
+            redirect_to perfil_path(current_user.id)
         else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
-            redirect_to perfil_path
+            redirect_to perfil_path(current_user.id)
         end
       else
         redirect_to errors_path
       end
     end
     private 
+
+    def search 
+        @perfil = Perfil.find_by(id:params[:id])
+    end  
+
     def params_create
         params.require(:perfil).permit(:public,:full_name, :ocupacion ,:biografia, :amountCoffe,:currencySymbol,:image)
     end 
 
-   # def params_update
-   #     params.require(:perfil).permit(:public,:full_name, :ocupacion,:biografia,:amountCoffe,:currencySymbol,:image)
-   # end
-
-    def search 
-        @perfil = Perfil.find_by( id: params[:id])
+    def params_update
+        params.require(:perfil).permit(:public,:full_name, :ocupacion,:biografia,:amountCoffe,:currencySymbol,:image)
     end
+
+
+
 
     def states 
         begin
