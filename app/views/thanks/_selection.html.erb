@@ -1,7 +1,9 @@
 <div class="container-new-thanks">
+ <%= link_to  perfil_path(Perfil.find_by(params[:id])) do%>
    <div class="container_exit_selection">
       <%= image_tag 'Vector.png',:class=>"exit" %>
    </div>
+  <% end %>
 
   <div class="container-recognize">
     <p class="text-recognize">Formas de reconocer a Salvador</p>

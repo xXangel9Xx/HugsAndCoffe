@@ -44,6 +44,22 @@
         display: flex;
         justify-content: center;
     }
+    .carousel-fade,.active.left {
+        left:0;
+        opacity:5;
+        -webkit-transition: opacity 9s; /*time < to $.carousel.interval setup */
+        -moz-transition: opacity 4s; 
+        -ms-transition: opacity 4s; 
+        -o-transition: opacity 4s; 
+        transition: opacity  4s;
+        z-index:2;
+    }
+    .carousel-fade,.next {
+        left:0;
+        opacity:5;
+        z-index:1;
+    }
+    
     .carousel-control{
         position: relative !important;
     }

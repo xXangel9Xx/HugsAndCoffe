@@ -8,7 +8,7 @@
 
  <% if @states.length > 0 %>
   <div class="index-galery index-galery-login">
-    <div id="myCarousel" class="carousel slid carousel-fade" data-ride="carousel" data-interval="false">  
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
         <%@states.each_with_index do |states,i|%>
             <%if i == 0%>
@@ -57,7 +57,7 @@
 
   <% if @thankPerfil.length > 0 %>
    <div class="index-thanks index-galery-login">
-    <div id="myCarouselThanks" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
+    <div id="myCarouselThanks" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
         <%@thankPerfil.each_with_index do |thanks,i|%>
             <%if i == 0%>

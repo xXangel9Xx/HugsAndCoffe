@@ -1,27 +1,266 @@
 // Place all the styles related to the hugsAndCoffes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
 @media screen and(min-width:300px){
+    .nav-HugsAndCoffe{
+        display: inline-flex;
+        position: absolute;
+        width: 100%;
+        height: 64px;
+        left: 0px;
+        top: 0px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    .p-logoAb{
+        margin: 0%;
+    }
+    .logoAB{
+        background-color: #EE4380;
+        color: white;
+        margin-left: 5%;
+        position: absolute;
+        border-radius: 5px;
+        width: 13%;
+        height: 30px;
+        left: 20px;
+        top: 17px;
+        padding-top: 1%;
+        padding-left: 1%;
+        padding-right: 3px;
+        text-align: center;
+    }
+    .login{
+        position: absolute;
+        margin-left: 84%;
+        width: 41px;
+        height: 11px;
+        top: 26px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #434242;
+    }
+    .image{
+        margin-top: 6%;
+    }
+    .lema{
+        width: auto;
+        height: 43px;
+        font-family: Happy Monkey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #434242;
+    }
+    .lema2{
+        height: 53px;
+        left: 424px;
+        top: 628px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #434242;
+    }
+    .div-CrearMiPerfil{
+        margin-top: 30%;
+        width: 52%;
+        height: 48px;
+        top: 729px;
+        background: #EE4380;
+        border-radius: 5px;
+        margin-left: 24%;
+        text-align: center;
+        color: white;
+        padding-top: 1%;
+    }
+    .create-perfil-home{
+        text-decoration: none;
+        color: white;
+        font-size: 26px
+    }
+    .center-home{
+        background: #F8F8F8;
+        padding-bottom: 29%;
+    }
+    
+    
+    .footer-home-hugsAndCoffe{
+        position: absolute;
+        height: -webkit-fill-available;
+        background-color: #EE4380;
+        width: 100%;
+    }
+    .footer-lema{
+        margin-top: 7%;
+        font-family: Happy Monkey;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 43px;
+        text-align: center;
+        color: #FFFFFF;
+    
+    }
+    .text-footer-home-information{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 130%;
+        color: #FFFFFF;
+        width: 50%;
+        margin-left: 25%;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+    .container-images{
+        margin-left: 20%;
+    }
 
-
-.nav-HugsAndCoffe{
-    display: inline-flex;
+    .image-footer-show-image1{
     position: absolute;
-    width: 100%;
-    height: 64px;
-    left: 0px;
-    top: 0px;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    .image-footer-show-image2{
+        margin-left: 9%;
+        margin-top: 3%;
+        position: absolute;
+    }
+    .image-footer-show-image3{
+        margin-left: 19%;
+        margin-top: 7%;
+        position: absolute;
+    }
 }
-.logoAB{
+@media screen and(min-width:400px){
+    .image{
+        margin-left: 14%;
+    }
+    .container-images{
+        margin-left: 26%;
+    }
+}
+@media screen and(min-width:500px){
+    .image{
+        margin-left: 24%;
+    }
+    .text-footer-home-information{
+        font-size: 22px;
+    }
+    .container-images{
+        margin-left: 29%;
+    }
+}
+@media screen and(min-width:600px){
+    .image{
+        margin-left: 27%;
+    }
+    .container-images{
+        margin-left: 32%;
+    }
+}
+@media screen and(min-width:700px){
+    .image{
+        margin-left: 30%;
+    }
+    .text-footer-home-information{
+        font-size: 27px;
+    }
+}
+@media screen and(min-width:800px){
+    .div-CrearMiPerfil{
+        margin-top: 19%;
+    }
+}
+@media screen and(min-width:900px){
+    .image{
+        margin-left: 34%;
+    }
+}
+@media screen and(min-width:1000px){
+    .image{
+        margin-left: 37%;
+    }
+    .div-CrearMiPerfil{
+        width: 32%;
+        margin-left: 36%;
+    }
+}
+@media screen and(min-width:1100px){
+    .image{
+        margin-left: 38%;
+    }
+    .container-images{
+        margin-left: 36%;
+    }
+}
+@media screen and(min-width:1200px){
+    .logoAB{
+        padding-top: 5px;
+    }
+    .image{
+        margin-left: 39%;
+    }
+    .container-images{
+        margin-left: 40%;
+    }
+    .image-footer-show-image2{
+        margin-left: 7%;
+    }
+    .image-footer-show-image3{
+        margin-left: 14%;
+    }
+}
+@media screen and(min-width:1300px){
+    .image{
+        margin-top: 5%;
+    }
+}
+@media screen and(min-width:1400px){
+    .image{
+        margin-left: 40%;
+        margin-top: 4%;
+    }
+}
+@media screen and(min-width:1600px){
+    .image{
+        margin-left: 41%;
+    }
+    .div-CrearMiPerfil{
+        margin-left: 35%;
+    }
+}
+@media screen and(min-width:1800px){
+    .image{
+        margin-left: 42%;
+    }
+    .image-footer-show-image2{
+        margin-left: 5%;
+    }
+    .image-footer-show-image3{
+        margin-left: 10%;
+    }
+}
+//@media screen and(min-width:300px){
+
+/*.logoAB{
     background-color: #EE4380;
     color: white;
     margin-left: 5%;
     position: absolute;
     border-radius: 5px;
-    width: 5%;
+    width: 5%; ESTO ES LO UNICO QUE CAMBIA
     height: 30px;
     left: 20px;
     top: 17px;
@@ -29,10 +268,10 @@
     padding-top: 1%;
     padding-left: 1%;
     padding-right: 3px;
-}
-.login{
+}*/
+/*.login{
     position: absolute;
-    margin-left: 90%;
+    margin-left: 90%; ESTO ES LO UNICO QUE CAMBIA
     width: 41px;
     height: 11px;
     top: 26px;
@@ -45,14 +284,14 @@
     align-items: center;
     text-align: center;
     color: #434242;
-}
-.p-logoAb{
+}*/
+/*.p-logoAb{
     margin: 0%;
-}
-.image{
+}*/
+/*.image{
     margin-top: 6%;
-    margin-left: 38%;
-}
+    margin-left: 38%;   ESTO ES LO UNICO QUE CAMBIA
+}*//*
 .lema{
     width: auto;
     height: 43px;
@@ -76,19 +315,19 @@
     text-align: center;
     letter-spacing: 0.02em;
     color: #434242;
-}
-.div-CrearMiPerfil{ 
-    margin-top: 6%;
-    width: 18%;
-    height: 87px;
+}*/
+/*.div-CrearMiPerfil{ 
+    margin-top: 6%; ESTO CAMBIA
+    width: 18%; ESTO CAMBIA
+    height: 87px; ESTO CAMBIA
     top: 729px;
     background: #EE4380;
     border-radius: 5px;
-    margin-left: 40%;
+    margin-left: 40%; ESTO CAMBIA
     text-align: center;
     color: white;
     padding-top: 1%;
-}
+}*//*
 .create-perfil-home{
     text-decoration: none;
     color: white;
@@ -105,30 +344,30 @@
     height: -webkit-fill-available;
     background-color: #EE4380;
     width: 100%;
-}
+}*//*
 .footer-lema{
     margin-top: 7%;
     font-family: Happy Monkey;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: 36px; ESTO CAMBIA
     line-height: 43px;
     text-align: center;
     color: #FFFFFF; 
-}
-
+}*/
+/*
 .text-footer-home-information{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 24px; ESTO CAMBIA
     line-height: 130%;
     color: #FFFFFF; 
     width: 50%;
     margin-left: 25%;
     text-align: center;
     letter-spacing: 0.02em;
-}
+}*//*
 .container-images{
     margin-left: 38%;
 }
@@ -147,5 +386,5 @@ position: absolute;
 }
 
 
-
-}
+*/
+//}

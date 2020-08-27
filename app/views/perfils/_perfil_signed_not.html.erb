@@ -5,7 +5,7 @@
   </div>
 <% if @states.length > 0 %>
   <div class="index-galery">
-    <div id="myCarousel" class="carousel slid carousel-fade" data-ride="carousel" data-interval="false">  
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
         <%@states.each_with_index do |states,i|%>
             <%if i == 0%>
@@ -53,7 +53,7 @@
 
   <% if @thankPerfil.length > 0 %>
     <div class="index-thanks">
-    <div id="myCarouselThanks" class="carousel carousel-fade" data-ride="carousel" data-interval="false">  
+    <div id="myCarouselThanks" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
         <%@thankPerfil.each_with_index do |thanks,i|%>
             <%if i == 0%>
@@ -131,13 +131,19 @@
           </div> 
   <% end %>
 
-  <%if @edit_or_not%>
+  <%if @edit_or_not%>       
+   <%=link_to edit_perfil_path(@perfil), :class=>"link-thank-new-color" do%>
       <div class="link-thanks-new margin-not-found-not-loged">
-        <%= link_to 'Editar perfil', edit_perfil_path(@perfil), :class=>"link-thank-new-color" %>
+          Editar perfil
       </div>
-  <% else %>
+    <% end %>
+      
+  <% else %> 
+  <%=link_to new_perfil_thank_path(@perfil), :class=>"link-thank-new-color" do%>
       <div class="link-thanks-new margin-not-found-not-loged">
-        <%= link_to 'Agradecer', new_perfil_thank_path(@perfil), :class=>"link-thank-new-color" %>
+        Agradecer
       </div>
+  <% end %>
+
   <% end %>     
  
