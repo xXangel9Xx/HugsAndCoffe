@@ -14,7 +14,7 @@ export default function MultiplicatorCoffe(){
         valueMultiplication[i].addEventListener('click', (e)=>{
           valueAmountCoffe = valueMultiplication[i].dataset.value * valueAmountCoffe
           coffeValue.value = valueMultiplication[i].dataset.value
-          valueAmountCoffeContainer.innerHTML = `total:${valueAmountCoffe}`
+          valueAmountCoffeContainer.innerHTML = `${valueAmountCoffe}`
   
         },true);
     };

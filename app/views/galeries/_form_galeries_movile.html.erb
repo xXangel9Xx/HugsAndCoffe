@@ -22,13 +22,12 @@
 
             <%=f.file_field(:image, direct_upload: true, data: { target: 'dropzone.input' }, :id=>"imagen")%>
                 <div class="form-image-container-galeries background dropzone-msg dz-message needsclick text-gray-600">
+               <%= image_tag('message.png') %>
                <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
                <span class="dropzone-msg-desc text-sm">2 MB file size maximum. Allowed file types png, jpg.</span>
             </div>
         </div>
-       <!--<div class="form-image-container-galeries">
-            <%= image_tag 'message.png' %>
-            </div>--> 
+
          <hr>
 
         <div class="container-save-form-galeries">
