@@ -73,6 +73,9 @@
     .container-thanks-image-thank{
         display: flex;
     }
+    .container-coffe-image-thank{
+        display: flex;
+    }
     .name-thank{
         margin-right: 72%;
         color: black;
@@ -143,6 +146,7 @@
     text-align: center;
     margin-top: 18%;
 }
+
 }
 @media screen and(min-width: 350px){
     .link-thanks-new{margin-left: 28%;}
@@ -155,7 +159,8 @@
         margin-left: 5%;
     }
     .index-thanks{
-        margin-left: 5%;
+        //margin-left: 5%;
+        //width: 90%;
         width: 90%;
     }
     .not-loged{ width: 90%;}
@@ -178,7 +183,6 @@
         width: 39%;    
     }   
     .index-galery{
-        position: absolute;
         margin-top: 14%;
         height: 400px;
     }     
@@ -212,11 +216,11 @@
     }
     .back-image-carrucel{margin-right: 5px;}
 
-    .index-thanks{
-        padding: 2%;
-        margin-top: 2%;
-        margin-left: 5%;
-    }
+   // .index-thanks{
+   //     padding: 2%;
+   //     margin-top: 58%;
+   //     margin-left: 5%;
+   // }
     .container-carrucel-states{
         margin-top: 0%;
         width: 41%;
@@ -260,6 +264,7 @@
     .container-carrucel-index-states{margin-left: 44%;}
     .margin-thanks-null {margin-top: 55%;}
     .not-loged{ width: 90%;}
+
 }
 @media screen and(min-width:1200px){.container-carrucel{margin-top: 50%;}
         .login-biography{margin-left: 44%;}
@@ -270,6 +275,7 @@
         .container-carrucel-index-states{margin-left: 46%;}
         .margin-thanks-null {margin-top: 51%;}
         .not-loged{ width: 90%;}
+
 }
 @media screen and(min-width:1300px){
         .link-thanks-new{margin-left: 46%;}
@@ -282,6 +288,7 @@
         .margin-not-found{margin-left: 59%;}
         .margin-thanks-null {margin-top: 48%;}
         .not-loged{ width: 90%;}
+ 
 }
 @media screen and(min-width:1400px){.container-carrucel{margin-top: 45%;}
 .login-biography{margin-left: 44%;}
@@ -291,6 +298,7 @@
 }
 .margin-thanks-null{margin-top: 46%;}
 .not-loged{ width: 90%;}
+
 }
 
 @media screen and(min-width:1500px){.container-carrucel{margin-top: 43%;}

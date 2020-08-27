@@ -3,7 +3,7 @@
   <div class="container-biografia-perfil">
      <p class="biography"><%=Perfil.find_by(id: params[:id]).biografia%></p>
   </div>
-<% if @states.length > 0 %>
+<% if @states != nil && @states.length > 0 %>
   <div class="index-galery">
     <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
@@ -51,7 +51,7 @@
   <% end %>
     <!--////////////////////////////////////////////////////////////////-->
 
-  <% if @thankPerfil.length > 0 %>
+  <% if @thankPerfil!= nil && @thankPerfil.length > 0 %>
     <div class="index-thanks">
     <div id="myCarouselThanks" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">

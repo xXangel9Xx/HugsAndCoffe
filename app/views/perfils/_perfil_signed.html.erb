@@ -6,7 +6,7 @@
     </div>
 
 
- <% if @states.length > 0 %>
+ <% if  @states != nil && @states.length > 0%>
   <div class="index-galery index-galery-login">
     <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
@@ -55,7 +55,7 @@
   <% end %>
     <!--////////////////////////////////////////////////////////////////-->
 
-  <% if @thankPerfil.length > 0 %>
+  <% if @thankPerfil!= nil && @thankPerfil.length > 0 %>
    <div class="index-thanks index-galery-login">
     <div id="myCarouselThanks" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">  
       <div class="carousel-inner">
@@ -136,13 +136,17 @@
   <% end %>
 
   <%if @edit_or_not%>
+    <%= link_to edit_perfil_path(@perfil), :class=>"link-thank-new-color" do%>
       <div class="link-thanks-new margin-not-found">
-        <%= link_to 'Editar perfil', edit_perfil_path(@perfil), :class=>"link-thank-new-color" %>
+        Editar perfil
       </div>
+    <% end %>
   <% else %>
+    <%= link_to new_perfil_thank_path(@perfil), :class=>"link-thank-new-color" do %>
      <div class="link-thanks-new margin-not-found">
-        <%= link_to 'Agradecer', new_perfil_thank_path(@perfil), :class=>"link-thank-new-color" %>
+        Agradecer
       </div> 
+    <% end %>
   <% end %>
 
 </div>

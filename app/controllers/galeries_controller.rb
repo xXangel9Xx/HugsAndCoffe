@@ -15,7 +15,7 @@ class GaleriesController < ApplicationController
                redirect_to perfil_galeries_path(current_user.id)
            else
                flash[:alert] = "Lamentamos informar que ha ocurrido un error"
-               redirect_to new_perfil_galery_path
+               redirect_to new_perfil_galery_path(current_user.id)
            end
         end
         
@@ -34,7 +34,7 @@ class GaleriesController < ApplicationController
                redirect_to perfil_galeries_path(current_user.id)
             else
                flash[:alert] = "Lamentamos informar que ha ocurrido un error"
-               redirect_to '/galeries'
+               redirect_to new_perfil_galery_path(current_user.id)
             end
          else
             redirect_to errors_path

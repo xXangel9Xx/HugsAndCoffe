@@ -25,7 +25,7 @@ class BankAccountsController < ApplicationController
             redirect_to perfil_bank_accounts_path(current_user.id)
         else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
-             #redirect_to 'path'
+            redirect_to new_perfil_bank_account_path(current_user.id)
         end
     end
    def update
@@ -35,7 +35,7 @@ class BankAccountsController < ApplicationController
             redirect_to perfil_bank_accounts_path(current_user.id)
         else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
-             #redirect_to 'path'
+            redirect_to new_perfil_bank_account_path(current_user.id)
         end
     else
         redirect_to errors_path
