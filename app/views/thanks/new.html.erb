@@ -2,7 +2,14 @@
 <div data-context="thanks--new">
  <div class="nav_show_perfil_logout">
       <div class="container-dates-user-logout-nav">
-              <%=image_tag(User.find_by(id: params[:perfil_id]).perfil.image, :class=>"image-profile-logout")  %>
+
+       <% if User.find_by(id: params[:perfil_id]).perfil.image.attached? %>
+           <%=image_tag(User.find_by(id: params[:perfil_id]).perfil.image, :class=>"image-profile-logout")%> 
+         <%else%>
+            <%=image_tag('user_picture.jpeg')%>
+        <% end %>
+
+
             <div class="name-and-ocupation">
              <h1 class="date-user-logout">
              <%=User.find_by(id: params[:perfil_id]).perfil.full_name%>

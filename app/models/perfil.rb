@@ -8,7 +8,7 @@ class Perfil < ApplicationRecord
 
   #validates :full_name, format: {with: /\A[a-zA-Z]+\z/ ,message:"only allows letters"}
 
-  
+  #validates :image, attached: true, content_type: { in: 'application/pdf', message: 'is not a PDF' }
   validates :full_name, length: { in: 3..52 }
   before_save :full_name_capitalize
   

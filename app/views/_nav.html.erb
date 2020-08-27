@@ -22,7 +22,12 @@
             <p class="p-logoAb">A&B</p>
         </div>
         <div class="profile">
+        <% if User.find_by(id: params[:perfil_id]).perfil.image.attached? %>
            <%=image_tag(User.find_by(id: params[:perfil_id]).perfil.image, :class=>"image-profile")%> 
+         <%else%>
+            <%=image_tag('user_picture.jpeg', :class=>"image-profile" )%>
+        <% end %>
+
             <h1 class="name-user"><%=User.find_by(id: params[:perfil_id]).perfil.full_name%></h1>
         </div>
     </nav>
