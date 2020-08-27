@@ -47,9 +47,9 @@ class BankAccountsController < ApplicationController
      redirect_to errors_path
     end
 
-    def destroy
-       render @bank_account.delete
-    end
+  #  def destroy
+  #     render @bank_account.delete
+  #  end
 
  
     private

@@ -88,6 +88,6 @@ class PerfilsController < ApplicationController
     end
 
     def editOrNot
-       @editOrNot = current_user.id == Perfil.find_by(id:params[:id]).id if user_signed_in?
+       @edit_or_not = current_user.id == Perfil.find_by(id:params[:id]).id if user_signed_in?
     end
 end  
