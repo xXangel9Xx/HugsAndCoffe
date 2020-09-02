@@ -22,7 +22,7 @@
             <td style="width: 10%;"> <p class="td-accounts-index"><%for i in 0..bank_account.account.length/2%><%=bank_account.account[i]%><%end%>..</p></td>  
             <td style="width: 10%;"> <p class="td-accounts-index"><%for i in 0..bank_account.identification.length/2%><%=bank_account.identification[i]%><%end%>..</p></td>
             <td style="width: 10%;"> <p class="td-accounts-index"><%for i in 0..bank_account.typeAccount.length/2%><%=bank_account.typeAccount[i]%><%end%>..</p></td>
-            <td style="width: 10%;"><%=link_to  edit_perfil_bank_account_path(current_user.id,bank_account) do %>
+            <td style="width: 10%;"><%=link_to  edit_perfil_bank_account_path(User.find_by(id: current_user.id).perfil.id,bank_account) do %>
                 <%=image_tag 'menu_accounts.png'%>
                <%end%></td>
             

@@ -1,9 +1,12 @@
 <div data-context="perfil--nav">
 
- <%if user_signed_in? && current_user.id == Perfil.find_by(id:params[:id]).id  %>
+ <%if user_signed_in? && User.find_by(id: current_user.id).perfil.id == Perfil.find_by(id:params[:id]).id  %>
     <%=render partial: 'perfil_signed', layout: 'perfil_signed'%>
+  
   <%elsif @perfil.public == true%>
     <%=render partial: 'perfil_signed_not', layout: 'perfil_signed_not'%>
+  
+  
   <%elsif @perfil.public == false %>
       <%=render partial: 'nav_logout', layout: 'nav_logout'%>
       <div id="not-public-perfil-show">

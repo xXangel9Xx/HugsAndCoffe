@@ -7,15 +7,13 @@
             <div class="container_link_movile_nav"><a href="" class="link_movile_nav">Cuentas</a></div>
             <div class="container_link_movile_nav"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class=>"link_movile_nav"%></div>
         </nav>
-
+       
    <nav  class="navCreateUsuario">
         <%= image_tag 'Header.png', :class => "burguer", :id=>'menu-burger'%>
         <div class="logoAB-profile">
             <p class="p-logoAb">A&B</p>
         </div>
         <div class="profile">
-            <!--<div class="image-profile">  
-            </div>-->
             <%= image_tag('user_picture.jpeg', :class=>"image-profile") %>
             <h1 class="name-user">name user</h1>
         </div>

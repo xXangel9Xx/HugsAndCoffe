@@ -1,15 +1,15 @@
 <div class="container-Perfils-new">
   <div class="nav-perfil-images-cuentas">
     <div>
-      <%= image_tag 'icon.svg'%><%= link_to 'Perfil', perfil_path(current_user.id) %>
+      <%= image_tag 'icon.svg'%><%= link_to 'Perfil', perfil_path(User.find_by(id: current_user.id).perfil.id) %>
     </div>
       <br>
     <div>
-      <%= image_tag 'icon.png' %> <%= link_to 'Imagenes', perfil_galeries_path(current_user.id,@perfil)	 %>
+      <%= image_tag 'icon.png' %> <%= link_to 'Imagenes', perfil_galeries_path(User.find_by(id: current_user.id).perfil.id)	 %>
     </div>
       <br>
     <div>
-       <%= image_tag 'iconCuentas.svg' %> <%= link_to 'Cuentas', perfil_bank_accounts_path(current_user.id,@perfil) %>
+       <%= image_tag 'iconCuentas.svg' %> <%= link_to 'Cuentas', perfil_bank_accounts_path(User.find_by(id: current_user.id).perfil.id) %>
     </div>
     <br>
     <div>

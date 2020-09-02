@@ -19,10 +19,10 @@ class PerfilsController < ApplicationController
     def create
      @perfil = Perfil.new(params_create)
      @perfil.user_id = current_user.id
-     @perfil.id = current_user.id
+    # @perfil.id = current_user.id
         if @perfil.save
             flash[:notice] = "Su perfil fue creada exitosamente"
-            redirect_to @perfil
+            redirect_to perfil_path(@perfil)
         else
             flash[:notice] = "Lamentamos informar que ha ocurrido un error"
             redirect_to new_perfil_path
@@ -88,6 +88,6 @@ class PerfilsController < ApplicationController
     end
 
     def editOrNot
-       @edit_or_not = current_user.id == Perfil.find_by(id:params[:id]).id if user_signed_in?
+       @edit_or_not = User.find_by(id: current_user.id).perfil.id == Perfil.find_by(id:params[:id]).id if user_signed_in?
     end
 end  

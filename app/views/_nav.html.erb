@@ -3,14 +3,14 @@
            <%= image_tag 'exit_image.png', :id => "exit-menu-movile" %>
             <div class="ABC_movile"><p>A&B</p></div>
              <div class="container_link_movile_nav">
-                <%= link_to 'Perfil', perfil_path(current_user.id),:class=>"link_movile_nav" %>
+                <%= link_to 'Perfil', perfil_path(User.find_by(id: current_user.id).perfil.id),:class=>"link_movile_nav" %>
              </div>
 
              <div class="container_link_movile_nav">
-                <%= link_to 'Imagenes', perfil_galeries_path(current_user.id), :class=>"link_movile_nav"%> 
+                <%= link_to 'Imagenes', perfil_galeries_path(User.find_by(id: current_user.id).perfil.id), :class=>"link_movile_nav"%> 
              </div>
              <div class="container_link_movile_nav">
-                <%= link_to 'Cuentas', perfil_bank_accounts_path(current_user.id), :class=>"link_movile_nav" %>
+                <%= link_to 'Cuentas', perfil_bank_accounts_path(User.find_by(id: current_user.id).perfil.id), :class=>"link_movile_nav" %>
              </div>
             <div class="container_link_movile_nav"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class=>"link_movile_nav"%></div>
         </nav>
@@ -22,13 +22,16 @@
             <p class="p-logoAb">A&B</p>
         </div>
         <div class="profile">
-        <% if User.find_by(id: params[:perfil_id]).perfil.image.attached? %>
-           <%=image_tag(User.find_by(id: params[:perfil_id]).perfil.image, :class=>"image-profile")%> 
+<!--image_tag(User.find_by(id: params[:perfil_id]).perfil.image
+User.find_by(id: params[:perfil_id]).perfil
+-->
+        <% if Perfil.find_by(id:params[:id]).image.attached? %>
+           <%=Perfil.find_by(id:params[:id]).image, :class=>"image-profile")%> 
          <%else%>
             <%=image_tag('user_picture.jpeg', :class=>"image-profile" )%>
         <% end %>
 
-            <h1 class="name-user"><%=User.find_by(id: params[:perfil_id]).perfil.full_name%></h1>
+            <h1 class="name-user"><%=Perfil.find_by(id:params[:id]).full_name%></h1>
         </div>
     </nav>
 </div>

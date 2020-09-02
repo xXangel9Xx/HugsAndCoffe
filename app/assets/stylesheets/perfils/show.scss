@@ -4,8 +4,13 @@
       height: 143px !important;
     }
     .photos-state{
-        height: 100% !important;
+        height: 90% !important;
         width: 100% !important;
+    }
+    .subtitle-states{
+        text-align: center;
+        position: relative;
+        overflow: hidden;
     }
     .container-image-show{
         display: block;
@@ -195,10 +200,10 @@
         margin-top: 5px;
         margin-left: 40%;
     }    
-    .photos-state{
-        height: 100% !important;
-        width: 100% !important;
-    }
+    //.photos-state{
+   //     height: 100% !important;
+    //    width: 100% !important;
+   // }
     .container-index-states-photos{
         margin-top: 14%;
     }
@@ -207,7 +212,7 @@
     .container-carrucel{
         width: 41%;
        // margin-top: 44%;
-        margin-top: 57%;
+        margin-top: 4%;
         margin-left: 31%;
         display: inline-flex;
         justify-content: center;
@@ -248,7 +253,7 @@
     
 }       
 
-@media screen and(min-width:1100px){.container-carrucel{margin-top: 53%;}
+@media screen and(min-width:1100px){.container-carrucel{margin-top: 5%;}
     .login-biography{margin-left: 44%;}
     .index-galery-login{    
         width: 47%;
@@ -258,7 +263,7 @@
     .not-loged{ width: 90%;}
     .margin-thanks-null {margin-top: 2%;}
 }
-@media screen and(min-width:1200px){.container-carrucel{margin-top: 50%;}
+@media screen and(min-width:1200px){
         .login-biography{margin-left: 44%;}
         .index-galery-login{    
             width: 47%;
@@ -270,7 +275,6 @@
 }
 @media screen and(min-width:1300px){
         .link-thanks-new{margin-left: 46%;}
-        .container-carrucel{margin-top: 48%;}
         .login-biography{margin-left: 44%;}
         .index-galery-login{    
             width: 47%;
@@ -281,7 +285,7 @@
         .not-loged{ width: 90%;}
  
 }
-@media screen and(min-width:1400px){.container-carrucel{margin-top: 45%;}
+@media screen and(min-width:1400px){
 .login-biography{margin-left: 44%;}
 .index-galery-login{    
     width: 47%;
@@ -290,7 +294,7 @@
 .not-loged{ width: 90%;}
 }
 
-@media screen and(min-width:1500px){.container-carrucel{margin-top: 43%;}
+@media screen and(min-width:1500px){
 .login-biography{margin-left: 44%;}
 .index-galery-login{    
     width: 47%;
@@ -300,7 +304,7 @@
 .not-loged{ width: 90%;}
 }
 
-@media screen and(min-width:1600px){.container-carrucel{margin-top: 41%;}
+@media screen and(min-width:1600px){
 .login-biography{margin-left: 44%;}
 .index-galery-login{    
     width: 47%;
@@ -312,7 +316,7 @@
 
 
 @media screen and(min-width:1700px){.link-thanks-new{margin-left: 47%;}
-.container-carrucel{margin-top: 39%;}
+
 .login-biography{margin-left: 44%;}
 .index-galery-login{    
     width: 47%;
@@ -323,7 +327,6 @@
 .not-loged{ width: 90%;}
 }  
 @media screen and(min-width:1900px){
-    .container-carrucel{margin-top: 37%;}
     .login-biography{margin-left: 44%;}
     .index-galery-login{    
         width: 47%;
@@ -334,7 +337,7 @@
 } 
 @media screen and(min-width:2000px){
 .link-thanks-new{margin-left: 60%;}
-.container-carrucel{margin-top: 36%;}
+
 .login-biography{margin-left: 44%;}
     .index-galery-login{    
         width: 47%;

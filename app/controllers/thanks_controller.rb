@@ -28,7 +28,10 @@ class ThanksController < ApplicationController
       params.require(:thank).permit(:coffe,:value_coffes,:hug,:name,:ocupacion,:message)
     end
     def user_bank_account
-      @user_bank_account = User.find_by(id: params[:perfil_id]).bank_account.all
+      
+     perfil = Perfil.find_by(id:params[:perfil_id])
+     @user_bank_account = User.find_by(id: perfil.user_id).bank_account.all
+
     end
     def get_id
          Perfil.find_by(params[:id]).id

@@ -9,7 +9,8 @@ class BankAccountsController < ApplicationController
     end
     
     def index
-     @bank_accounts = BankAccount.all
+        perfil = Perfil.find_by(id: params[:perfil_id])
+        @bank_accounts = User.find_by(id: perfil.user_id).bank_account.all
     end
 
     def show
@@ -41,17 +42,12 @@ class BankAccountsController < ApplicationController
         redirect_to errors_path
     end
    end
-
+  
     def edit  
      return @bank_account  if @bank_account  
      redirect_to errors_path
     end
 
-  #  def destroy
-  #     render @bank_account.delete
-  #  end
-
- 
     private
     def search
         @bank_account = BankAccount.find_by( id: params[:id] )
@@ -61,7 +57,4 @@ class BankAccountsController < ApplicationController
         params.require(:bank_account).permit(:entidad,:email,:account,:identification,:typeAccount)
     end
 
-  #  def params_update
-  #     params.require(:bank_account).permit(:entidad,:email,:account,:identification,:typeAccount)
-  #  end
 end
