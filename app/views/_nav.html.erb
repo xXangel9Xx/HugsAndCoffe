@@ -25,13 +25,13 @@
 <!--image_tag(User.find_by(id: params[:perfil_id]).perfil.image
 User.find_by(id: params[:perfil_id]).perfil
 -->
-        <% if Perfil.find_by(id:params[:id]).image.attached? %>
-           <%=Perfil.find_by(id:params[:id]).image, :class=>"image-profile")%> 
+        <% if Perfil.find_by(id:params[:perfil_id]).image.attached? %>
+           <%=Perfil.find_by(id:params[:perfil_id]).image, :class=>"image-profile")%> 
          <%else%>
             <%=image_tag('user_picture.jpeg', :class=>"image-profile" )%>
         <% end %>
 
-            <h1 class="name-user"><%=Perfil.find_by(id:params[:id]).full_name%></h1>
+            <h1 class="name-user"><%=Perfil.find_by(id:params[:perfil_id]).full_name%></h1>
         </div>
     </nav>
 </div>
