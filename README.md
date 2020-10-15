@@ -11,7 +11,20 @@ this is the main page here we can choose what to do if we do scroll down a butto
 ![hugsPagePrincipal](https://user-images.githubusercontent.com/58712435/96074804-87f7e780-0e77-11eb-9c59-4b1ba68c111d.jpg?raw=true "hugs and coffe")
 ![create account](https://user-images.githubusercontent.com/58712435/96083280-e37fa080-0e8a-11eb-9fb2-b68d63615084.png?raw=true "create account")
 
+## Fill data
+we fill all the inputs, but with the image have to let it load 
+![fill data](https://user-images.githubusercontent.com/58712435/96081012-5f2b1e80-0e86-11eb-8fdb-3221d8482dbc.jpg?raw=true "fill data")
 
+### ¿how we know the image let it load?.
+
+![update file](https://user-images.githubusercontent.com/58712435/96082949-30af4280-0e8a-11eb-8f36-f7e823b8a61f.png?raw=true "update file")
+
+when the image it is updated down a text comes out what say: update file.
+![update file](https://user-images.githubusercontent.com/58712435/96082949-30af4280-0e8a-11eb-8f36-f7e823b8a61f.png?raw=true "update file")
+when the image it is loaded down a text comes out what say: remove file.
+![remove file](https://user-images.githubusercontent.com/58712435/96082971-3ad14100-0e8a-11eb-9f8e-b7359427287c.png?raw=true "remove file")
+### ¿What pass when i do not await the load?.
+comes out a error ... and the page will is down.
 
 # README
 
