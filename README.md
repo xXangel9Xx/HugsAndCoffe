@@ -9,7 +9,7 @@ All in the page is optional, the persons go the perfil where they see the images
 ## Page main 
 this is the main page here we can choose what to do if we do scroll down a button comes out it to create account.
 ![hugsPagePrincipal](https://user-images.githubusercontent.com/58712435/96074804-87f7e780-0e77-11eb-9c59-4b1ba68c111d.jpg?raw=true "hugs and coffe")
-![create acount](https://user-images.githubusercontent.com/58712435/96083087-7966fb80-0e8a-11eb-8ec3-2c332c5fe3b5.png?raw=true "create acount")
+![create account](https://user-images.githubusercontent.com/58712435/96083280-e37fa080-0e8a-11eb-9fb2-b68d63615084.png?raw=true "create account")
 
 
 
