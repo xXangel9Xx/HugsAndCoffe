@@ -17,9 +17,9 @@ we fill all the inputs, but with the image have to let it load
 
 ### ¿how we know the image let it load?.
 When the image it is updated down a text comes out what say: update file.
-![update file](https://user-images.githubusercontent.com/58712435/96082971-3ad14100-0e8a-11eb-9f8e-b7359427287c.png?raw=true "remove file")
+![cancel upload](https://user-images.githubusercontent.com/58712435/96084821-c1d3e880-0e8d-11eb-8022-5d8eafd26ed5.png?raw=true "cancel upload")
 when the image it is loaded down a text comes out what say: remove file.
-![remove file](https://user-images.githubusercontent.com/58712435/96082971-3ad14100-0e8a-11eb-9f8e-b7359427287c.png?raw=true "remove file")
+![remove file](https://user-images.githubusercontent.com/58712435/96084831-c4364280-0e8d-11eb-9f3f-0a15728e6888.png?raw=true "remove file")
 ### ¿What pass when i do not await the load?.
 comes out a error ... and the page will is down.
 
