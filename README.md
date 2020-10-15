@@ -23,6 +23,12 @@ when the image it is loaded down a text comes out what say: remove file.
 ### ¿What pass when i do not await the load?.
 comes out a error ... and the page will is down.
 
+## within page  of the perfil.
+Here we have three options 
+perfil, imagenes, cuentas and logout.
+![within page  of the perfil](https://user-images.githubusercontent.com/58712435/96085141-5b9b9580-0e8e-11eb-9c32-928f667f03dd.jpg?raw=true "within page  of the perfil")
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
