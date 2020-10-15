@@ -6,7 +6,9 @@ This project it was did in ruby on rails, it was my first project and it was com
 This page it is did to help the persons want promote some idea or an help foundation of some type and needs donations of money,  it not work with money in this page, then. 
 ### ¿how works this page?
 All in the page is optional, the persons go the perfil where they see the images of the help fundation and decide if thanks or not and they have  two options hug or coffe but we will see this later.
-
+## Page main 
+this is the main page here we can choose what to do if we do scroll down a button comes out it to create account.
+![hugsPagePrincipal](https://user-images.githubusercontent.com/58712435/96074804-87f7e780-0e77-11eb-9c59-4b1ba68c111d.jpg?raw=true "hugs and coffe")
 
 
 # README
