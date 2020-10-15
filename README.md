@@ -1,9 +1,5 @@
-Se parece al error que Builderse refiere al ActiveRecord::Associations::Buildermódulo que se define en el alcance de ActiveRecord.
-
-Intenta acceder a tu modelo con ::Builder:
-
-  if ::Builder.exists?(email: email)
-
+words of developer: Angel Gonzalez.
+this project it was did in ruby on rails, it was my first project and it was complicated and presents to amount problems, and i taking in account did the front-End and backend myself alone, not is perfect but  to start ,  i do not see it bad.
 
 
 
