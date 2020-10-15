@@ -16,7 +16,7 @@ we fill all the inputs, but with the image have to let it load
 ![fill data](https://user-images.githubusercontent.com/58712435/96081012-5f2b1e80-0e86-11eb-8fdb-3221d8482dbc.jpg?raw=true "fill data")
 
 ### ¿how we know the image let it load?.
-When the image it is updated down a text comes out what say: update file.
+When the image it is updated down a text comes out what say: cancel update.
 ![cancel upload](https://user-images.githubusercontent.com/58712435/96084821-c1d3e880-0e8d-11eb-8022-5d8eafd26ed5.png?raw=true "cancel upload")
 when the image it is loaded down a text comes out what say: remove file.
 ![remove file](https://user-images.githubusercontent.com/58712435/96084831-c4364280-0e8d-11eb-9f3f-0a15728e6888.png?raw=true "remove file")
