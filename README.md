@@ -76,8 +76,17 @@ We have to let click sustained in the circle to is fill.
 
 ![fill hug ](https://user-images.githubusercontent.com/58712435/96213074-23578e00-0f46-11eb-8c56-e47e568e7cfa.jpg?raw=true "fill hug")
 
-Then we give click in "continuar".
+Then we give click in "siguiente".
+We just fill the inputs
+![thank hug form](https://user-images.githubusercontent.com/58712435/96213695-9f9ea100-0f47-11eb-90e3-e99694ba389f.jpg?raw=true "thank hug form")
+Then the thanks come out in the perfil.
+![show thanks](https://user-images.githubusercontent.com/58712435/96213709-a75e4580-0f47-11eb-9594-7be02e19c38b.jpg?raw=true "show thanks")
 
+
+## ¿What problems it have this project?
+1)the active storage for that is why the image is deleted then of some time.
+2)if the image the create the profile not load good the page will is down.
+just for mentions two problems.
 
 # README
 
