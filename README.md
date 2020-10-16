@@ -57,7 +57,16 @@ That would be the view the a user it is not the owner of the password of the acc
 
 ## Thanks
 
+Here just we select the option we want, ¿how? easy just onclick in the image of a coffee or hug.
 
+![selection](https://user-images.githubusercontent.com/58712435/96211791-3cab0b00-0f43-11eb-8b65-83a329ec474d.jpg?raw=true "selection")
+
+## Coffe 
+We just fill the inputs and onclick in save.
+![thank coffe](https://user-images.githubusercontent.com/58712435/96211684-f9509c80-0f42-11eb-93be-7f5c29ed77bc.jpg?raw=true "thank coffe")
+
+
+![form coffe](https://user-images.githubusercontent.com/58712435/96211788-39178400-0f43-11eb-94fc-d59eca6a98e4.jpg?raw=true "form coffe")
 
 # README
 
