@@ -68,6 +68,17 @@ We just fill the inputs and onclick in save.
 
 ![form coffe](https://user-images.githubusercontent.com/58712435/96211788-39178400-0f43-11eb-94fc-d59eca6a98e4.jpg?raw=true "form coffe")
 
+## Hug
+
+Onclick in the hug.
+We have to let click sustained in the circle to is fill.
+![nil](https://user-images.githubusercontent.com/58712435/96213064-1f2b7080-0f46-11eb-9616-7ecc09a75bad.jpg?raw=true "nil")
+
+![fill hug ](https://user-images.githubusercontent.com/58712435/96213074-23578e00-0f46-11eb-8c56-e47e568e7cfa.jpg?raw=true "fill hug")
+
+Then we give click in "continuar".
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
