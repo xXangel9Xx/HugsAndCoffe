@@ -16,18 +16,29 @@ we fill all the inputs, but with the image have to let it load
 ![fill data](https://user-images.githubusercontent.com/58712435/96081012-5f2b1e80-0e86-11eb-8fdb-3221d8482dbc.jpg?raw=true "fill data")
 
 ### ¿how we know the image let it load?.
+
 When the image it is updated down a text comes out what say: cancel update.
 ![cancel upload](https://user-images.githubusercontent.com/58712435/96084821-c1d3e880-0e8d-11eb-8022-5d8eafd26ed5.png?raw=true "cancel upload")
+
+
 when the image it is loaded down a text comes out what say: remove file.
 ![remove file](https://user-images.githubusercontent.com/58712435/96084831-c4364280-0e8d-11eb-9f3f-0a15728e6888.png?raw=true "remove file")
+
+
 ### ¿What pass when i do not await the load?.
 comes out a error ... and the page will is down.
 
-## within page  of the perfil.
+## Within page  of the perfil.
 Here we have three options 
 perfil, imagenes, cuentas and logout.
+
+
 ![within page  of the perfil](https://user-images.githubusercontent.com/58712435/96085141-5b9b9580-0e8e-11eb-9c32-928f667f03dd.jpg?raw=true "within page  of the perfil")
 
+
+## Create Image
+We just fill the inputs and await the load the image.
+![create image](https://user-images.githubusercontent.com/58712435/96208441-80017b80-0f3b-11eb-9726-a0e558e2d8b0.jpg?raw=true "create image")
 
 # README
 
