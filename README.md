@@ -43,9 +43,19 @@ We just fill the inputs and await the load the image.
 
 ## Create account bank
 We just fill the inputs.
-now  how function this: this inputs they is will show when a visitor into  in ours perfil and he is want thank us. Is completely optional and depend of the person to transfer the money and the bank is charge of that.
+Now  ¿how function this?.
+This inputs they is will show when a visitor into  in ours perfil and he is want thank us. Is completely optional and depend of the person to transfer the money and the bank is charge of that.
 
 ![create account](https://user-images.githubusercontent.com/58712435/96209210-11252200-0f3d-11eb-91d2-694226b30461.jpg?raw=true "create account")
+
+
+## View from a visitor 
+That would be the view the a user it is not the owner of the password of the account or that is not connected.
+
+![perfil visitor](https://user-images.githubusercontent.com/58712435/96210845-d4f3c080-0f40-11eb-9dfc-50fb03039748.jpg?raw=true "perfil visitor")
+![perfil thanks](https://user-images.githubusercontent.com/58712435/96210848-d6bd8400-0f40-11eb-8d73-c2bf78c26ad6.jpg?raw=true "perfil thanks")
+
+## Thanks
 
 
 
