@@ -38,7 +38,16 @@ perfil, imagenes, cuentas and logout.
 
 ## Create Image
 We just fill the inputs and await the load the image.
-![create image](https://user-images.githubusercontent.com/58712435/96208441-80017b80-0f3b-11eb-9726-a0e558e2d8b0.jpg?raw=true "create image")
+![create image](https://user-images.githubusercontent.com/58712435/96209159-ffdc1580-0f3c-11eb-84a9-1d3829d3aaef.jpg?raw=true "create image")
+
+
+## Create account bank
+We just fill the inputs.
+now  how function this: this inputs they is will show when a visitor into  in ours perfil and he is want thank us. Is completely optional and depend of the person to transfer the money and the bank is charge of that.
+
+![create account](https://user-images.githubusercontent.com/58712435/96209210-11252200-0f3d-11eb-91d2-694226b30461.jpg?raw=true "create account")
+
+
 
 # README
 
